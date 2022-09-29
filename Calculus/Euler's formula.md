@@ -1,0 +1,4 @@
+> [!summary]
+>  $$e^{i\theta} = \cos \theta + i \sin \theta$$
+
+

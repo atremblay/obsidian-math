@@ -1,0 +1,10 @@
+{
+  "baseFontSize": 18,
+  "cssTheme": "Atom",
+  "monospaceFontFamily": "Menlo",
+  "textFontFamily": "Arial,Calibri,Avenir Next Condensed",
+  "enabledCssSnippets": [
+    "centerImage",
+    "defCallout"
+  ]
+}

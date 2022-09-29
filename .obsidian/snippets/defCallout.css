@@ -1,0 +1,8 @@
+.callout[data-callout="definition"] {
+    --callout-color: 216, 222, 233;
+    --callout-icon: book;
+}
+.callout[data-callout="proof"] {
+    --callout-color: 163, 190, 140;
+    --callout-icon: book-open;
+}

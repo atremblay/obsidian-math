@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "bc523ecfba9dde02",
+    "type": "split",
+    "children": [
+      {
+        "id": "ea4e44f3cd4c94b7",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "CRF.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "989ac238af0ddb05",
+    "type": "split",
+    "children": [
+      {
+        "id": "9fe25535ffb8c29f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6e81db37240607b8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "7698c608d7b73069",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "823950cb6981b3af",
+    "type": "split",
+    "children": [
+      {
+        "id": "139bd2c6e7e07098",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "57fd047c658c196b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CRF.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "ea4e44f3cd4c94b7",
+  "lastOpenFiles": [
+    "Graph/Terminology.md",
+    "CRF.md",
+    "Graph/Images/multigraph.svg",
+    "Graph/Images/hypergraph.svg",
+    "Graph/Images/graph.svg",
+    "graph.png",
+    "hypergraph.png",
+    "pseudograph.png",
+    "multigraph.png",
+    "forward-backward2.svg"
+  ]
+}

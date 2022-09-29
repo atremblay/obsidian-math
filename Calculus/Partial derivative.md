@@ -1,0 +1,4 @@
+---
+aliases:
+    - "partial derivative"
+---
