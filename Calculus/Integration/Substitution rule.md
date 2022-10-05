@@ -50,6 +50,8 @@ $$
 
 The point of this is that if we can find a u-substituation to get in the form of the right-hand side, then we can do the integral on the left-hand side and get the result.
 
+
+> [!Tip]
 > Notice how the integrands on both side is the same thing as the chain-rule $$\frac{d F(u)}{du} = \frac{d F(u)}{du} \frac{du}{dx}$$
 
 Matching up both sides we have $du = \frac{du}{dx}dx$
@@ -59,6 +61,12 @@ Example
 $$\int 2x \sin(x^2)dx$$
 
 Set $u = x^2$ and $du = 2xdx$
+
+> [!question] 
+> Why can we treat $\frac{du}{dx}$ like a fraction? What sort of gymnastic allows this? Is this like the [[Separation of variables]] where treating it like a fraction is a convenient fiction?
+
+
+
 
 
 $$\int 2x \sin(x^2)dx= \int sin(u)du = -\cos(u) + C = -\cos(x^2) + C$$

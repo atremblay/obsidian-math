@@ -1,4 +1,4 @@
-
+'d'
 # Basic trigonometric functions
 |$f(u)$|||$\frac{d}{d\theta}f(u) = f'(u)\frac{du}{d\theta}$| $\int f'(u)\frac{du}{d\theta} d\theta$|
 |:---:|:---:|:---:|:---:|:---:|

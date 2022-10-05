@@ -32,6 +32,8 @@ $$
 
 <span class='centerImg'>![[Polar coordinate derivative.svg]]</span>
 
+![[polar_derivative.gif]]
+
 A more formal approach is to use the point $R$. We still want to look at the angle $\alpha$ as $\lim_{ \Delta \theta \to 0 } \cot \alpha = \cot \psi$
 
 $$
