@@ -14,7 +14,7 @@ tags:
 
 
  Intuitively, as $\Delta \theta \rightarrow 0$
- 1. $Q\rightarrow P$ and the segment $QP$ will have the same slope as $\frac{\mathrm{d}r}{\mathrm{d}\theta}$
+ 1. $Q\rightarrow P$ and the segment $QP$ will have the same slope as $\frac{\mathrm{d}\rho}{\mathrm{d}\theta}$
  2. The segment $OP'$ will be the same as $OP$
  3. The angle $\alpha$ will then be the same as $\psi$
 

@@ -9,7 +9,7 @@ tags:
 > [!summary]
 > Assuming we have the solution $y_1$ of
 > $$f_2(x)y''+f_1(x)y'+f_0(x)y=0$$
-> The the second solution is
+> Then the second solution is
 > $$\boxed{y_2=y_1\int\frac{\exp\left\{-\int\frac{f_1(x)}{f_2(x)}dx\right\}}{y_1^2}dx}$$
 > $y_2$ is linearly independant from $y_1$, so
 > $$y_h=c_1y_1+c_2y_2$$

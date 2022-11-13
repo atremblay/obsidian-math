@@ -29,7 +29,7 @@ $$V_y^{(t)} = -32t + V\sin(\theta)$$
 
 Integrate the acceleration $a_x=0$ w.r.t. $t$ 
 $$\int{a_xdt}=V_x^{(t)} = C$$
-At $t=0$, the vertical speed is $V_x^{(0)}=V\cos(\theta)$, thus
+At $t=0$, the horizontal speed is $V_x^{(0)}=V\cos(\theta)$, thus
 $$V_x^{(t)} = V\cos(\theta)$$
 
 **Vertical distance at time $t$**

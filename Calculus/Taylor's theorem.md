@@ -1,6 +1,7 @@
 ---
 aliases:
     - "Taylor series"
+    - "taylor series"
 ---
 
 > [!Summary]
@@ -8,6 +9,12 @@ aliases:
 > $$
 > f(x)=\sum_{i=0}^n \frac{(x-a)^nf^{(n)}(a)}{n!} + R
 > $$
+> Where the function is evaluated at point $a$ and estimated at point $x$.
+> If $x=a + \Delta a$, then another way to write it is
+> $$
+> f(a+\Delta a)=\sum_{i=0}^n \frac{(\Delta a)^nf^{(n)}(a)}{n!} + R
+> $$
+> 
 > **Multi variables**
 > It's typical to stop at the Hessian
 > $$
@@ -17,6 +24,8 @@ aliases:
 > Where $\bf{x}$ is a vector of independant variables, $\bf{a}$ is the vector where the derivatives are evaluated and $H$ is the Hessian of $f(\bf{a})$.
 > 
 
+^627630
+
 
 # Single variable
 ## Approximation
@@ -24,11 +33,11 @@ aliases:
 We may need to approximate a function $f(x)$ by another, simpler, one $g(x)$. Oftentimes to get an easier derivative or integral. This other function can be a polynomial of degree $n$
 $$g(x)=\textcolor{orange}{c_0}+\textcolor{cyan}{c_1}x+\textcolor{lime}{c_2}x^2+\textcolor{violet}{c_3}x^3+\ldots+c_nx^n$$
 
-The goal is to get $g(x)$ as close as possible to $f(x)$, $g(x) \approx f(x)$ by finding good values for $c_i$. Again, this polynomial is a convenient one, it could be another function. It just has nice proporties. 
+The goal is to get $g(x)$ as close as possible to $f(x)$, $g(x) \approx f(x)$ by finding good values for $c_i$. This polynomial is a convenient one, it could be another function. It just has nice proporties. 
 
 ## Coefficients
 
-We need to find values for $c_i$. The walkthrough always starts by estimating the functions at $x=0$. It's convenient because it will cancel many terms. We would like to have
+We need to find values for $c_i$. The walkthrough always starts by estimating the functions at $x=0$ (aka [[Maclaurin Series]]. It's convenient because it will cancel many terms. We would like to have
 
 $$
 g(0) = c_0 + c_10 + c_20^2+c_30^3+\ldots+c_n0^n = \textcolor{orange}{c_0 = f(0)}
@@ -99,7 +108,7 @@ g^{(n)}(a) &= (n!)c_n = f^{(n)}(a) \\
 \end{align}
 $$
 
-Try to find the value of the coefficients, it's a nightmare. The very last coefficient is available, but try to work this backwards and it because an absolute mess.
+Try to find the value of the coefficients, it's a nightmare. The very last coefficient is available, but try to work this backwards and it becomes an absolute mess.
 
 ## Generalization
 
@@ -134,7 +143,8 @@ We find that the coeffcients are $c_i=\frac{f^{(i)}(a)}{i!}$, so the approximati
 
 $$g(x)=\sum_{i=0}^n \frac{f^{(i)}(a)(x-a)^i}{i!}$$
 
-Same expectations apply. Arround $a$ we expect that $g(x)$ will be a good approximator. The more terms you add to the polynomial, the better the approximation will be, generally, the further away from $a$ you can go.
+Same expectations apply. Around $a$ we expect that $g(x)$ will be a good approximator. The more terms you add to the polynomial, the better the approximation will be, generally, the further away from $a$ you can go.
+
 
 # Multivariable 
 This is surprisingly easy to do the same thing for a multivariate function $f: \mathbb{R}^n \rightarrow \mathbb{R}$
@@ -201,13 +211,10 @@ where $H$ is the Hessian.
 ## Approximation at another point
 
 It's easy to redo those steps but with the derivatives evaluated at $(a,b)$ 
-$$
-g(x,y) = c_0 + c_1(x-a) + c_2(y-b) + c_3(x-a)(y-b) +c_4(x-a)^2 + c_5(y-b)^2 
-$$
 
 $$
 \begin{align}
-g(x,y)      &= &c_0 &+ & c_1(x-a) &+ & c_2y &+ & c_3(x-a)(y-b)  &+ & c_4(x-a)^2 &+ & c_5(y-b)^2 \\
+g(x,y)      &= &c_0 &+ & c_1(x-a) &+ & c_2(y-b) &+ & c_3(x-a)(y-b)  &+ & c_4(x-a)^2 &+ & c_5(y-b)^2 \\
 g_x(x,y)    &= &    &  & c_1      &+ &      &  & c_3(y-b)       &+ & 2c_4(x-a)  &  &            \\
 g_y(x,y)    &= &    &  &          &  & c_2  &+ & c_3(x-a)       &+ &            &  & 2c_5(y-b)  \\
 g_{xy}(x,y) &= &    &  &          &  &      &  & c_3            &  &            &  &            \\
@@ -258,5 +265,5 @@ $$
 
 Make it more general with vector notation for the independant variables $\textbf{x}$ and the point at which the derivative is evaluated $\textbf{a}$
 $$
-g(\textbf{x})= f(\textbf{a}) + [\textbf{x}-\textbf{a}]^T\nabla f(\textbf{a}) + \frac 1 2 [\textbf{x}-\textbf{a}]^T H [\textbf{x}-\textbf{a}]
+f(\textbf{x})\approx g(\textbf{x})= f(\textbf{a}) + [\textbf{x}-\textbf{a}]^T\nabla f(\textbf{a}) + \frac 1 2 [\textbf{x}-\textbf{a}]^T H [\textbf{x}-\textbf{a}]
 $$

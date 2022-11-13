@@ -4,26 +4,30 @@
     "type": "split",
     "children": [
       {
-        "id": "2584ecdcb8358b74",
+        "id": "ed6d77ee643d72d5",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Calculus/Integration/Integration by parts.md",
+            "mode": "preview",
+            "source": false
+          }
         }
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "2995fd7522722176",
+    "id": "129b1f6a68ea48bf",
     "type": "split",
     "children": [
       {
-        "id": "9da54faf9944bd30",
+        "id": "b0e5aaebafbea7b3",
         "type": "tabs",
         "children": [
           {
-            "id": "f2aa114dd0a8e6b6",
+            "id": "f1f2f4d46fad4d7b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -31,12 +35,12 @@
             }
           },
           {
-            "id": "276288f00c318f5f",
+            "id": "10fd86d4c44ea783",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "arc",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,22 +53,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 652.5
+    "width": 300
   },
   "right": {
-    "id": "ad58de1d878db69a",
+    "id": "2d03d41cc0ce4f9c",
     "type": "split",
     "children": [
       {
-        "id": "41d9144ddfab29a9",
+        "id": "0eb69185f3aca55a",
         "type": "tabs",
         "children": [
           {
-            "id": "d686687d12768955",
+            "id": "3f18f4bc21e002a0",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Calculus/Integration/Integration by parts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -76,7 +81,7 @@
             }
           },
           {
-            "id": "d4fe16bd4344bcf0",
+            "id": "7ed1e7664b1c0df8",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -93,17 +98,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f2aa114dd0a8e6b6",
+  "active": "ed6d77ee643d72d5",
   "lastOpenFiles": [
-    "Equation of a plane.md",
-    "Calculus/Equation of a plane.md",
-    "Calculus/Integration/Inverse trigonometric functions.md",
-    "Calculus/Trigonometric functions.md",
-    "Trigonometry/Trigonometric identity.md",
-    "Calculus/Integration/Substitution rule.md",
-    "Calculus/images/Sans tit.svg",
-    "Calculus/images/polar_derivative.gif",
-    "Calculus/images/Polar coordinate derivative.svg",
-    "Calculus/polar coordinate/derivative.md"
+    "Ordinary differential equations/Definitions/Elementary function.md",
+    "To study/Stoke's theorem.md",
+    "Reading notes/@tenenbaum_ordinary_1985.md",
+    "Calculus/Limits/Properties.md",
+    "Ordinary differential equations/Solutions/Reduction of order.md",
+    "Calculus/Arc length.md",
+    "Calculus/Angle between two lines.md",
+    "Calculus/polar coordinate/derivative.md",
+    "Calculus/polar coordinate/polar coordinate.md",
+    "Calculus/Problems/Geometric problems.md"
   ]
 }
