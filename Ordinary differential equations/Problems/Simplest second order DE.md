@@ -1,4 +1,7 @@
 
+> [!NOTE]- I'm an idiot
+> Apparently I need to redo the same kind of exercices over and over again. See [[Hooke's law]]
+
 $$
 a = \dot{v} = \ddot{x} = -kx
 $$
@@ -19,7 +22,7 @@ With $a=1$, $b=0$ and $c=k$, we have a [[Const Coeff Homo DE#Case 3: Complex pai
 $$
 r = \frac{ \pm \sqrt{-4k}}{2} = \pm i\sqrt{k}
 $$
-The real part $\alpha=0$ and the imaginary part $\beta=\sqrt{k}$ . The [[Const Coeff Homo DE#General solution|the two general solutions]] are
+Real part: $\alpha=0$, imaginary part: $\beta=\sqrt{k}$ . The [[Const Coeff Homo DE#General solution|the two general solutions]] are
 
 $$
 x^{(1)}=e^{\alpha t}\cos{\beta t}=e^{0}\cos{t\sqrt{k}} = \cos{\left(t\sqrt{k}\right)}
@@ -155,3 +158,4 @@ $$
 $$
 \dot{\textbf{x}}= A \textbf{x}
 $$
+The eigenvalues of $A$ are the roots of the [[Characteristic equation]].

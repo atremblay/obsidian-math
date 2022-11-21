@@ -31,7 +31,7 @@ r = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
 $$
 Three cases arise from this.
 
-> [!tip]
+> [!tip]-
 > Very important, all of this is derived from the initial guess. Had we guessed something else a different analysis would have been required. 
 
 ### Case 1: Distinct roots

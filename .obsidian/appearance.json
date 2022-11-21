@@ -1,8 +1,8 @@
 {
   "baseFontSize": 18,
-  "cssTheme": "Atom",
-  "monospaceFontFamily": "Menlo",
-  "textFontFamily": "Arial,Calibri,Avenir Next Condensed",
+  "cssTheme": "Obsidian Nord Enhanced",
+  "monospaceFontFamily": "Hack Nerd Font,Menlo",
+  "textFontFamily": "Avenir,Arial,Avenir Next Condensed",
   "enabledCssSnippets": [
     "centerImage",
     "defCallout"
