@@ -1,24 +1,23 @@
 An ODE is linear if
 
 $$
-\sum_{i=0}^{n} a_{(n-i)}(x)y^{(n-i)} = Q(x)
+\sum_{i=0}^{n} f_{(n-i)}(x)y^{(n-i)} = Q(x)
 $$
 Sum of linear terms $y^{(k)}$, where $k$ is the $k^{th}$ derivative. It is of order $n$ if $f_n \not\equiv 0$ on interval I.
 
 #### Nonhomogeneous
 If $Q(x)\not\equiv0$ then 
 $$
-\sum_{i=0}^{n} a_{(n-i)}(x)y^{(n-i)} = Q(x)
+\sum_{i=0}^{n} f_{(n-i)}(x)y^{(n-i)} = Q(x)
 $$
 is non-homogeneous
 
 #### Homogeneous
 If $Q(x)\equiv0$ then 
 $$
-\sum_{i=0}^{n} a_{(n-i)}(x)y^{(n-i)} = Q(x)
+\sum_{i=0}^{n} f_{(n-i)}(x)y^{(n-i)} = 0
 $$
 is called homogeneous
-
 
 
 >Check how that fits with [[Homogeneous Function]]

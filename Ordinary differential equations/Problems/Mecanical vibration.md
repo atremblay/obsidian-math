@@ -178,4 +178,8 @@ m_2\left(\frac{m_1}{k_2}x_1^{(4)}+\frac{k_1}{k_2}\ddot{x_1} + \ddot{x_1}\right) 
 \frac{m_1m_2}{k_2}x_1^{(4)}+\textcolor{orange}{\frac{m_2(k_1+k_2)+m_1k_2}{k_2}\ddot{x_1}} +k_1x_1  &= 0
 \end{align}
 $$
+To give it a more familiar look ([[Const Coeff Homo DE]])
+$$a_4x_1^{(4)}+a_2\ddot{x_1} +a_0x_1  = 0$$
+with 
+$$a_4=\frac{m_1m_2}{k_2}, \hspace{1em}a_2=\frac{m_2(k_1+k_2)+m_1k_2}{k_2}, \hspace{1em}a_0=k_1$$
 We now have one fourth order differential equation in terms of $x_1$. The same steps could be done to get a 4th ODE in terms of $x_2$.

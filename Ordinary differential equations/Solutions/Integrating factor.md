@@ -7,56 +7,56 @@ tags:
 > [!summary]
 > Standard form of a [[Ordinary differential equation#Order|first order]] [[Linear ODE|linear ODE]]
 > $$
-> y'+p(x)y = f(x)
+> x'+p(y)x = f(y)
 > $$
-> Solution: $$\boxed{y=\frac{1}{\textcolor{green}{r(x)}}\int \textcolor{green}{r(x)}f(x)dx}$$
-> where $\textcolor{green}{r(x)}=e^{\int p(x)dx}$
+> Solution: $$\boxed{x=\frac{1}{\textcolor{green}{r(y)}}\int \textcolor{green}{r(y)}f(y)dy}$$
+> where $\textcolor{green}{r(y)}=e^{\int p(y)dy}$
 
 
 The standard form of a first order linear ODE is written as 
 
-$$y'+p(x)y = f(x)$$
+$$x'+p(y)x = f(y)$$
 
-Even if $y'$ has a coefficient, we simply divide everything by it to fall back on the standard form. Multiply both sides by the unknown function $\textcolor{green}{r(x)}$, which will be the integrating factor. 
-$$\textcolor{green}{r(x)}y'+\textcolor{green}{r(x)}p(x)y = \textcolor{green}{r(x)}f(x)$$
+Even if $x'$ has a coefficient, we simply divide everything by it to fall back on the standard form. Multiply both sides by the unknown function $\textcolor{green}{r(y)}$, which will be the integrating factor. 
+$$\textcolor{green}{r(y)}x'+\textcolor{green}{r(y)}p(y)x = \textcolor{green}{r(y)}f(y)$$
 We would like to have (no idea why or how the inventor thought about that)
-$$\frac{d}{dx}\left[r(x)y\right]=r(x)f(x)$$
-So that we can integrate both sides with respect to $x$
+$$\frac{d}{dy}\left[r(y)x\right]=r(y)f(y)$$
+So that we can integrate both sides with respect to $y$
 
 $$
 \begin{align}
-\textcolor{orange}{\int}\frac{d}{dx}\left[r(x)y\right]\textcolor{orange}{dx}&=\textcolor{orange}{\int} r(x)f(x)\textcolor{orange}{dx}\\
-\iff r(x)y &=\int r(x)f(x)dx \\
-\iff y &=\frac{1}{r(x)}\int r(x)f(x)dx
+\textcolor{orange}{\int}\frac{d}{dy}\left[r(y)x\right]\textcolor{orange}{dy}&=\textcolor{orange}{\int} r(y)f(y)\textcolor{orange}{dy}\\
+\iff r(y)x &=\int r(y)f(y)dy \\
+\iff x &=\frac{1}{r(y)}\int r(y)f(y)dy
 \end{align}
 $$
-Using the product rule of derivative
+Using the [[Chain Rule|chain rule]] of derivative
 $$
 \begin{align}
-\frac{d}{dx}\left[r(x)y\right]=r(x)y'+r'(x)y=\underbrace{r(x)y'+r(x)p(x)y = r(x)f(x)}_{\textit{From above}}
+\frac{d}{dy}\left[r(y)x\right]=r(y)x'+r'(y)x=\underbrace{r(y)x'+r(y)p(y)x = r(y)f(y)}_{\textit{From above}}
 \end{align}
 $$
 
 $$
 \begin{align}
-\cancel{r(x)y'}+r'(x)y&=\cancel{r(x)y'}+r(x)p(x)y \\
-\iff r'(x)\cancel{y}&=r(x)p(x)\cancel{y} \\
-\iff r'(x)&=r(x)p(x) \\
-\iff \frac{r'(x)}{r(x)}&=p(x) \\
+\cancel{r(y)x'}+r'(y)x&=\cancel{r(y)x'}+r(y)p(y)x \\
+\iff r'(y)\cancel{x}&=r(y)p(y)\cancel{x} \\
+\iff r'(y)&=r(y)p(y) \\
+\iff \frac{r'(y)}{r(y)}&=p(y) \\
 \end{align}
 $$
 
-Integrate both sides w.r.t. $x$ and isolate $r(x)$
+Integrate both sides w.r.t. $y$ and isolate $r(y)$
 
 $$
 \begin{align}
-\int \frac{r'(x)}{r(x)}dx&=\int p(x)dx \\
-\iff \ln{r(x)} &= \int p(x)dx \\
-\iff r(x) &= e^{\int p(x)dx} \\
+\int \frac{r'(y)}{r(y)}dx&=\int p(y)dy \\
+\iff \ln{r(y)} &= \int p(y)dy \\
+\iff r(y) &= e^{\int p(y)dy} \\
 \end{align}
 $$
-Combine this result with the one from above, we get the solution to this first order linear ODE by using the integrating factor $r(x)$
-$$y =\frac{1}{r(x)}\int r(x)f(x)dx$$where $r(x)=e^{\int p(x)dx}$
+Combine this result with the one from above, we get the solution to this first order linear ODE by using the integrating factor $r(y)$
+$$x =\frac{1}{r(y)}\int r(y)f(y)dy$$where $r(y)=e^{\int p(y)dy}$
 
 
 -----
@@ -65,55 +65,55 @@ Slightly more detailed by keeping the integration constant
 
 $$
 \begin{align}
-\int \frac{r'(x)}{r(x)}dx&=\int p(x)dx \\
-\iff \ln{r(x)} + C_1 &= \int p(x)dx \\
-\iff \ln{r(x)} &= \int p(x)dx - C_1\\
-\iff r(x) &= e^{\int p(x)dx - C_1} \\
-\iff r(x) &= e^{-C_1}e^{\int p(x)dx} \\
-\iff r(x) &= Ce^{\int p(x)dx} \\
+\int \frac{r'(y)}{r(y)}dy&=\int p(y)dy \\
+\iff \ln{r(y)} + C_1 &= \int p(y)dy \\
+\iff \ln{r(y)} &= \int p(y)dy - C_1\\
+\iff r(y) &= e^{\int p(y)dy - C_1} \\
+\iff r(y) &= e^{-C_1}e^{\int p(y)dy} \\
+\iff r(y) &= Ce^{\int p(y)dy} \\
 \end{align}
 $$
 
 It will just cancel out here
 $$
 \begin{align}
-y &=\frac{1}{r(x)}\int r(x)f(x)dx \\
-y &=\frac{1}{\cancel{C}e^{\int p(x)dx}}\int \cancel{C}e^{\int p(x)dx}f(x)dx \\
+x &=\frac{1}{r(y)}\int r(y)f(y)dy \\
+x &=\frac{1}{\cancel{C}e^{\int p(y)dy}}\int \cancel{C}e^{\int p(y)dy}f(y)dy \\
 \end{align}
 $$
 
-So we can simply say that $r(x)=e^{\int p(x)dx}$ and not bother with the integration constant.
+So we can simply say that $r(y)=e^{\int p(y)dy}$ and not bother with the integration constant.
 
 
 > [!Example]-
-> $$y'+4y=e^{-x},\hspace{2em}y(0)=\frac{4}{3}$$
+> $$x'+4x=e^{-y},\hspace{2em}x(0)=\frac{4}{3}$$
 > 
 > 
-> $$y'+\underbrace{4}_{p(x)}y=\underbrace{e^{-x}}_{f(x)}$$
+> $$x'+\underbrace{4}_{p(y)}x=\underbrace{e^{-y}}_{f(y)}$$
 > 
 > 
 > $$
 > \begin{align}
-> \textcolor{green}{r(x)}&=e^{\int p(x)dx} \\
-> &= e^{\int 4dx} \\
-> &= e^{4x}
+> \textcolor{green}{r(y)}&=e^{\int p(y)dy} \\
+> &= e^{\int 4dy} \\
+> &= e^{4y}
 > \end{align}
 > $$
 > 
 > $$
 > \begin{align}
-> y&=\frac{1}{\textcolor{green}{r(x)}}\int \textcolor{green}{r(x)}f(x)dx \\
-> &= \frac{1}{\textcolor{green}{e^{4x}}}\int \textcolor{green}{e^{4x}}e^{-x}dx \\
-> &= \frac{1}{e^{4x}}\int e^{3x}dx \\
-> &= \frac{1}{e^{4x}} \left( \frac{1}{3} e^{3x} + C \right) \\
-> &= \frac{1}{3e^x}  + \frac{C}{e^{4x}} \\
+> x&=\frac{1}{\textcolor{green}{r(y)}}\int \textcolor{green}{r(y)}f(y)dx \\
+> &= \frac{1}{\textcolor{green}{e^{4y}}}\int \textcolor{green}{e^{4y}}e^{-y}dy \\
+> &= \frac{1}{e^{4y}}\int e^{3y}dy \\
+> &= \frac{1}{e^{4y}} \left( \frac{1}{3} e^{3y} + C \right) \\
+> &= \frac{1}{3e^y}  + \frac{C}{e^{4y}} \\
 > \end{align}
 > $$
 > Plugin the initial condition to get the value of C
 > 
 > $$
 > \begin{align}
-> y(0)&= \frac{1}{3e^0}  + \frac{C}{e^{0}} = \frac{4}{3} \\
+> x(0)&= \frac{1}{3e^0}  + \frac{C}{e^{0}} = \frac{4}{3} \\
 > \iff C &= 1
 > \end{align}
 > $$
@@ -121,6 +121,7 @@ So we can simply say that $r(x)=e^{\int p(x)dx}$ and not bother with the integra
 > 
 > $$
 > \boxed{
-> y=\frac{1}{3e^x}  + \frac{1}{e^{4x}} 
+> x=\frac{1}{3e^y}  + \frac{1}{e^{4y}} 
 > }
 > $$
+

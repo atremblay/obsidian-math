@@ -1,7 +1,4 @@
 
-> [!NOTE]- I'm an idiot
-> Apparently I need to redo the same kind of exercices over and over again. See [[Hooke's law]]
-
 $$
 a = \dot{v} = \ddot{x} = -kx
 $$
