@@ -1,0 +1,3 @@
+- A single eigenvalue can have more than one eigenvectors.
+- The eigenspace consists of the zero vector and all the eigenvectors corresponding to $\lambda$. 
+- The dimension of the eigenspace is the number of eigenvectors corresponding to $\lambda$. ^414ca9

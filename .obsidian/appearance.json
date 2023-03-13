@@ -1,11 +1,13 @@
 {
   "baseFontSize": 18,
-  "cssTheme": "Obsidian Nord Enhanced",
+  "cssTheme": "Minimal",
   "monospaceFontFamily": "Hack Nerd Font,Menlo",
   "textFontFamily": "Avenir,Arial,Avenir Next Condensed",
   "enabledCssSnippets": [
     "centerImage",
-    "defCallout"
+    "defCallout",
+    "highlithr_theme"
   ],
-  "accentColor": ""
+  "accentColor": "",
+  "theme": "obsidian"
 }

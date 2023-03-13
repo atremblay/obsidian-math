@@ -19,3 +19,9 @@ e^{i\theta} &= 1+ i\theta + \frac{(i\theta)^2}{2!} + \frac{(i\theta)^3}{3!} + \f
 \end{align}
 $$
 
+## Euler's identity
+
+Just a special case of Euler's formula where $\theta=\pi$.
+
+> [!summary]
+>  $$e^{i\pi} = \cos \pi + i \sin \pi=1$$

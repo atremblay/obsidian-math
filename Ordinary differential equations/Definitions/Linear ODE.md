@@ -1,3 +1,9 @@
+---
+aliases:
+    - "linear ODE"
+tags:
+    - "linear"
+---
 An ODE is linear if
 
 $$
@@ -72,11 +78,11 @@ $$
 
 Based on the superposition distributive properties, if $y_{p_1}$ is a solution to 
 $$
-f_n(x)y^{(n)} + \ldots + f_1(x)y' + f_0(x)y = Q_1(x)
+f_n(x)y_{p_1}^{(n)} + \ldots + f_1(x)y_{p_1}' + f_0(x)y_{p_1} = Q_1(x)
 $$
 and $y_{p_2}$ is a solution to 
 $$
-f_n(x)y^{(n)} + \ldots + f_1(x)y' + f_0(x)y = Q_2(x)
+f_n(x)y_{p_2}^{(n)} + \ldots + f_1(x)y_{p_2}' + f_0(x)y_{p_2} = Q_2(x)
 $$
 then $y_p=y_{p_1}+iy_{p_2}$ is a solution to 
 $$

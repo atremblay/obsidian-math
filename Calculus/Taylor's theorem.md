@@ -261,9 +261,19 @@ g(x,y) &= f(a,b) + f_x(a,b)x + f_y(a,b)y + f_{xy}(a,b)xy + \frac{f_{xx}(a,b)}{2}
 \end{align}
 $$
 
-## Generalization
+## Multivariate Generalization
 
 Make it more general with vector notation for the independant variables $\textbf{x}$ and the point at which the derivative is evaluated $\textbf{a}$
 $$
 f(\textbf{x})\approx g(\textbf{x})= f(\textbf{a}) + [\textbf{x}-\textbf{a}]^T\nabla f(\textbf{a}) + \frac 1 2 [\textbf{x}-\textbf{a}]^T H [\textbf{x}-\textbf{a}]
 $$
+A notation often encountered is writing $\mathbf{x}=\mathbf{a}+\mathbf{\Delta x}$. $\mathbf{x}$ is just $\mathbf{a}$ plus a delta.
+
+$$
+\begin{align}
+f(\textbf{x})\approx g(\textbf{x})&= f(\textbf{a}) + \nabla f(\textbf{a})[\textbf{x}-\textbf{a}] + \frac 1 2 [\textbf{x}-\textbf{a}]^T H [\textbf{x}-\textbf{a}] \\
+&=f(\mathbf{a}) + \nabla f(\textbf{a})[\mathbf{x-(x - \Delta x)}] + \frac 1 2 [\mathbf{x-(x - \Delta x)}]^T H [\mathbf{x-(x - \Delta x)}] \\
+&=f(\mathbf{a}) + \nabla f(\textbf{a})\mathbf{ \Delta x} + \frac 1 2 \mathbf{\Delta x}^T H \mathbf{\Delta x}
+\end{align}
+$$
+

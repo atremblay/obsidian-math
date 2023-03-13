@@ -1,0 +1,4 @@
+Prompting refers to providing additional input to a model designed to help it to produce correct outputs. Typically, these take the form of textual templates used to form cloze questions, and have been used in a variety of settings, such as probing [Language Models as Knowledge Bases?](https://arxiv.org/abs/1909.01066) and zero-shot learning [[GPT-2]]. Prompts can be used in conjunction with fine-tuning, which has been shown to improve results in a number of works (Schick and Schutze, 2020, 2021; Schick and Schu ̈tze, 2021a; Gao et al., 2021b; Le Scao and Rush, 2021; Tam et al., 2021). We adopt this technique in our experiments and adapt the models using prompt-based fine-tuning.
+
+
+From [[A Few More Examples May Be Worth Billions of Parameters]]

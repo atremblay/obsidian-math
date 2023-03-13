@@ -1,0 +1,183 @@
+{
+  "main": {
+    "id": "be9965e5e2548446",
+    "type": "split",
+    "children": [
+      {
+        "id": "76fe0317457231d6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ba8ff26dd5aa285e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ordinary differential equations/Decoupling a system of ODE.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "5be9b16f5d09b682",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ordinary differential equations/Examples/Dilution.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "960d52aec154e157",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ordinary differential equations/Examples/Interest.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1b6e2ffbeb9091da",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Templates/Example template.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "373bbae9a8aa6f78",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "7026cd912a3d4174",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "6afae23f8776ebf4",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "quiver",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "a073854268b656d5",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      }
+    ],
+    "currentTab": 1
+  },
+  "right": {
+    "id": "9da6985b83bf23df",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "189ba42dd815391f",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Ordinary differential equations/Examples/Interest.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "9283b01736b44c13",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Ordinary differential equations/Solutions/Undetermined Coefficient.md"
+          }
+        }
+      },
+      {
+        "id": "608e217cae78fc08",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Ordinary differential equations/Examples/Interest.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      }
+    ]
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "templater-obsidian:Templater": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "random-note:Open random note": false,
+      "workspaces:Manage workspace layouts": false
+    }
+  },
+  "active": "960d52aec154e157",
+  "lastOpenFiles": [
+    "Ordinary differential equations/Examples/Dilution.md",
+    "Ordinary differential equations/Decoupling a system of ODE.md",
+    "Ordinary differential equations/Examples/Interest.md",
+    "Templates/Example template.md",
+    "Ordinary differential equations/Direction Field.md",
+    "Ordinary differential equations/System of ODE.md",
+    "Linear Algebra/Matrix exponential.md",
+    "Ordinary differential equations/Stability and eigenvalues.md",
+    "Ordinary differential equations/Solutions/Undetermined Coefficient.md",
+    "Ordinary differential equations/Solutions/Variation of Parameters.md"
+  ]
+}

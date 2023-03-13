@@ -21,7 +21,7 @@ u(x)v(x)&= \textcolor{orange}{\int v(x)\frac{du(x)}{dx} dx} + \textcolor{violet}
 \end{align}
 $$
 
->The above is the ==indefinite== integral. If we look at the ==definite== integral then we have to evaluate, even on the left side since we did the integral
+>The above is the indefinite integral. If we look at the definite integral then we have to evaluate, even on the left side since we did the integral
 >$$u(x)v(x)\biggr\vert_a^b= \int_a^b v(x)\frac{du(x)}{dx} dx + \int_a^b u(x)\frac{dv(x)}{dx} dx$$
 
 
@@ -92,5 +92,12 @@ The integration constant eventually disappears. So when we do $v=\int \frac{dv}{
 > &= x\frac{e^{10x}}{10} - \frac{e^{10x}}{100} - D
 > \end{align}
 > $$
-> 
-> 
+
+
+> [!Example] 
+> $$\int \log x dx$$
+> $u=\log x$ and $dv=1$
+> $$\frac{du}{dx}=\frac 1 x$$
+> $$v=\int \frac{dv}{dx}dx=x$$
+> $$\textcolor{orange}{\int v\mathrm{d}u\mathrm{d}x}=\int x\frac 1 x \mathrm{d}x=x$$
+> $$uv-\textcolor{orange}{\int v\mathrm{d}u\mathrm{d}x}=x\log x - x$$

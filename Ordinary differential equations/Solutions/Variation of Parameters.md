@@ -18,7 +18,7 @@ Easier to explain with a second order generic DE
 $$f_2(x)y''+f_1(x)y'+f_0(x)y=Q(x)$$
 
 
-##### Step 1: [[Complementary function]]
+#### Step 1: [[Complementary function]]
 We need to have the [[Complementary function|complementary function]] 
 of the equation above. If the $f_i(x)$ are not constants then it will often be very difficult to get the $n$ independant solutions.  If they are constants then we know a few ways (e.g. [[Undetermined Coefficient]]). For the rest we will do as if $f_i(x)$ are constants. 
 
@@ -29,7 +29,7 @@ With $a_2\neq 0$
 And find the solutions $y_1$ and $y_2$, giving the [[Complementary function|complementary function]]
 $$y_h(x)=c_1y_1(x)+c_2y_2(x)$$
 
-##### Step 2: Calculate the derivatives
+#### Step 2: Calculate the derivatives
 This solution is for the homogeneous version of the DE and we are looking for a particular solution the the non-homogenous. So we make the **variation of  parameters**; changing the constant $c_1$ and $c_2$ to be unknown functions of $x$ instead: $u_1(x)$ and $u_2(x)$ . These terms vary as opposed to being constants.
 
 $$y_p=u_1(x)y_1(x) + u_2(x)y_2(x)$$
@@ -45,7 +45,7 @@ y_p''&=(u_1y_1''+u_2y_2'') + (u_1'y_1'+u_2'y_2') +(u_1'y_1+u_2'y_2)'
 $$
 Plugging these derivatives in the DE will give us conditions that we will have to respect in order have a particular solution. 
 
-##### Step 3: Use everything
+#### Step 3: Use everything
 
 $$
 \begin{align}
@@ -224,5 +224,10 @@ Up to our ability to integrate, this always works if we have $y_1$ and $y_2$.
 > We made the variation of parameters (change the constants in the homogeneous version to functions of x) that our solution would look like 
 > $$y=u_1(x)\cos x + u_2(x)\sin x $$
 > We now have the coefficient $u_1$ and $u_2$, so we have a solution (not a [[general solution]], but **a** solution).
-> 
-> 
+
+
+> [!Question] 
+> could this work for higher order than 2?
+
+# Additionnal ressources
+[Steve Brunton](https://youtu.be/wCeDUbZQ_zA)

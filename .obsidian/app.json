@@ -30,7 +30,10 @@
     "editor:redo",
     "editor:toggle-keyboard",
     "editor:configure-toolbar",
-    "editor:toggle-highlight"
+    "editor:toggle-highlight",
+    "highlightr-plugin:Orange"
   ],
-  "promptDelete": false
+  "promptDelete": false,
+  "showInlineTitle": true,
+  "showFrontmatter": true
 }

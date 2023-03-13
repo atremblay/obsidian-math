@@ -1,5 +1,5 @@
 ---
-aliases:
+alias:
     - "Undetermined coefficient for non-homogeneous ODE"
 tags:
     - "non_homogeneous"
@@ -10,11 +10,11 @@ tags:
 > [!summary]
 > The [[general solution]] of
 > $$
-> \sum_{i=0}^{n}a_{i}y^{(i)}=Q(x)
+> \sum_{i=0}^{n}a_{i}x^{(i)}=Q(t)
 > $$
-> Where $a_i\neq 0$ and $Q(x) \not\equiv 0$ on an interval $I$ is
-> $$y(x)=y_h(x)+y_p(x)$$
-> where $y_p$ is the particular solution of $Q(x)$ and $y_h$ is the [[Const Coeff Homo DE|general solution of the related homogeneous version]]. 
+> Where $a_i\neq 0$ and $Q(t) \not\equiv 0$ on an interval $I$ is
+> $$x(t)=x_h(t)+x_p(t)$$
+> where $x_p$ is the particular solution of $Q(t)$ and $x_h$ is the [[Const Coeff Homo DE|general solution of the related homogeneous version]]. 
 
 
 > [!Caution]
@@ -89,11 +89,11 @@ $$\textcolor{yellow}{y_p}=A\textcolor{violet}{t}e^{-t}$$
 $$
 \begin{align}
 &y''-2y'-3y&=3e^{-t} \\
-\iff &(Ate^{-t})'' - 2(Ate^{-t})' - 3Ate^{-t} &= 3te^{-t} \\
-\iff &A(-te^{-t} + e^{-t})' - 2A(-te^{-t} + e^{-t}) - 3Ate^{-t}&= 3te^{-t} \\
-\iff &A(te^{-t} - e^{-t} - e^{-t}) - 2A(-te^{-t} + e^{-t}) - 3Ate^{-t}&= 3te^{-t} \\
-\iff &\cancel{Ate^{-t}}- 2Ae^{-t} +\cancel{2Ate^{-t}} -2Ae^{-t} - \cancel{3Ate^{-t}}&= 3te^{-t} \\
-\iff &-4Ae^{-t} &= 3te^{-t} \\
+\iff &(Ate^{-t})'' - 2(Ate^{-t})' - 3Ate^{-t} &= 3e^{-t} \\
+\iff &A(-te^{-t} + e^{-t})' - 2A(-te^{-t} + e^{-t}) - 3Ate^{-t}&= 3e^{-t} \\
+\iff &A(te^{-t} - e^{-t} - e^{-t}) - 2A(-te^{-t} + e^{-t}) - 3Ate^{-t}&= 3e^{-t} \\
+\iff &\cancel{Ate^{-t}}- 2Ae^{-t} +\cancel{2Ate^{-t}} -2Ae^{-t} - \cancel{3Ate^{-t}}&= 3e^{-t} \\
+\iff &-4Ae^{-t} &= 3e^{-t} \\
 \iff &A &= -\frac{3}{4} \\
 \end{align}
 $$
@@ -139,6 +139,10 @@ $$
 ### Case 1
 No term of $Q(x)$ is the same as a term of $y_h$ . In this case a particular solution $y_p$ will be a linear combination of the terms in $Q(x)$ and **all of its linearly independant derivatives**. That's why the terms must have a finite number of derivatives. If the number of derivatives is infinite then we need [[Variation of Parameters]].
 
+> [!Todo] 
+> After a few weeks, the previous paragraph makes no sense. Why should $Q$ have finite number of derivatives?
+
+
 ### Case 2
 $Q(x)$ contains a term which, ignoring constant coefficients, is $x^k$ times a term $u(x)$ of $y_h$, where $k \geq 0$. In $y_p$ will then be a linear combination of $x^{k+1}u(x)$ and **all it's linearly independant derivatives** (ignoring constant coefficients). If in addition $Q(x)$ contains terms which belong to [[Undetermined Coefficient#Case 1|Case 1]], then the proper terms called for by this case must be included in $y_p$.
 
@@ -149,3 +153,13 @@ Applicable only if both of the following are fulfilled.
 2. $Q(x)$ contains a term which, ignoring constant coefficients, is $x^k$ times a term $u(x)$ in $y_p$ where $u(x)$ was obtained from the $r$ multiple root. 
 
 In this case, a particular solution $y_p$ will be a linear combination of $x^{k+r}u(x)$ and **all it's linearly independant derivatives**. If in addition $Q(x)$ contains terms which belong to [[Undetermined Coefficient#Case 1|Case 1]] and [[Undetermined Coefficient#Case 2|Case 2]], then the proper terms called for by theses cases must also be added to $y_p$.
+
+
+> [!Example] 
+> $$\ddot{x}+3\dot{x}+2x=e^{-3t}$$
+> - [ ] Complete this example
+> $$\ddot{x}+3\dot{x}+2x=\cos{\omega t}$$
+> 
+
+# Additionnal ressources
+[Steve Brunton](https://youtu.be/Jvmb2jeRaGE)
