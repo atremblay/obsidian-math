@@ -58,7 +58,7 @@ If $y'=F(x,y)$, then each curve for which $F(x,y)=k$ where $k$ is any number, wi
 
 Not sure how often this is used, but an isocline is a line that joins all points with the same derivative. In the example below, you can spot isoclines by going from top left to bottom right. All the arrows will points in the same direction. On the blue, orange and green lines, all the derivatives have the same value.
 
-![[isoclines.png]]
+<span class='centerImg'>![[isoclines.png|500]]</span>
 
 The isoclines will not necessarily be straight lines.
 
@@ -71,7 +71,8 @@ x^2 + 4y^2 &= k\\
 $$
 
 The following image overplots the isoclines for $k=1,3,4$.
-![[Pasted image 20211121141845.png]]
+<span class='centerImg'>![[Pasted image 20211121141845.png|500]]</span>
+
 
 ```python
 from pylab import *

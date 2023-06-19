@@ -11,4 +11,4 @@ $$
 \end{align}
 $$
 
-![[Pasted image 20230121161049.png]]
+![[Images/polar_coordinate_complex_plane.png]]

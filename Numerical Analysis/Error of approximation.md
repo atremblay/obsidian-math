@@ -26,7 +26,7 @@ $$
 
 The crux of this is that $e_r$ is divided by $\Delta t$ and that is smaller and smaller. So the round-off error gets bigger and bigger. There will be a tradeoff where a smaller $\Delta t$ will make $\textcolor{#1A5CA7}{\frac{e_r}{\Delta t}} \gt \textcolor{#5B840D}{\mathcal{O}(\Delta t^2)}$ and a bigger $\Delta t$ will make $\textcolor{#1A5CA7}{\frac{e_r}{\Delta t}} \lt \textcolor{#5B840D}{\mathcal{O}(\Delta t^2)}$.
 
-![[approximation_error.svg]]
+![[../Images/approximation_error.svg]]
 
 
 The total error of the approximation has an upper bound of

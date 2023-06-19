@@ -1,7 +1,7 @@
 
 ```dataviewjs
 // Get all pages from the root (the vault)
-const pages = dv.pages('')
+const pages = dv.pages('"Mathematics"')
 
 // This regex will find the contents of a specifically formatted callout
 const regex = /\n(.*)\[\!Question\](.*)\n/

@@ -1,10 +1,10 @@
------
-Equations involving **one** independant variable with its first or higher order derivatives
-e.g. $\frac{d^2y}{dx^2}=\frac{1}{1-x^2}$
 
-[[Partial differential equation]] involves more than one independant variable. 
+> [!Summary] 
+> Equations involving **one** independant variable with its first or higher order derivatives
+> e.g. $\frac{d^2y}{dx^2}=\frac{1}{1-x^2}$
+> 
+> [[Partial differential equation]] involves more than one independant variable. 
 
------
 
 Let $f(x)$ define a function of $x$ on an interval $I: a<x<b$. By an ordinary differential equation we mean an equation involving $x$, the function $f(x)$ and one or more of its derivates.
 
@@ -13,7 +13,7 @@ Q: How important is the exclusion of the boundaries on the interval?
 #### Order
 The order of the diffrential equation is the order of the higest derivate involved in the equation. e.g.
 
-**First order**
+**[[First Order DE|First order]]**
 
 - $\frac{dy}{dx}+y=0$
 - $y'=e^x$

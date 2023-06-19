@@ -185,7 +185,7 @@ It's just the same as the previous section, but with more inputs over time. It b
 ```
 
 
-![[forcing3.svg]]
+![[../Images/forcing3.svg]]
 
 
 # Ressources

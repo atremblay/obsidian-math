@@ -1,4 +1,4 @@
-![[spring.svg]]
+![[../Images/spring.svg|400]]
 
 The position of the mass with respect to time can be described by a second order ODE. Setting the problem is the difficult part.
 

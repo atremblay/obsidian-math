@@ -157,7 +157,7 @@ $$
 > plt.show()
 > ```
 > 
-> ![[mass_spring_damp.svg]]
+> ![[../Images/mass_spring_damp.svg]]
 
 
 # Stability

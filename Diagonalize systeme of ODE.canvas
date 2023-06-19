@@ -1,8 +1,8 @@
 {
 	"nodes":[
-		{"id":"6989f48df3619023","x":-1144,"y":117,"width":588,"height":592,"type":"file","file":"Linear Algebra/Jordan form.md"},
-		{"id":"cdc64ac8eb0d041e","x":-1074,"y":-675,"width":518,"height":564,"type":"file","file":"Linear Algebra/Diagonalization.md"},
-		{"id":"b442cebd862e238e","x":296,"y":-591,"width":643,"height":547,"type":"file","file":"Linear Algebra/Defective matrix.md"}
+		{"type":"file","file":"Mathematics/Linear Algebra/Jordan form.md","id":"6989f48df3619023","x":-1144,"y":117,"width":588,"height":592},
+		{"type":"file","file":"Mathematics/Linear Algebra/Diagonalization.md","id":"cdc64ac8eb0d041e","x":-1074,"y":-675,"width":518,"height":564},
+		{"type":"file","file":"Mathematics/Linear Algebra/Defective matrix.md","id":"b442cebd862e238e","x":296,"y":-591,"width":643,"height":547}
 	],
 	"edges":[
 		{"id":"3e9d7b9bedd3e063","fromNode":"cdc64ac8eb0d041e","fromSide":"right","toNode":"b442cebd862e238e","toSide":"left"},

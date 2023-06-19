@@ -11,6 +11,7 @@ tags:
 > $$
 > Solution: $$\boxed{x=\frac{1}{\textcolor{green}{r(y)}}\int \textcolor{green}{r(y)}f(y)dy}$$
 > where $\textcolor{green}{r(y)}=e^{\int p(y)dy}$
+> The only constant of integration we need to worry anywhere is in the last integral $\int r(y)f(y)dy$
 
 
 The standard form of a first order linear ODE is written as 
@@ -82,7 +83,19 @@ x &=\frac{1}{\cancel{C}e^{\int p(y)dy}}\int \cancel{C}e^{\int p(y)dy}f(y)dy \\
 \end{align}
 $$
 
-So we can simply say that $r(y)=e^{\int p(y)dy}$ and not bother with the integration constant.
+Similarly, we can drop the constant of integration in the integral of the exponential
+$$
+e^{\int p(y)dy} = e^{P(y) + C_1}= e^{P(y)}e^{C_1} = Ce^{P(y)}
+$$
+Where $P(y)$ is the integral of $p(y)$
+$$
+\begin{align}
+x &=\frac{1}{e^{\int p(y)dy}}\int e^{\int p(y)dy}f(y)dy \\
+&=\frac{1}{Ce^{P(y)}}\int Ce^{P(y)}f(y)dy \\
+&=\frac{1}{\cancel{C}e^{P(y)}}\int\cancel{C}e^{P(y)}f(y)dy \\
+\end{align}
+$$
+So we can simply say that $r(y)=e^{\int p(y)dy}$ and not bother with **any** of the integration constant.
 
 
 > [!Example]-
@@ -125,3 +138,7 @@ So we can simply say that $r(y)=e^{\int p(y)dy}$ and not bother with the integra
 > }
 > $$
 
+
+```dataview
+list from #integrating_factor 
+```

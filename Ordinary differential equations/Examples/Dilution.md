@@ -1,3 +1,5 @@
+[[@tenenbaum_ordinary_1985]] p.124
+
 ##### Example ^354736
 #example #homogeneous
 > [!Example] Statement
@@ -92,7 +94,7 @@ $$\boxed{x(t) = 100e^{-0.03t}+200}$$
 
 ```tikz 
 \usepackage{pgfplots}
-\pgfplotsset{compat=1.13,width=12cm}
+\pgfplotsset{compat=1.13,width=15cm}
 \begin{document} 
     \begin{tikzpicture}
     \begin{axis}[
@@ -831,6 +833,7 @@ $$\boxed{x(t)=t + 15}$$
         ] plot coordinates { (\T,0)  (\T, \X)};
     \end{axis} 
     \end{tikzpicture} 
+    
 \end{document} 
 ```
 
@@ -898,6 +901,7 @@ $$\boxed{x(t)=10e^{-\frac{t}{5}}+5}$$
         ] plot coordinates { (\T,0)  (\T, \X)};
     \end{axis} 
     \end{tikzpicture} 
+    
 \end{document} 
 ```
 

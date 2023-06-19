@@ -41,7 +41,7 @@ Imagine that an impulse function $f(t)$ is provided. Take the impulse at time 0 
 
 The impulse happens at time $\tau$ and we want to know the value at time $t$. The remaining time is $t-\tau$, we then need to calculate
 $$f(\tau)e^{\lambda(t-\tau)}$$
-![[variable_input.svg]]
+![[../Images/variable_input.svg]]
 Because there is a function of inputs, we can have the sum of all inputs at time $t$ with
 $$\int_{\tau=0}^{\tau=t} f(\tau)e^{\lambda (t-\tau)} \delta(t-\tau) d\tau \tag{3}$$
 
@@ -314,3 +314,5 @@ $$\int_{\tau=0}^{\tau=t} f(\tau)e^{\lambda (t-\tau)} \delta(t-\tau) d\tau \tag{3
 >     \end{tikzpicture} 
 > \end{document} 
 > ```
+
+

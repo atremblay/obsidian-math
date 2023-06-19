@@ -4,13 +4,19 @@ aliases:
     - "direction cosines"
 ---
 > [!summary]
+> > [!blank-container|right-small]
+> > > ![[direction cosines.svg]]
+> 
 > The direction cosines are defined, in 3 dimensions, as
-> $$\cos \alpha = \frac{OA}{OP}=\frac x d,\hspace{1em}\cos \beta = \frac{OB}{OP}=\frac y d, \hspace{1em}\cos \gamma = \frac{OC}{OP}=\frac z d$$
+> $$\begin{align}
+> \cos \alpha &= \frac{OA}{OP}=\frac x d \\
+> \cos \beta &= \frac{OB}{OP}=\frac y d \\
+> \cos \gamma &= \frac{OC}{OP}=\frac z d
+> \end{align}
+> $$
 > 
 > $x$, $y$ and $z$ are called *direction numbers*. 
 > 
-> <span class='centerImg'> ![[direction cosines.svg]] </span>
-
 
 # Properties
 Using the pythagorean theorem we have this property that squaring and summing the direction cosines equal to 1

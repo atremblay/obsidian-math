@@ -1,5 +1,5 @@
 Unless specified, all the examples below use continuously compounded interest rate. 
-
+[[@tenenbaum_ordinary_1985]] p.127
 ##### Example
 #example 
 > [!Example] Statement
@@ -92,6 +92,8 @@ $$
 
 > [!Example] (b)
 > If the money is being withdrawn at the rate of 300$/month beginning with the first month after the deposit.
+
+^b1e129
 
 Interest rate is continuous. So if $\dot{x}=0.05x$, then $x(t) = Ae^{0.05t}$. One month is $t=\frac{1}{12}$, then the capital is  $Ae^{\frac{0.05}{12}}$. At the end of the month, 300 is withdrawn. For simplicity of notation, $r=e^{\frac{0.05}{12}}$
 
@@ -195,6 +197,61 @@ $$
 > [!Example] (c)
 > Try to solve this problem assuming the more realistic situation of interest begin credited quarterly and 900$ withdrawn quarterly, beginning with the first quarter after the deposit. This no longer involves a differential equation. 
 
+It's pretty much the same thing as (b), but with $r=(1+\frac{0.05}{4})$. After 3 months, the capital is $Ar$ and withdrawal is 900
+
+Capital after $t$ periods of 3 months
+$$
+Ar^t - 900\frac{1-r^{t}}{1-r}
+$$
+If the capital is depleted after $20*4=80$ quarters
+$$
+\begin{align}
+Ar^{80} - 900\frac{1-r^{80}}{1-r} &= 0 \\
+\iff Ar^{80} &= 900\frac{1-r^{80}}{1-r} \\
+A &= 900\frac{1-r^{80}}{r^{80}(1-r)} \\
+\end{align}
+$$
+Whip out your calculator
+$$
+\begin{align}
+A &= 900\frac{1-r^{80}}{r^{80}(1-r)} \\
+& = 900\frac{1-(1+\frac{0.05}{4})^{80}}{(1+\frac{0.05}{4})^{80}(1-(1+\frac{0.05}{4}))} \\
+& = 900\frac{1-\left(1+\frac{0.05}{4}\right)^{80}}{-\frac{0.05}{4}\left(1+\frac{0.05}{4}\right)^{80}} \\
+&\approx 45347.99\$
+\end{align}
+$$
+```tikz 
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13,width=15cm}
+\begin{document} 
+    \begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle,
+        xlabel=$t$,
+        ylabel=$x(t)$,
+        enlargelimits,
+        samples=200
+    ]
+        \newcommand\R{(1+0.05/4)};
+        \newcommand\A{900/(\R^80) * (1-\R^80)/(1-\R)};
+        \addplot[domain=0:80, thick] {
+            (\A* \R^x) 
+            -900*(
+                1-\R^x
+            )/(
+                1-\R
+            )
+        };
+    \end{axis} 
+    \end{tikzpicture} 
+\end{document} 
+```
+
+
+> [!error]- What went wrong
+> Nothing with the calculations, only tikz. Better obsess over parenthesis everywhere. Not where which ones are required, but assume it's the dumbess calculator
+
+
 
 ---
 ##### Example
@@ -207,9 +264,91 @@ $$
 > [!Example] (a)
 > What amount must you deposit monthly at 5%?
 
+Suppose there is an initial capital $A$. The interest rate is continuous, so we know that after a month ($\frac{1}{12}$ of a year) the capital will be $Ae^{\frac{0.05}{12}}$. Then a monthly deposit is made. It's the same thing as [[#^b1e129]], but with deposits instead of withdrawal.
+
+$$
+x(t)=Ar^{t} + K\frac{1-r^{t}}{1-r}
+$$
+Where $A$ is the initial capital, $K$ is the monthly deposit and $r=e^{\frac{0.05}{12}}$ is the interest over a month.
+There are two unknowns to find, $A$ and $K$. Initially, at $t=0$ the amount of money is 0. 
+$$
+\begin{align}
+x(0)=0=Ar^{0} + \cancelto{0}{K\frac{1-r^{0}}{1-r}} \\
+\implies A = 0
+\end{align}
+$$
+Not a big shocker here. Then at the end of 30 years there is 45500$ in the bank
+$$
+\begin{align}
+x(30)&=45000= K\frac{1-r^{30}}{1-r} \\
+\implies K &\approx 54.57$
+\end{align}
+$$
+```tikz 
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13,width=12cm}
+\begin{document} 
+    \begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle,
+        xlabel=$t$,
+        ylabel=$x(t)$,
+        enlargelimits,
+        samples=200
+    ]
+        \newcommand\R{exp(0.05/12)};
+        \newcommand\K{45500*(1-\R)/(1-\R^30)};
+        \addplot[domain=0:30, thick] {
+            \K*(
+                1-\R^x
+            )/(
+                1-\R
+            )
+        };
+    \end{axis} 
+    \end{tikzpicture} 
+\end{document} 
+```
 
 
 > [!Example] (b)
 > What amount must you deposit semiannually if interest is credited semiannually at 5% instead of continuously? This problem no longer involves differential equations. 
 
 
+$$
+x(t)= K\frac{1-r^{t}}{1-r}
+$$
+with $r=(1+0.05/2)$. There will be $30*2$ periods
+
+$$
+\begin{align}
+x(60)=45500= K\frac{1-r^{60}}{1-r} \\
+\implies K=45500\frac{1-r}{1-r^{60}} \approx 334.58\$
+\end{align}
+$$
+
+```tikz 
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13,width=12cm}
+\begin{document} 
+    \begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle,
+        xlabel=$t$,
+        ylabel=$x(t)$,
+        enlargelimits,
+        samples=200
+    ]
+        \newcommand\R{(1+0.05/2)};
+        \newcommand\K{45500*(1-\R)/(1-\R^60)};
+        \addplot[domain=0:60, thick] {
+            \K*(
+                1-\R^x
+            )/(
+                1-\R
+            )
+        };
+    \end{axis} 
+    \end{tikzpicture} 
+\end{document} 
+```

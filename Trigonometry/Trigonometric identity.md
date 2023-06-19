@@ -1,4 +1,4 @@
-
+fi
 ### Reciprocal 
 
 The reciprocal trigonometric identities are:
@@ -44,9 +44,12 @@ In geometry, two angles are complementary if their sum is equal to 90 degrees. S
 
 ### Supplementary Angles
 
+> [!blank-container|right-medium]
+> ![[supplementary_angles.svg]]
+
+
 Two angles are supplementary if their sum is equal to 90 degrees. Similarly, when we can learn here the trigonometric identities for supplementary angles.
 
-![[supplementary angles.svg|350]]
 
 -   $\sin (180 –\theta) = \sin\theta$
 -   $\cos (180 - \theta) = -\cos\theta$

@@ -124,35 +124,39 @@ $$
 Plot with $x_0=1.5$, $b=2$ and $k=-3$
 Orange: Without forcing
 Green : Forcing (input)
-Cyan: With Forcing
+White: With Forcing
 
 ```tikz 
-\usepackage{pgfplots, tikz}
-\usetikzlibrary{positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16,width=12cm}
 \begin{document} 
-    \begin{tikzpicture}[scale=2.0] 
-        \draw[thin,color=gray] (0,0) grid (7.0,2.0); 
-        \draw[->] (0,0) -- (7.2,0) node[right] {$t$}; 
-        \draw[->] (0,0) -- (0,2.2) node[above] {$x(t)$}; 
-        \draw[color=cyan, domain=0:7, ultra thick] 
-            plot[samples = 100] (\x,
-                {exp(-3*\x)*1.5 + 2/3*(1-exp(-3*\x))}
-            )
-            node[above] {$1.5e^{-3t}+\frac 2 3(1-e^{-3t})$}; 
-        \draw[color=orange, domain=0:7, ultra thick] 
-            plot[samples = 100] (\x,
-                {exp(-3*\x)*1.5}
-            )
-            node[above] {$1.5e^{-3t}$}; 
-        \draw[color=green, domain=0:7, ultra thick] 
-            plot[samples = 100] (\x,
-                {2/3*(1-exp(-3*\x))}
-            )
-            node[right] {$b=2$}; 
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=middle,
+            xlabel=$t$,
+            ylabel=$x(t)$,
+            samples=200,
+            enlargelimits,
+            domain=0:2,
+        ]
+        \addplot[
+            color=orange,
+            ultra thick
+        ] {exp(-3*x)*1.5}
+            node[above] {$1.5e^{-3t}$};
+        \addplot[
+            color=green,
+            ultra thick
+        ] {2/3*(1-exp(-3*x))}
+            node[right] {$b=2$};
+        \addplot[
+            ultra thick,
+        ] {exp(-3*x)*1.5 + (2/3)*(1-exp(-3*x))}
+            node[above left] {$1.5e^{-3t}+\frac{2}{3} (1-e^{-3t}) $};
+    \end{axis} 
     \end{tikzpicture} 
 \end{document} 
 ```
-
 
 > [!Question] 
 > I would have expected the cyan line to start at 3.5 ($x_0+b=1.5+2$) at $t=0$. Why does it start at the exact same point? The math says that at $t=0$ two terms cancel, leaving only the initial condition, but it does not fit my intuition.

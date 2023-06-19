@@ -6,7 +6,8 @@
 > $$
 
 
-<span class='centerImg'>![[angle_between_lines.svg]]</span>
+> [!blank-container|right-medium]
+> ![[images/angle_between_lines.svg]]
 
 
 ### Perpendicular
