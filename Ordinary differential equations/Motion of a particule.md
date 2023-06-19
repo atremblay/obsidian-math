@@ -165,7 +165,8 @@ The ball cannot go lower than the ground. No idea how to solve this one above, b
         ]
         \newcommand\G{32};
         \addplot[
-            ultra thick
+            ultra thick,
+            black
         ] {40*\G*(x + 40*exp(-x/40)-40)};
         \addplot[
             mark=none,
@@ -193,7 +194,8 @@ The ball cannot go lower than the ground. No idea how to solve this one above, b
         ]
         \newcommand\G{32};
         \addplot[
-            ultra thick
+            ultra thick,
+            black
         ] {40*\G*(1 - exp(-x/40))};
     \end{axis} 
     \end{tikzpicture} 

@@ -268,6 +268,43 @@ $$\boxed{6-0.5481 \approx 5.4518}$$
 grams of sulfure are dissolved.
 
 
+```tikz
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16,width=10cm}
+\begin{document} 
+    \begin{tikzpicture}
+        \begin{axis}[
+            title={Undissolved Amount $x(t)$},
+            axis lines=middle,
+            xlabel=$t$,
+            ylabel=$x(t)$,
+            samples=200,
+            enlargelimits,
+            domain=0:400,
+        ]
+        \newcommand\C{0.6*(5/7)^(1/50)};
+        \addplot[
+            ultra thick,
+            gray
+        ] {(4^\C^x)/(1-\C^x)};
+        
+        \newcommand\T{250};
+        \newcommand\X{((4^\C^\T)/(1-\C^\T))}; 
+        \addplot[
+            mark=none,
+            dashed,
+            gray
+        ] plot coordinates { (0,\X) (\T, \X)}
+            node[above right] {$250$};
+        \addplot[
+            mark=none,
+            dashed,
+            gray
+        ] plot coordinates { (\T,0)  (\T, \X)};
+    \end{axis} 
+    \end{tikzpicture} 
+\end{document} 
+```
 
 
 ##### Example
