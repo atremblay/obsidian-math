@@ -9,7 +9,7 @@
 
 Use this image to prove it. We are looking to squeeze $ODA$ between two other values. This is a bit twisted because we start from somewhere else entirely to end up on that limit. It must have been found by doing something else and this conclusion came along.
 
-<span class='centerImg'>![[lim_sinx_over_x.svg|400]]</span>
+<span class='centerImg'>![[../Images/lim_sinx_over_x.svg|400]]</span>
 
 $$
 \text{area } OBA \lt \text{area of sector } ODA \lt \text{area } ODE

@@ -14,6 +14,10 @@
   
   
 
+> [!blank-container|right-medium]
+> ![[Images/divergence.svg]]
+> 
+
 ## Properties
 ### Linearity
 The divergence operator is linear
@@ -27,3 +31,5 @@ $$
 \vec{\nabla} \cdot \left(\alpha \vec{f}(x,y)\right) = \alpha \vec{\nabla} \cdot \vec{f}(x,y) 
 $$
 
+See also:
+- [[Curl Operator]]

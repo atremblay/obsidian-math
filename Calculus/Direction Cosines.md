@@ -5,7 +5,7 @@ aliases:
 ---
 > [!summary]
 > > [!blank-container|right-small]
-> > > ![[direction cosines.svg]]
+> > > ![[Images/direction cosines.svg]]
 > 
 > The direction cosines are defined, in 3 dimensions, as
 > $$\begin{align}

@@ -1,6 +1,6 @@
 
 > [!summary]
-> If $x=g(\theta)$ then we have this equivalence by the [[Chain Rule|chain rule]]
+> If $x=g(\theta)$ then we have this equivalence by the [[../Derivative/Chain Rule|chain rule]]
 > 
 > $$
 > \int f(x)dx = \int f(g(\theta))d g(\theta) = \int f(g(\theta))\frac{dg(\theta)}{d\theta} d\theta
@@ -8,7 +8,7 @@
 > In integration, if we can find something that can be used as $g(\theta)$ and $\frac{dg(\theta)}{d\theta}$ then we can subsitute and get the same integral 
 
 
-By the [[Chain Rule|chain rule]]
+By the [[../Derivative/Chain Rule|chain rule]]
 
 $$
 \frac{dF(g(x))}{dx} = \frac{d F(g(x))}{d g(x)} \frac{d g(x)}{dx}
@@ -48,7 +48,7 @@ $$
 \int \frac{d F(u)}{du}du = \int \frac{d F(u)}{du} \frac{du}{dx} dx
 $$
 
-The point of this is that if we can find a u-substituation to get in the form of the right-hand side, then we can do the integral on the left-hand side and get the result.
+The point of this is that if we can find a u-substitution to get in the form of the right-hand side, then we can do the integral on the left-hand side and get the result.
 
 
 > [!Tip]
@@ -71,3 +71,6 @@ Set $u = x^2$ and $du = 2xdx$
 
 $$\int 2x \sin(x^2)dx= \int sin(u)du = -\cos(u) + C = -\cos(x^2) + C$$
 
+```dataview
+table from #substitution_rule 
+```

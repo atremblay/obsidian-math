@@ -1,7 +1,7 @@
 
 Find the family of functions such that $A$ ($\Delta PQR$)  is constant. 
 
-![[1.svg]]
+![[Images/1.svg]]
 
 No matter where we take $P(x,y)$, $A$ needs to be the same. So, this point is essentially a constant in this problem. What will vary is the intersection of the slope and the x-axis at $Q(a,0)$. 
 
@@ -45,7 +45,7 @@ $$
 This would be our family of functions. A specific solution is obtained when we set a value for $C$.
 
 We now have to test this family of functions against an arbitrary point $P(x_0,y_0)$
-![[1.1.svg]]
+![[Images/1.1.svg]]
 
 We use $Q(b,0)$ instead of $Q(a,0)$ to avoid confusion on the notation. This is not the same point as above. $A$ is
 still the same constant as before. It's the central point of this whole problem.

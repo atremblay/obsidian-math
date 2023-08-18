@@ -47,7 +47,14 @@ aliases:
 table without ID url from "Mathematics/Machine Learning/Papers/LoRA.md"
 ```
 
+
+
+
 ###### TL;DR
+
+> [!blank-container|right-small]
+> ![[../Research/Images/LoRA.png]]
+
 Instead of fine-tuning a full model on a downstream task:
 - For a pretrained **and frozen** matrix $W \in \mathbb{R}^{d \times k}$, LoRA trains two additional matrices 
     - $A \in \mathbb{R}^{r \times k}$ and 
@@ -59,10 +66,9 @@ Instead of fine-tuning a full model on a downstream task:
 - Initialization: $A \sim \mathcal{N}(0, \sigma^2)$, $B=0$
 - This can be parallelized whereas other adaptive methods are more sequential (e.g. adding other intermediate layers in a transformer block)
 
-![[LoRA.png|300]]
 
 
-## Abstract
+#### Abstract
 An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example – deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose **Lo**w-**R**ank **A**daptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.
 
 

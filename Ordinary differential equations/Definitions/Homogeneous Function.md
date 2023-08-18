@@ -3,33 +3,44 @@ aliases:
     - "homogeneous function"
 ---
 
-Let $z=f(x,y)$ define $z$ as a function of $x$ and $y$ in a [[region]] $R$. The function $f(x,y)$ is said to be **homogeneous of order n** if it can be written as 
-$$f(x,y) = x^ng(u)$$
-where $u=\frac{y}{x}$ and $g(u)$ is a function of $u$. Alternatively
-$$f(x,y) = y^nh(u)$$
-where $u=\frac{x}{y}$ and $h(u)$ is a function of $u$. Alternatively
-$$f(tx,ty) = t^nf(x,y)$$
+Let $z=f(t,x(t))$ define $z$ as a function of $x(t)$ and $t$ in a [[region]] $R$. The function $f(t,x(t))$ is said to be **homogeneous of order n** if it can be written as 
+###### Alternative 1
+
+^dc5cc9
+
+$$f(t,x(t)) = t^ng(u)$$
+where $u=\frac{x(t)}{t}$ and $g(u)$ is a function of $u$. 
 
 
-> [!Example]-
+> [!Example]
 > $$
 > \begin{align}
-> f(x, y) &= x^2 + y^2log \frac{y}{x} \\
-> &= x^2\left(1 + \left(\frac{y}{x}\right)^2 \log \frac y x\right) \\
-> &= x^2\left(1 + u^2 \log u\right) \\
-> &= x^2g(u)
+> f(t, x(t)) &= t^2 + (x(t))^2log \frac{x(t)}{t} \\
+> &= t^2\left(1 + \left(\frac{x(t)}{t}\right)^2 \log \frac {x(t)} t\right) \\
+> &= t^2\left(1 + u^2 \log u\right) \\
+> &= t^2g(u)
 > \end{align}
 > $$
 > 
 > Homogeneous function of order 2
 
-> [!Example]-
+
+###### Alternative 2
+$$f(t,x(t)) = x(t)^nh(u)$$
+where $u=\frac{t}{x(t)}$ and $h(u)$ is a function of $u$. 
+
+###### Alternative 3
+$$f(wt,wx(t)) = w^nf(t,x(t))$$
+
+This is sort of a variable substitution.
+
+> [!Example]
 > Use same function as above
 > $$
 > \begin{align}
-> f(tx, ty) &= t^2x^2 + t^2y^2log \frac{ty}{tx} \\
-> &= t^2\left(x^2 + y^2 log \frac{y}{x}\right) \\
-> &= t^2f(x,y)
+> f(wt, wx(t)) &= w^2t^2 + w^2x(t)^2log \frac{wx(t)}{wt} \\
+> &= w^2\left(t^2 + x(t)^2 log \frac{x(t)}{y}\right) \\
+> &= w^2f(t,x(t))
 > \end{align}
 > $$
 > Homogeneous function of order 2

@@ -12,7 +12,8 @@ The arc length is the length of a curve between two points. The idea is pretty s
 
 $$S_{n}=\sum_{i=1}^n P_{i-1}P_{i}$$
 
-<span class='centerImg'>![[arc_length.svg]]</span>
+> [!blank-container|left-large]
+> ![[Images/arc_length.svg]]
 
 The more segments we have, the more accurate the measurement will be. Each segment has a $\Delta x_{i}$ and a $\Delta y_{i}$ that we can use to calculate its length.
 

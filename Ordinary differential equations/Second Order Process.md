@@ -129,7 +129,7 @@ Further simplification yields $19x=31 \iff x=\frac{19}{31}$. So 1.63 units of th
 
 
 ##### Example
-#example 
+#example #substitution_rule
 > [!Example] Statement
 > Six grams of sulfure are placed in a solution of 100cc of benzol which when saturated will hold 10 grams of sulfur. If 3 grams of sulfur are in the solution in 50 minutes, how may grams will be in the solution in 250 minutes?
 
@@ -214,7 +214,7 @@ $$
 $$
 
 > [!step]- Alternative step - Definite Integral
-> Working off of (1), we can do a definite integral with the condition (instead of an antiderivative)
+> Working off of (2), we can do a definite integral with the condition (instead of an antiderivative)
 > $$
 > \begin{align}
 > 100 \left(\int_6^3 \frac{1}{4x}\frac{dx}{dt} dt - \int_6^3 \frac{1}{4(4+x)}\frac{dx}{dt} dt\right) &= k\int_0^{50} dt \\
@@ -237,7 +237,7 @@ $$
 \end{align}
 $$
 > [!step]- Alternative step - Definite Integral
-> Again, working off of (1), we can do a definite integral 
+> Again, working off of (2), we can do a definite integral 
 > $$
 > \begin{align}
 > 100 \left(\int_6^x \frac{1}{4x}\frac{dx}{dt} dt - \int_6^x \frac{1}{4(4+x)}\frac{dx}{dt} dt\right) &= k\int_0^{t} dt \\
@@ -281,11 +281,12 @@ grams of sulfure are dissolved.
             samples=200,
             enlargelimits,
             domain=0:400,
+            draw={rgb,255:red,209;green,209;blue,209},
+            text={rgb,255:red,209;green,209;blue,209},
         ]
         \newcommand\C{0.6*(5/7)^(1/50)};
         \addplot[
             ultra thick,
-            gray
         ] {(4^\C^x)/(1-\C^x)};
         
         \newcommand\T{250};
@@ -293,13 +294,11 @@ grams of sulfure are dissolved.
         \addplot[
             mark=none,
             dashed,
-            gray
         ] plot coordinates { (0,\X) (\T, \X)}
             node[above right] {$250$};
         \addplot[
             mark=none,
             dashed,
-            gray
         ] plot coordinates { (\T,0)  (\T, \X)};
     \end{axis} 
     \end{tikzpicture} 
@@ -308,20 +307,43 @@ grams of sulfure are dissolved.
 
 
 ##### Example
-#example 
+#example #substitution_rule
 > [!Example] Statement
-> In (1.1) take $s_1=10$, $s_2=10$, $m=1$, $n=1$. If 5 units of $C$ are formed in 10 min, determine the number of $C$ units formed in 50 min.
+> In (1) take $s_1=10$, $s_2=10$, $m=1$, $n=1$. If 5 units of $C$ are formed in 10 min, determine the number of $C$ units formed in 50 min.
+
+$$
+\begin{align}
+\dot{x} &= k(10-x)^2 \\
+\int_0^5 \frac{1}{(10-x)^2} \frac{dx}{dt} dt &= k \int_0^{10} dt \tag{3}\\
+-\frac{1}{(10-x)}\bigg\lvert_0^5  &= kt\bigg \lvert_0^{10} \\
+-\left[\frac{1}{(10-5)} - \frac{1}{(10-0)}\right]  &= 10k \\
+\iff k  &= -1 \\
+\end{align}
+$$
+
+Changing the conditions in (3) and using $k=-1$
+
+
+$$
+\begin{align}
+\int_0^x \frac{1}{(10-x)^2} \frac{dx}{dt} dt &= - \int_0^{50} dt \tag{3}\\
+-\frac{1}{(10-x)}\bigg\lvert_0^x  &= -t\bigg \lvert_0^{50} \\
+-\left[\frac{1}{(10-x)} - \frac{1}{(10-0)}\right]  &= -50 \\
+\frac{x}{10-x} = 50 \\
+\iff x(t) = 8.\overline{3}
+\end{align}
+$$
 
 
 ##### Example
 #example 
 > [!Example] Statement
-> In (1.1) take $s_1=10$, $s_2=8$, $m=1$, $n=1$. If 5 unites of $C$ are formed in 5 min, determine the number of $C$ units formed in 10 min.
+> In (1) take $s_1=10$, $s_2=8$, $m=1$, $n=1$. If 5 unites of $C$ are formed in 5 min, determine the number of $C$ units formed in 10 min.
 
 ##### Example
 #example 
 > [!Example] Statement
-> In (1.1) take $m=1$, $n=1$
+> In (1) take $m=1$, $n=1$
 > 
 
 
@@ -409,3 +431,88 @@ grams of sulfure are dissolved.
 > [!Example] Statement
 > A substance containing 10 lb of moisture is placed in a sealed room, whose volume is 2000 cu ft and which when saturated can hold 0.015 lb of moisture per cubic foot. Initially the relative humidity of the air is 30 percent. If the substance loses 4 lb of moisture in 1 hr, how much time is required for the substance to lose 80 percent of its moisture content? Assume the substance loses moisture at a rate that is proportional to its moisture content and to the difference between the moisture content of saturated air and the moisture content of the air.
 
+- There will be a maximum of $2000 \times 0.015=30$ lbs of moisture when fully saturated
+- Starting humidity is 30%. 30% of fully saturated (that's what relative humidity means), $2000 \times 0.015 \times 0.3 = 9$ lbs already in the air
+- $x_0=10$ is the starting moisture of the substance
+- $x$ is the remaining moisture left in the substance
+- Current amount moisture need to account for the starting humidity: $\underbrace{x_0 - x}_{\text{From substance}} + 9$
+
+Giving
+$$
+\begin{align}
+\dot{x} = kx\left(\frac{30}{2000} - \frac{10-x+9}{2000}\right)
+\end{align}
+$$
+
+The rest is just following through the motion.
+
+$$
+\begin{align}
+\dot{x}  &= kx\left(\frac{11+x}{2000}\right) \\
+\dot{x} \frac{1}{x(11+x)} &= \frac{k}{2000} \\
+\dot{x} \left(\frac{-1}{11(11+x)} + \frac{1}{11x}\right) &= \frac{k}{2000}
+\end{align}
+$$
+
+> [!step]- [[../Partial Fraction Expansion|Partial Fraction Expansion]]
+> $$
+> \begin{align}
+> \frac{A}{11+x} + \frac{B}{x} &= \frac{1}{(11+x)x} \\
+> \frac{Ax+B(11+x)}{\cancel{(11+x)x}} &= \frac{1}{\cancel{(11+x)x}} \\
+> (A+B)x+11B &= 1 \\
+> \end{align}
+> $$
+> 
+> Match like-powers
+> 
+> $$
+> \begin{align}
+> A + B &= 0 \\
+> 11B &= 1
+> \end{align}
+> $$
+> 
+> Giving $A = -\frac{1}{11}$ and $B=\frac{1}{11}$
+> 
+> Partial fraction expansion gives
+> $$\frac{-1}{11(11+x)} + \frac{1}{11x}$$
+
+$$
+\begin{align}
+\int \left(\frac{-1}{11(11+x)} + \frac{1}{11x}\right) \frac{dx}{dt} dt  = \int \frac{k}{2000} dt   \\
+\int \left(\frac{-1}{11(11+x)} + \frac{1}{11x}\right) dx  = \frac{k}{2000} \int dt   \\
+\frac{1}{11}\left(\int \frac{-1}{(11+x)}dx + \int \frac{1}{x}dx\right)   = \frac{k}{2000} \int dt  \tag{I} \\
+\end{align}
+$$
+
+From this we can plug the know conditions (bounds for the integral)
+
+$$
+\begin{align}
+\frac{1}{11}\left(\int_{10}^6 \frac{-1}{(11+x)}dx + \int_{10}^6 \frac{1}{x}dx\right)   & = \frac{k}{2000} \int_0^1 dt   \\
+\frac{1}{11}\left[\ln(x) - \ln(11+x) \right]_{10}^6 &= \frac{k}{2000} \\
+\frac{1}{11}\left[\ln\left(\frac{x}{(11+x)}\right)\right]_{10}^6 &= \frac{k}{2000} \\
+\frac{1}{11}\left[\ln\left(\frac{6}{(11+6)}\right) - \ln\left(\frac{10}{(11+10)}\right)\right] &= \frac{k}{2000} \\
+\frac{1}{11} \ln\left(\frac{6}{17}\frac{21}{10}\right) &= \frac{k}{2000} \\
+\iff k &= \frac{2000}{11} \ln\left(\frac{126}{170}\right) \\ 
+&= \frac{2000}{11} \ln\left(\frac{63}{85}\right)
+\end{align}
+$$
+
+Now that we have the value for $k$, reuse ($I$) to have the final time. 80% of the substance's moisture is gone, so 2lbs is left.
+
+$$
+\begin{align}
+\frac{1}{11}\left(\int_{10}^2 \frac{1}{x}dx - \int_{10}^2 \frac{1}{(11+x)}dx\right) &= \frac{k}{2000} \int_0^t dt \\
+\frac{1}{11}\left[\ln\left(\frac{x}{11+x}\right)\right]_{10}^2 &= \frac{kt}{2000}\bigg\lvert_0^t \\
+\frac{1}{11}\left[\ln\left(\frac{2}{11+2}\right) - \ln\left(\frac{10}{11+10}\right)\right] &= \frac{kt}{2000} \\
+\frac{1}{11}\ln\left(\frac{2}{13}\frac{21}{10}\right) &= \frac{k}{2000} \\
+ \bcancel{\frac{1}{11}}\ln\left(\frac{42}{130}\right) &= \frac{\cancel{2000}}{\bcancel{11}}\frac{ \ln\left(\frac{63}{85}\right)t}{\cancel{2000}} \\
+ \iff t &= \frac{\ln\left(\frac{42}{130}\right)}{ \ln\left(\frac{63}{85}\right)} \approx 3.7722954115
+\end{align}
+$$
+
+
+> [!error]- What went wrong
+> - Made a mistake when using (1.1), forgot the $x$ in $kx$
+> - Signs, again...

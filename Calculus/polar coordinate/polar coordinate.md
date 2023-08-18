@@ -23,4 +23,4 @@ Just as $y$ is typically a function of $x$ ($f(x)$), $\rho$ is typically a funct
 $\rho$ will usually have a positive value and $\theta$ will range from 0 to $2 \pi$.
 
 
-<span class='centerImg'>![[Polar coordinate.svg]]</span>
+<span class='centerImg'>![[../Images/Polar coordinate.svg]]</span>

@@ -6,4 +6,4 @@ At each point we have the slope of the "original" curve with $F(x,y)$. So $dy = 
 
 See [[Direction Field]] for the source of this example. The lines below are three possible integral curves, depending on some initial conditions.
 
-![[Pasted image 20211121100624.png]] 
+![[../Calculus/Images/Pasted image 20211121100624.png]] 

@@ -7,7 +7,7 @@ $\mathbf{f(x)}$ may be a non-linear system. This is literally the set of instruc
 Take a vector field, every point in it has a direction of movement and taking a small step in that direction will bring us somewhere else. Could be useful to predict where a lifeboat lost as sea would be. Or how an oil spill will evolve and where we should deploy our ressources to clean the mess.
 
 
-![[Pasted Image 20211121100624.png|400]]
+![[../Calculus/Images/Pasted image 20211121100624.png|400]]
 
 To be more thourough, we could add a time variable as the system can change over time (non-autonomous). The system need not be the same foreever and ever.
 $$\mathbf{\dot{x}}=\mathbf{f(x,t)}$$

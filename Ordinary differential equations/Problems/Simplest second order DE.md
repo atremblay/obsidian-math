@@ -44,7 +44,7 @@ x(0) &= c_1\cos{\left(0\sqrt{k}\right)}+c_2\sin{\left(0\sqrt{k}\right)}\\
 \end{align}
 $$
 
-and velocity $v(0)=\dot{x}(0)=v_0$ (don't forget the [[Chain Rule]])
+and velocity $v(0)=\dot{x}(0)=v_0$ (don't forget the [[../../Calculus/Derivative/Chain Rule]])
 $$
 \begin{align}
 v(0)=\dot{x}(0) &= -c_1\sin{\left(0\sqrt{k}\right)}\sqrt{k}+c_2\cos{\left(0\sqrt{k}\right)}\sqrt{k}\\

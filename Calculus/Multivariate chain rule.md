@@ -15,7 +15,7 @@
 > }
 > $$
 
-This shows how to extend the concept of [[Chain Rule]] to multiple variables.
+This shows how to extend the concept of [[Derivative/Chain Rule]] to multiple variables.
 
 With function compositions like $u=f(x,y)$ where $x$ and $y$ are functions of other variables $x=g(s,t)$, $y=h(s,t)$, changing $s$ or $t$ will result in changes in $x$ and $y$ and those will affect $u$.
 

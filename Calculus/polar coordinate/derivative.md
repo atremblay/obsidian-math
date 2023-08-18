@@ -30,9 +30,9 @@ $$
 \Rightarrow &\boxed{\cot \textcolor{cyan}{\psi} =  \frac{\frac{\mathrm{d} \rho}{\mathrm{d} \theta}}{\rho}}
 \end{align}$$
 
-<span class='centerImg'>![[Polar coordinate derivative.svg]]</span>
+<span class='centerImg'>![[../Images/Polar coordinate derivative.svg]]</span>
 
-![[polar_derivative.gif]]
+![[../Images/polar_derivative.gif]]
 
 A more formal approach is to use the point $R$. We still want to look at the angle $\alpha$ as $\lim_{ \Delta \theta \to 0 } \cot \alpha = \cot \psi$
 

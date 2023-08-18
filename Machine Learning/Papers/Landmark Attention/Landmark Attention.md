@@ -27,7 +27,7 @@ table without ID url from "Mathematics/Machine Learning/Papers/Landmark Attentio
 While transformers have shown remarkable success in natural language processing, their attention mechanism's large memory requirements have limited their ability to handle longer contexts. Prior approaches, such as recurrent memory or retrieval-based augmentation, have either compromised the random-access flexibility of attention (i.e., the capability to select any token in the entire context) or relied on separate mechanisms for relevant context retrieval, which may not be compatible with the model's attention. In this paper, we present a novel approach that allows access to the complete context while retaining random-access flexibility, closely resembling running attention on the entire context. Our method uses a landmark token to represent each block of the input and trains the attention to use it for selecting relevant blocks, enabling retrieval of blocks directly through the attention mechanism instead of by relying on a separate mechanism. Our approach seamlessly integrates with specialized data structures and the system's memory hierarchy, enabling processing of arbitrarily long context lengths. We demonstrate that our method can obtain comparable performance with Transformer-XL while significantly reducing the number of retrieved tokens in each step. Finally, we show that fine-tuning LLaMA 7B with our method successfully extends its context length capacity up to $32 \mathrm{k}$ tokens, allowing for inference at the context lengths of GPT-4.
 
 
-## Introduction
+## 1 Introduction
 
 Large transformers have revolutionized language modeling and demonstrated remarkable abilities to perform various tasks with zero or few examples [4]. This success can be largely attributed to the attention mechanism, which allows each token to access the representation of any other token in each layer. However, this flexibility comes with quadratic computational cost and highly problematic memory footprint, limiting the number of tokens that can be attended to, and thus the context length.
 
@@ -59,7 +59,7 @@ The primary advantages of our method can be summarized as follows:
 
 Our implementation of landmark attention is accessible at https://github.com/epfml/ landmark-attention.
 
-## Related Work
+## 2 Related Work
 
 With the evolution of state-of-the-art commercial models and their applications towards very long context window lengths, such as 32k tokens (GPT-4 [24]) or even 100k (Claude [2]), the research question of efficient while accurate long context models is receiving increased attention.
 
@@ -71,7 +71,7 @@ Approximate and Sparse Attention. Various methods have also been proposed to red
 
 Context Length Extrapolation. Transformers have a well-known limitation in extrapolating to contexts longer than what was observed during training [26], even when relative positional encoding is used [35]. Current solutions to address this problem often result in weakened attention scores for long-range tokens, which undermines the benefits of a longer context [26, 35]. Moreover, these methods only work when combined with windowed attention, which restricts direct attention to long-range tokens [35]. We hypothesize that the limitation may partially stem from the model's learning of its own positional encoding with the use of causal masking, as demonstrated in [11]. This limitation poses a challenge as our goal is to enable access to long-range tokens during inference at distances that were not observed during training. We discuss solutions in Section 3.2.1.
 
-## Methodology
+## 3 Methodology
 
 In this paper, we mainly focus on the causal language modeling where each token can only attend to previous tokens in the input. We briefly discuss the extension of our method to the non-causal case in Appendix F.
 
@@ -81,21 +81,21 @@ More particularly, we assign a representative vector to each block such that a h
 
 To obtain the representative vector of a block, we introduce a new special token to the vocabulary, called the landmark token. We insert a landmark token after the last token of each block and train the model such that the key vector for this token becomes the representative vector we seek. The process is illustrated in Figure 1.
 
-We will first describe the method we use to train the landmark tokens in Section 3.1 and then describe the inference process in Section 3.2.
+We will first describe the method we use to train the landmark tokens in [[#3.1 Training Landmark Tokens|§3.1]] and then describe the inference process in Section 3.2.
 
 We note that an alternative for directly finding a candidate set of keys with high attention score is using a data structure that allows finding nearest neighbors of the query vectors efficiently such as FAISS [14]. In comparison, our method provides a retrieval method directly controlled by attention which can be more semantic-based. Furthermore, retrieving a block instead of a single token allows the attention to also access the local context around the token which may be more accommodating of observed classic attention patterns [19]. Finally, we point out the aforementioned data structures can also be applied on top of our method to search for relevant blocks.
 
-### Training Landmark Tokens
+### 3.1 Training Landmark Tokens
 
 In order to train the landmark tokens, we first go over the text corpus and add a landmark token after every $\ell_{\text {block }}$ tokens. Then we proceed to training the model using the standard batching method which feeds windows of $\ell_{\text {seq }}$ tokens to the model. In a list of $\ell_{\text {seq }}>\ell_{\text {block }}$ tokens, we train the model such that each landmark token represents the block consisting of all previous tokens until the previous landmark token (or the beginning of the input if no previous landmark token exists). The token is passed through the transformer as any other token while its representation is updated using the self-attention mechanism. Let us denote the index (token position) of the landmark corresponding to the $i$-th token's block by $p_{i}$. If the last block is incomplete and does not have a landmark token, we define $p_{i}:=\ell_{\text {seq }}$. If the $i$-th token is a landmark token, $p_{i}:=i$.
 
-In order to train the transformer to make use of landmark tokens, we alter the standard attention mechanism such that the attention weight for a token depends on the similarity of the query vector with both the token's key as well as with the key of its block's landmark token. To define the mechanism, we first define a generalized softmax function called Grouped Softmax. Given a vector $\mathbf{v} \in \mathbb{R}^{\text {lseq }}$ and a group index $\mathbf{g} \in \mathbb{N}^{\text {Seq }}$, Grouped Softmax applies softmax separately over elements belonging to the same group. (Using $g=\mathbb{1}_{\ell_{\text {seq }}}$ recovers the standard softmax function):
+In order to train the transformer to make use of landmark tokens, we alter the standard attention mechanism such that the attention weight for a token depends on the similarity of the query vector with both the token's key as well as with the key of its block's landmark token. To define the mechanism, we first define a generalized softmax function called Grouped Softmax. Given a vector $\mathbf{v} \in \mathbb{R}^{\ell_\text {seq }}$ and a group index $\mathbf{g} \in \mathbb{N}^{\ell_\text {seq }}$, Grouped Softmax applies softmax separately over elements belonging to the same group. (Using $\mathbf{g}=\mathbb{1}_{\ell_{\text {seq }}}$ recovers the standard softmax function):
 
 $$
-\sigma_{G}(\mathbf{v}, \mathbf{g})_{i}:=\text { GroupedSoftmax }(\mathbf{v}, \mathbf{g})_{i}:=\frac{e^{\mathbf{v}_{i}}}{\sum_{j: \mathbf{g}_{j}=\mathbf{g}_{i}} e^{\mathbf{v}_{j}}} .
+\sigma_{G}(\mathbf{v}, \mathbf{g})_{i}:=\operatorname { GroupedSoftmax }(\mathbf{v}, \mathbf{g})_{i}:=\frac{e^{\mathbf{v}_{i}}}{\sum_{j: \mathbf{g}_{j}=\mathbf{g}_{i}} e^{\mathbf{v}_{j}}} .
 $$
 
-We replace the softmax function after computing the attention scores with Grouped Softmax. For each block, we put its regular tokens in a separate group, ensuring that all regular tokens within the same block share the same group, while tokens outside the block are assigned to different groups. When computing the attention weights for the $i$-th token, landmark tokens for other blocks are placed in the same group as the $i$-th token. The landmark token for the $i$-token's block is ignored when computing the attention weights for the $i$-th token. In other words, the landmark token for each block is only used by tokens in other blocks. This is intuitive as the landmark token should only be accessed when tokens in other blocks require to retrieve information from the landmark's corresponding block. Building on the fact that $p_{j}=j$ only holds when the $j$-th token is a landmark token, we can define the grouping used for the $i$-th token more formally as
+We replace the softmax function after computing the attention scores with Grouped Softmax. For each block, we put its regular tokens in a separate group, ensuring that all regular tokens within the same block share the same group, while tokens outside the block are assigned to different groups. When computing the attention weights for the $i$-th token, landmark tokens for other blocks are placed in the same group as the $i$-th token. The landmark token for the $i$-token's block is ignored when computing the attention weights for the $i$-th token. In other words, ==the landmark token for each block is only used by tokens in other blocks==. This is intuitive as the landmark token should only be accessed when tokens in other blocks require to retrieve information from the landmark's corresponding block. Building on the fact that $p_{j}=j$ only holds when the $j$-th token is a landmark token, we can define the grouping used for the $i$-th token more formally as
 
 $$
 \mathbf{G}_{i, j}:=\left\{\begin{array}{lll}
@@ -116,11 +116,11 @@ $$
 \end{aligned}
 $$
 
-An exmaple illustration of various values defined above is given in Appendix A. Note that under this scheme, the attention weights sum to one as is the case for the standard softmax function. More importantly, attending to tokens in other blocks is gated by the attention score to the landmark token as expected. Since tokens in the same block and the landmark tokens share the softmax group, the model has to choose between attending to other blocks and current tokens. Thus, the intuition behind the grouping is to force the model to only attend to relevant blocks due to this trade-off.
+An example illustration of various values defined above is given in Appendix A. Note that under this scheme, the attention weights sum to one as is the case for the standard softmax function. More importantly, attending to tokens in other blocks is gated by the attention score to the landmark token as expected. Since tokens in the same block and the landmark tokens share the softmax group, the model has to choose between attending to other blocks and current tokens. Thus, the intuition behind the grouping is to force the model to only attend to relevant blocks due to this trade-off.
 
 We note that attention masks can be applied normally by ignoring the masked elements in the softmax (e.g. by setting $A_{i, j}$ to $-\infty$ on the masked elements in practice). Indeed we focus our experiments on the causal language modeling. We also point out that the grouping scheme can be further extended to introduce additional hierarchy for retrieval. For example, we refer the interested reader to Appendix D, where we briefly discuss a different grouping scheme which also trains a global retrieval gate token that controls whether retrieval from an earlier block needs to be performed. At inference, this gate can be used to decide whether a memory call is needed or the model already has the information it needs in the context. We leave further investigations of this setting for future work.
 
-### Inference
+### 3.2 Inference
 
 Similar to training, the input gets augmented by a landmark token after every $\ell_{\text {block }}$ tokens. Then, we break the input into chunks of $\ell_{\text {local }}$ length and iteratively feed chunks from the beginning to the end. To retrieve relevant blocks, each attention layer has access to a cache of previous blocks. The cache stores the key-value vectors for all tokens of those blocks, including the landmark token. Since
 
@@ -130,7 +130,7 @@ We start by discussing the most permissive retrieval scheme. When processing eac
 
 Under the above scheme, each token and each head can retrieve different blocks from the cache. It is possible to limit the retrieval flexibility in order to improve efficiency. For example, it is possible to merge the scores across heads by taking a maximum over the landmark attention scores (after applying softmax) of each head. Under this scheme, the same set of blocks is retrieved for all heads. It is also possible to take the maximum over different tokens, retrieving only $k$ blocks per head for all the tokens in the current window combined. We study the effect of these limitations at the end of Section 4.1. Unless otherwise stated, we experiment using the permissive scheme described above.
 
-#### Positional Encoding
+#### 3.2.1 Positional Encoding
 
 When computing the attention scores to cache elements (both landmark and normal tokens), it is important to correctly incorporate positional information. The transformer model is sensitive to positional information. It is also intuitive that the model would rely on position information in some cases. For example tokens right after the last memory block do not have access to any context and are unable to select memory blocks based on semantics. Instead, they need to rely on positional information to select the last memory block.
 
@@ -147,7 +147,7 @@ Note that we found out that when $k=1$ mapping memory blocks to a segment of at 
 
 We point out that the above approximation relies on the ability to add position information when performing the retrieval. In our experiments, we use Transformer models with Rotary positional encoding [32] which adds the position information to the key and query vectors just before computing the attention. Thus, we can store the key vectors without position information in the cache and add the position information when performing the retrieval according to the following scheme.
 
-### Memory & Computation
+### 3.3 Memory & Computation
 
 During training, our method has only a negligible overhead due to the computation of GroupedSoftmax. In particular, our method does not require maintaining a cache of previous values at training time. Furthermore, we decouple the training context length from the inference context length since it is possible to perform inference at any context length using the method described in Section 3.2 regardless of the train context length. As such, when comparing training time in terms of inference context length, we offer constant training time $((1))$ whereas training time for a standard transformer scales quadratically with the operational (inference) context length.
 
@@ -157,9 +157,9 @@ It is worth noting that the additional computational overhead introduced by perf
 
 Finally, we point out that our method can be naturally combined with flash attention [9], reducing the overhead further. Flash attention computes the attention matrix in blocks with the block size chosen to optimize memory accesses. The performance can be maximized by choosing the frequency of the landmark tokens to be equal to the aforementioned block size (or a multiple of it). Combination with more advanced extensions is also possible. For example, the landmark token can naturally be used to decide on dropping blocks when using block sparse flash attention. In this work, to reduce the implementation workload, we use a higher-level implementation and leave the efficient implementation as a future work.
 
-## Experiments
+## 4 Experiments
 
-### Language Modeling
+### 4.1 Language Modeling
 
 We first evaluate the efficacy of retrieving earlier blocks on two language modeling tasks which can be expected to have long-range token interactions: English language books (PG-19) [28] (3.7B tokens), and math papers from arXiv (5.6B tokens). We provide additional details about the datasets in Appendix B. Our results show that models trained with landmark tokens can retrieve relevant blocks, obtaining comparable perplexity as a Transformer-XL while reducing FLOPs. In contrast with Transformer-XL, using our method, the information retrieval is interpretable. Particularly, it is possible to understand which parts of the text was recovered to generate a certain answer, which can for example be useful to remove inaccurate information. Our results also demonstrate that using the inference mechanism described in Section 3.2, our models can be used at much longer context than the one used for training.
 
@@ -216,7 +216,7 @@ Finally, the number of retrieved blocks and the number of blocks stored in memor
 ###### Granularity of Cache Block Retrieval
 Block retrieval can be performed on different levels of granularity. At the most granular level, the set of retrieved blocks can be different for each head and each token. This setting is the same as the model experiences during training. However, it is possible to further limit this granularity at inference, for increased system throughput. In this section we evaluate the effect of maintaining the same set of retrieved blocks across tokens or across heads. The results are presented in Table 2 which also shows the total number of retrieved block, with the same block retrieved by different token or head counted multiple times. While reducing the flexibility has a noticeable adverse effect on performance, the model still improves over the baseline. In particular, we note that it is possible to retrieve the same set of blocks for all tokens (which varies across heads) while only suffering 0.23 points in perplexity. To provide further insights into the expected improvement in speed gained from using a less flexible selection scheme, we further discuss the distribution of the retrieved blocks in Appendix C.
 
-### Fine-Tuning Pre-Trained Models
+### 4.2 Fine-Tuning Pre-Trained Models
 
 We demonstrate the possibility of fine-tuning a large language model using landmark's token and therefore extending the model's context length. Namely, we fine-tune LLaMA 7B [36] for 15000 steps using our method. To reduce computation, we fine-tune the model with context length 512 . We use the sample subset of RedPajama[^1] for the fine-tuning which closely follows the dataset curation process used for training LLaMA.
 
@@ -240,7 +240,7 @@ We evaluate the efficacy of our method by comparing model's ability to recover a
 > 
 > **Figure 3**: Prompt format used for comparing retrieval accuracy of the vanilla LLaMA 7B and its counterpart fine-tuned with landmarks. The points marked with a red cross represent cases where the model ran out of memory. Points marked with a green star use a more efficient inference mechanism (see Appendix G). Inference is done by feeding the segment in windows of length 250 tokens (excluding the inserted landmark tokens). The top $k=4$ landmarked blocks are retrieved. Retrieval accuracy is measured for a fixed total prompt length, by using the suffix and prefix filler. Results are averaged over 50 random generation of the pass key (a random number between 1 and 50000), which each time is located at a random position in the full-length prompt. The space before and after the pass key is filled accordingly by the suffix and prefix filler. The gray box marks the region where the prompt length is within lengths used during original LLaMA training.
 
-## Future Work
+## 5 Future Work
 
 Extrapolating Positional Encoding. One of the obstacles in attaining infinite context length is the inability of models to attend to context lengths much larger than those they were trained on. In this work, we provide a special indexing method which can be combined with landmark tokens to bypass this issue. However, as a result, the model can only attend to tokens that are too far based on their semantic (and not their position). While this is an important improvement and facilitates extrapolation to large context lengths, it can be expected that the performance would be further improved if the exact indexing method can be used. Unfortunately, existing proposals limit (or completely disable) attention to far tokens which defeats our purpose. While we briefly discuss a possible solution for models with landmark tokens in Appendix E, we leave a more thorough investigation as future work. We note that once such method is developed, it can be directly combined with landmark tokens, yielding inference capabilities at any length.
 
@@ -248,7 +248,7 @@ Hierarchical Landmarks. In large-scale settings, the landmark tokens can be stor
 
 Training with Cache. For simplicity, in this work we focus on using the standard training procedure. While we expect the standard softmax mechanism to closely resemble the retrieval at inference, given the special indexing scheme, it is possible that the model would gain additional benefit from incorporating the cache during training. We leave investigation of such training variants as a future work.
 
-## Conclusion
+## 6 Conclusion
 
 In conclusion, this work presents a novel method for training attention to retrieve relevant blocks from memory. Unlike previous methods that rely on recurrence to create memory, our approach enables direct access to previous tokens, ensuring accurate information retrieval without the problem of slowly forgetting past data. We have demonstrated that our method achieves comparable performance to recurrent methods such as Transformer-XL while utilizing less computational resources. Additionally, our attention-based retrieval process allows for tracking and interpretability, providing insights into the information used to generate the output. Importantly, our results highlight the ability of our approach to handle significantly longer context lengths than those encountered during training. Moreover, we have shown that this capability can efficiently be incorporated into existing pre-trained models through fine-tuning, showcasing improved retrieval capabilities in the LLaMA 7B language model. Overall, our method enables efficient inference with arbitrary context lengths, making it suitable for accessing large inputs and processing fine-grained information within the large context.
 
@@ -270,7 +270,7 @@ arXiv Math We use the cleaned arXiv math subset of proof-pile[^2] dataset. The d
 
 PG-19 PG-19 is a large dataset (3.7B tokens in the training dataset) of English books that were published before 1919 and were retrieved from the Project Gutenberg archive. This dataset is widely used for evaluating model capabilities in utilizing long-range token interactions [34, 39].
 
-## Number of Unique Retrieved Blocks
+## C Number of Unique Retrieved Blocks
 
 
 > [!blank-container|right-medium]
@@ -286,7 +286,7 @@ Moreover, the results demonstrate a significant decrease in the number of unique
 
 Finally, when allowing the set of retrieved blocks to vary across tokens but not heads, it is still possible to observe improvement in the number of unique retrieved blocks which can reduce the bandwidth needed to load blocks from the cache. At the same time, better perplexities can be achieved in this setting.
 
-## Context Miss Token
+## D Context Miss Token
 
 In this section, we demonstrate how to create additional hierarchy in the landmark structure by simply changing the grouping. In particular, we use a new grouping scheme to train a new special token, called context miss token (CMT). CMT is always placed at the beginning of the input (at the special position -1 ) and is used to signal the need to retrieve landmarked blocks from the memory. To train this token, we change the grouping scheme so that attention to some of the blocks is regulated by CMT, similar to how landmark tokens act as gateways to the tokens in their respective blocks. In particular, let us denote $L_{\mathrm{CMT}}$ as the set of landmark tokens that are controlled by CMT. Then, using the same notation as in Section 3.1, we use the following grouping during training (For brevity, in the below formulation we assume that the negative of all preceding conditions hold for each case):
 

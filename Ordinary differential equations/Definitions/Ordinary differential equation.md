@@ -77,7 +77,7 @@ But then, the implicit solution may not be valid everywhere. It can be rewritten
 
 Because we cannot isolate *y* easily, we have to resort to a graph (which would not be possible in higher dimension, but for now it will do).
 
-![[Pasted image 20211024184006.png]]
+![[../../Calculus/Images/Pasted image 20211024184006.png]]
 
 ```python
 from sympy import Eq, symbols, plot_implicit

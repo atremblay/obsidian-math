@@ -7,7 +7,7 @@
 
 
 > [!blank-container|right-medium]
-> ![[images/angle_between_lines.svg]]
+> ![[Images/angle_between_lines.svg]]
 
 
 ### Perpendicular

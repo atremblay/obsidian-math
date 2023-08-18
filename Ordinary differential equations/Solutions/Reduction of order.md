@@ -36,7 +36,7 @@ y_2''&=y_1u'+y_1'u+y_1'u+y_1''\int u(x)dx \\
 &= y_1u'+2y_1'u+y_1''\int u(x)dx
 \end{align}
 $$
-Replacing these in the [[Homogeneous Function|homogeneous function]]
+Replacing these in the [[../Definitions/Homogeneous Function|homogeneous function]]
 $$
 \begin{align}
 &f_2(x)y_2''+f_1(x)y_2'+f_0(x)y_2 \\

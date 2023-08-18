@@ -3,6 +3,7 @@ tags:
     - "first_order" 
     - "solution"
 ---
+- [ ] There are mistakes here  see page 95-96
 
 > [!summary]
 > Special form of an ODE on which we can use the [[Integrating factor|integrating factor]]

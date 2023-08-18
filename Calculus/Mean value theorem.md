@@ -13,7 +13,7 @@
 > > 
 > > where $x < x_1 < x + \Delta x$
 > > 
-> > <span class='centerImg'>![[mean value theorem.png|250]]</span>
+> > <span class='centerImg'>![[Images/mean value theorem.png|250]]</span>
 >
 >
 >

@@ -1,4 +1,4 @@
-Given a function (or data) $f(t)$, the [[Calculus/Derivative|derivative]] on the right is given by
+Given a function (or data) $f(t)$, the [[../Calculus/Derivative/Derivative|derivative]] on the right is given by
 $$\frac {\mathrm{d}f}{\mathrm{d}t} = \lim_{\Delta t \to 0} \frac {f(t+\Delta t) - f(t)}{\Delta t}$$
 
 > [!NOTE]- Derivative on the left and middle
@@ -113,7 +113,7 @@ $$
 The <mark class="hltr-purple">leading order error term</mark> is now in the order $\mathcal{O}(\Delta t^2)$. So if we reduce $\Delta t$ by 10 times, then the error is 100 times smaller.  
 
 
-![[derivative.svg]]
+![[../Calculus/Images/derivative.svg]]
 
 
 > [!NOTE]- Why not always use the central difference

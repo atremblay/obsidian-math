@@ -14,7 +14,7 @@ The perpendicular distance from the origin to the plane is $\sqrt{A^2+B^2+C^2}$.
 
 Any plane has a normal vector $N=\langle a,b,c \rangle$, with length $l=\sqrt{a^2+b^2+c^2}$,  which is perpendicular to it. The normal can be positioned anywhere, the important point is the size of the vector.
 
-<span class='centerImg'>![[images/plane_equation2.svg]]</span>
+<span class='centerImg'>![[Images/plane_equation2.svg]]</span>
 
 If we have a known point $P(x_0, y_0, z_0)$ and any other point $R(x, y, z)$, both on the plane, their difference will also lie on the plane and it will be perpendicular to the normal vector. That line is defined by $R-P= \langle x,y,z \rangle - \langle x_0,y_0,z_0 \rangle =\langle x-x_0,y-y_0,z-z_0 \rangle$ 
 
@@ -49,7 +49,7 @@ where $d=ax_0+by_0+cz_0$
 - The angle between $OQ$ and $OP$ is $\theta$
 - By the [[Direction Cosines#Angle between two lines|angles between two lines]], $\cos \theta = \cos \alpha \cos\alpha' + \cos\beta\cos\beta'+\cos\gamma\cos\gamma'$ 
 
-<span class='centerImg'>![[plane_equation.svg]]</span>
+<span class='centerImg'>![[Images/plane_equation.svg]]</span>
 
 Because the triangle $OQP$ is a right triangle
 $$

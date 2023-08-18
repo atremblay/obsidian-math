@@ -67,6 +67,27 @@ $$
 > 3. A term such as $(x+d)^3$ has the exponent three **outside** the parenthesis. Hence $(x+d)^3$ appears three times in the denominator, once as $\textcolor{violet}{(x+d)}$, the second time as $\textcolor{lime}{(x+d)^2}$, and the third time as $\textcolor{lightblue}{(x+d)^3}$.
 
 
+> [!example] 
+> $$
+> \begin{align}
+> \frac{2}{u^2(2u+1)}&=\frac{A u+B}{u^2}+\frac{C}{2u+1} \\
+> \frac{2}{u^2(2u+1)}&=\frac{(Au+B)(2u+1)+C u^2}{u^2(2u+1)} \\
+> 2&=2Au^2+Au+2Bu+B+C u^2 \\
+> 2&=(2A+C) u^2+(A+2B)u+B \\
+> \end{align}
+> $$
+>  Matching coefficients of powers of $u$ gives
+> $$B=2, 2A+C = 0, A+2B=0 \implies A =-4, C=8$$
+> Replace
+> $$
+> \begin{align}
+> \frac{-4u+2}{u^2}+\frac{8}{2u+1} &=\frac{(-4u+2)(2u+1)+ 8u^2}{u^2(2u+1)} \\
+> &=\frac{-8u^2+4u -4u+2+ 8u^2}{u^2(2u+1)} \\
+> &=\frac{2}{u^2(2u+1)} \\
+> \end{align}
+> $$
+
+
 > [!NOTE] 
 > There are a few more tips and tricks to do partial fraction expansion, but they are not noted here. Check Lesson 26A, p. 284, of [[../Reading notes/@tenenbaum_ordinary_1985|@tenenbaum_ordinary_1985]]
 

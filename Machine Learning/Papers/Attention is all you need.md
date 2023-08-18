@@ -45,6 +45,8 @@ url:
 table without ID url from "Mathematics/Machine Learning/Papers/Attention is all you need.md"
 ```
 
+- [ ] Need to explain implementation details in PyTorch. The `tgt_mask` versus `tgt_key_padding_mask` is a bit confusing.
+
 ##### TL;DR
 1.  Introduction of the Transformer: The paper "Attention is All You Need" presents the Transformer, a novel neural network architecture designed to address sequence-to-sequence tasks with better efficiency and scalability compared to traditional RNNs and LSTMs.
 2.  Self-attention mechanism: The Transformer leverages self-attention, allowing it to process input sequences in parallel rather than sequentially, improving computational efficiency and enabling the model to capture long-range dependencies.

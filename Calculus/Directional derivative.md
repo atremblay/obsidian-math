@@ -6,7 +6,7 @@
 > }
 > $$
 > > [!blank-container|right-small]
-> > ![[images/directional_derivative_2D.svg]]
+> > ![[Images/directional_derivative_2D.svg]]
 > > Figure 1
 >  
 > where $\alpha, \beta, \gamma$ are the direction angles that the directed line $PQ$ makes with the positive x-, y- and z-axes, is the directional derivative of $u$ at $P$  and in the direction determined by $\alpha, \beta,\gamma$
@@ -86,7 +86,7 @@ Where $\mathbf{d}$ is a vector of the [[Direction Cosines|direction cosines]] in
 Because the direction of $s$ is linear, it does not matter how long it is, the direction cosines will stay the same. Considering that $s$ is a vector with an $x$ and $y$ component, let's change the notation a little bit
 
 > [!blank-container|right-small]
-> ![[images/directional_derivative_2D_vec.svg]]
+> ![[Images/directional_derivative_2D_vec.svg]]
 > > Figure 2
 > 
 
@@ -113,7 +113,7 @@ $$
 ## Maximum direction
 
 > [!blank-container|left-medium]
-> <span class='centerImg'>![[directional_derivative.svg|400]]</span>
+> <span class='centerImg'>![[Images/directional_derivative.svg|400]]</span>
 
 An interesting manipulation is to find what is the steepest direction. We are using the case where $u=f(x,y,z)$, three variables (6) instead of two like the above (5).
 $$

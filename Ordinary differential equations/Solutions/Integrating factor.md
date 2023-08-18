@@ -31,7 +31,7 @@ $$
 \iff x &=\frac{1}{r(y)}\int r(y)f(y)dy
 \end{align}
 $$
-Using the [[Chain Rule|chain rule]] of derivative
+Using the [[../../Calculus/Derivative/Chain Rule|chain rule]] of derivative
 $$
 \begin{align}
 \frac{d}{dy}\left[r(y)x\right]=r(y)x'+r'(y)x=\underbrace{r(y)x'+r(y)p(y)x = r(y)f(y)}_{\textit{From above}}
