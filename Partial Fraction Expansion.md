@@ -89,7 +89,7 @@ $$
 
 
 > [!NOTE] 
-> There are a few more tips and tricks to do partial fraction expansion, but they are not noted here. Check Lesson 26A, p. 284, of [[../Reading notes/@tenenbaum_ordinary_1985|@tenenbaum_ordinary_1985]]
+> There are a few more tips and tricks to do partial fraction expansion, but they are not noted here. Check Lesson 26A, p. 284, of [[Reading notes/@tenenbaum_ordinary_1985|@tenenbaum_ordinary_1985]]
 
 
 ```dataview

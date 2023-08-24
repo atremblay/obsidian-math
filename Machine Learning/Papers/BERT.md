@@ -50,13 +50,13 @@ One vector for each of these are summed up:
 These vectors are the inputs going into the model. Obviously they must be of the same size if we want to add them up.
 
 > [!blank-container]
-> ![[BERT input.png]]
+> ![[../../../Explorance/Research/Images/BERT input.png]]
 
 
 ### Pre-training
 Pre-training is done with two different tasks. 
 
-![[BERT pre-training.png|450]]
+![[../../../Explorance/Research/Images/BERT pre-training.png|450]]
 
 #### Next Sentence Prediction (NSP)
 
@@ -79,7 +79,7 @@ These vectors are fed to a tiny head. Something really light weight. Then the wh
 
 > While the LM is used by all task, this is NOT a multitask model. It's a different model for each tasks.
 
-![[BERT fine-tune.png|525]]
+![[../../../Explorance/Research/Images/BERT fine-tune.png|525]]
 
 #### NER
 No CRF is used. Every token output are independant. Or rather, there are not transition matrix from one token to the next. Since the transformer attends to everything, we can say that the tokens are modeled jointly, but the hidden states (entites) are not modeled jointly. 
@@ -115,7 +115,7 @@ A non-null answer is returned when $\text{span} > \text{span}_{null} + \tau$ whe
 
 ### Ablation studies
 
-![[BERT ablation results.png|400]]
+![[../../../Explorance/Research/Images/BERT ablation results.png|400]]
 
 
 ### References

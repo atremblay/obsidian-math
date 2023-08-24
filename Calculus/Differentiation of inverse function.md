@@ -22,7 +22,7 @@ $$
 $$
 
 
-The limit ([[Properties#Quotient rule|quotient rule]]) only then apply to the denominator (numerator stays the same since it does not involve $\Delta x$).
+The limit ([[Limits/Properties#Quotient rule|quotient rule]]) only then apply to the denominator (numerator stays the same since it does not involve $\Delta x$).
 
 $$
 \lim_{\Delta x \rightarrow 0}\frac{1}{\frac{\Delta y}{\Delta x}} = \frac{1}{\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}}= \frac{1}{\frac{dy}{dx}}

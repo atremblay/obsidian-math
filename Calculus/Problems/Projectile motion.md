@@ -72,7 +72,7 @@ $$
 
 **First term**
 
-Using the [[Trigonometric identity#Double Angle|double angle]] identity $\cos^2(\theta) - \sin^2(\theta) = \cos(2\theta)$ (easier to carry around)
+Using the [[../../Trigonometry/Trigonometric identity#Double Angle|double angle]] identity $\cos^2(\theta) - \sin^2(\theta) = \cos(2\theta)$ (easier to carry around)
 
 $$\textcolor{orange}{\frac{d}{d\theta}}\frac{V^2\textcolor{orange}{\sin(\theta)\cos(\theta)}}{32}=\frac{V^2\textcolor{orange}{\left(\cos^2(\theta) - \sin^2(\theta)\right)}}{32} = \frac{V^2\textcolor{orange}{\cos(2\theta)}}{32}$$
 
@@ -221,7 +221,7 @@ $$
 
 Suppose that a ball is thrown and you want to know the initial velocity, then you need to have the initial angle and the total distance travelled. The calculations are easier if we also have the time of flight. 
 
-If $h=0$, the whole thing simplifies quite a bit with the [[Trigonometric identity#Products|product identity]] 
+If $h=0$, the whole thing simplifies quite a bit with the [[../../Trigonometry/Trigonometric identity#Products|product identity]] 
 
 $$
 \begin{align}

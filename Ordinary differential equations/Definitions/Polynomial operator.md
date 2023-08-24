@@ -13,7 +13,7 @@ P(D)y&=(a_nD^n+\ldots+a_1D+a_0)y \\
 &= Q(x)
 \end{align}
 $$
-Different notation for the same thing like in [[Undetermined Coefficient]].
+Different notation for the same thing like in [[../Solutions/Undetermined Coefficient]].
 
 # Properties
 ## Linear 

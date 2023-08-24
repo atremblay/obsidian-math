@@ -1,6 +1,6 @@
-When the [[Eigenspace|dimension of the eigenspace]] is not equal to the multiplicity of its corresponding eigenvalue $\lambda$, then it's not possible to [[Diagonalization|diagonalize]] a square matrix $\mathbf{A}$.
+When the [[Definitions/Eigenspace|dimension of the eigenspace]] is not equal to the multiplicity of its corresponding eigenvalue $\lambda$, then it's not possible to [[Diagonalization|diagonalize]] a square matrix $\mathbf{A}$.
 
-The best thing we can do is to build a matrix $\mathbf{P}$ with [[generalized eigenvectors]] to have something that is approximately diagonal
+The best thing we can do is to build a matrix $\mathbf{P}$ with [[Generalized eigenvectors]] to have something that is approximately diagonal
 $$\mathbf{P^{-1}AP}=\mathbf{J}\iff\mathbf{AP}=\mathbf{PJ}$$
 where $\mathbf{J}$ is a jordan matrix.
 

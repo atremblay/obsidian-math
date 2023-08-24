@@ -1,5 +1,5 @@
 Unless specified, all the examples below use continuously compounded interest rate. 
-[[@tenenbaum_ordinary_1985]] p.127
+[[../../Reading notes/@tenenbaum_ordinary_1985]] p.127
 ##### Example
 #example 
 > [!Example] Statement
@@ -58,7 +58,7 @@ $$
 \frac{dx}{dt} = \lim_{\Delta t \rightarrow 0}\frac{\Delta x}{\Delta t} &= 0.05x-3600
 \end{align}
 $$
-Using [[Separation of variables]],
+Using [[../Solutions/Separation of variables]],
 $$
 x(t)=Ce^{0.05t}+72000
 $$

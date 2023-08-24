@@ -3,7 +3,7 @@
 > [!Example] Statement
 > The number of bacteria in a yeast culture grows at a rate which is proportional to the number present. If the population of a colony of yeast bacteria doubles in one hour, find the number of bacteria which will be present at the end of 3.5 hours.
 
-Using [[Separation of variables|separation of variables]]
+Using [[../Solutions/Separation of variables|separation of variables]]
 $$\lim_{\Delta t \rightarrow 0}\frac{\Delta x}{\Delta t} = \frac{dx}{dt} = kx \implies x(t)=x_0e^{kt}$$
 In this problem we do not care about the initial population value other than there is one, $x_0$.
 
@@ -15,7 +15,7 @@ $$x(3.5) = x_0e^{3.5\ln 2} \approx 11.31x_0  $$
 > The death rate of an ant colony is proportional to the number present. If no births were to take place, the population at the end of one week would be reduced by one-half. However because of births, the rate of which is also proportional to the population present, the ant population doubles in 2 weeks. Determine the birth rate of the colony per week.
 
 Split the problem in two. Start with the scenario with pure deaths.
-Using [[Separation of variables|separation of variables]]
+Using [[../Solutions/Separation of variables|separation of variables]]
 $$\frac{dx}{dt} = -k_dx \implies x(t)=x_0e^{-k_dt}$$
 where $k_d$ is the proportion of death.
 

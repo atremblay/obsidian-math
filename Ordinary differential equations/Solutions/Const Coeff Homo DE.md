@@ -23,7 +23,7 @@ ar^2 + br + c=0
 \end{align}
 $$
 
-> [[Characteristic equation]]: $ar^2 + br + c=0$
+> [[../../Calculus/Characteristic equation]]: $ar^2 + br + c=0$
 
 The unknown here is $r$ and it can be solved with the quadratic formula.
 $$
@@ -43,8 +43,8 @@ $$\boxed{x=c_1e^{r_1t}+c_2e^{r_2t}+\ldots+c_ne^{r_nt}}$$
 
 If $b^2-4ac>0$ then we have two real and distinct roots, $r_1$ and $r_2$, so two different solutions
 $$\textcolor{lime}{x_1}=e^{r_1t}\hspace{2em}\textcolor{cyan}{x_2}=e^{r_2t}$$
-#### [[General solution]]
-One is not a scalar multiple of the other, so they are independant and the [[general solution]] is
+#### [[../../Calculus/General solution]]
+One is not a scalar multiple of the other, so they are independant and the [[../../Calculus/General solution]] is
 
 $$\boxed{x=c_1\textcolor{lime}{e^{r_1t}}+c_2\textcolor{cyan}{e^{r_2t}}}$$
 #### Specific solution
@@ -78,7 +78,7 @@ $$
 \end{array}
 \right]
 $$
-This ties back to [[General solution]]
+This ties back to [[../../Calculus/General solution]]
 
 ### Case 2: Repeated root 
 ---
@@ -92,13 +92,13 @@ If $b^2-4ac=0$ then we have repeated root. Unlike case 1, we cannot set $x_1=e^{
 Instead, we do this little trick $x_1=e^{rt}$ and $x_2=\textcolor{cyan}{t}e^{rt}$. $x_2$ may be surprising, but 
 
 This works as: 
-1. $te^{rt}$ is a solution. Pluging it into $ax'' + bx' + cx=0$ will have the $\textcolor{cyan}{t}$ disappear and the rest is the same. See [[Lin. Ind. of Func#Wronskian|Wronskian]].
-2. $te^{rt}$ is linearly independant from $e^{rt}$. The [[Existence and uniqueness#Theorem Linear independance|theorem of linear independance]] says that two solutions are dependant if one is equal to the other times a **constant**. Here $t$ is not a constant, it's the dependant variable.
+1. $te^{rt}$ is a solution. Pluging it into $ax'' + bx' + cx=0$ will have the $\textcolor{cyan}{t}$ disappear and the rest is the same. See [[../../Calculus/Lin. Ind. of Func#Wronskian|Wronskian]].
+2. $te^{rt}$ is linearly independant from $e^{rt}$. The [[../Existence and uniqueness#Theorem Linear independance|theorem of linear independance]] says that two solutions are dependant if one is equal to the other times a **constant**. Here $t$ is not a constant, it's the dependant variable.
 
 This trick can be applied as many times as we need. Simply use $\textcolor{cyan}{t^2},\textcolor{cyan}{t^3},\ldots$
 
-#### [[General solution]]
-One is not a scalar multiple of the other, so they are independant and the [[general solution]] is
+#### [[../../Calculus/General solution]]
+One is not a scalar multiple of the other, so they are independant and the [[../../Calculus/General solution]] is
 
 $$\boxed{x=c_1e^{rt}+c_2\textcolor{cyan}{t}e^{rt}}$$
 #### Specific solution
@@ -134,13 +134,13 @@ If $b^2-4ac<0$ then we have a complex pair of roots (square root of a negative n
 $$r=\alpha \pm i\beta$$
 and the two linearly independant solutions will be 
 $$x_1=e^{\alpha + i\beta},\hspace{1em}x_2=e^{\alpha - i\beta}$$
-These are perfectly fine and can work for the [[general solution]]
+These are perfectly fine and can work for the [[../../Calculus/General solution]]
 $$x=c_1e^{(\alpha + i\beta)t}+c_2e^{(\alpha - i\beta)t}$$
-#### [[General solution]]
+#### [[../../Calculus/General solution]]
 
 But we can modify it so that the solution deals with real numbers and not complex numbers.
 
-By using [[Euler's formula]] 
+By using [[../../Calculus/Euler's formula]] 
 $$
 \begin{align}
 x_1=e^{\left(\alpha + i\beta\right)t} &= e^{\alpha t}e^{i\beta t} \\
@@ -186,7 +186,7 @@ $$
 > All of the above is to show a methodology and not a plug-and-play type of thing. Let's take this
 > $$x'''+x=0$$
 > Guess: $x=e^{rt}$
-> [[Characteristic equation]]: $r^3 + r = 0$
+> [[../../Calculus/Characteristic equation]]: $r^3 + r = 0$
 > 
 > Try to find the roots
 > $$
@@ -198,7 +198,7 @@ $$
 > $$
 > $r_1=0, r_2=-i, r_3=i$
 > 
-> So a [[general solution]] could be 
+> So a [[../../Calculus/General solution]] could be 
 > $$
 > \begin{align}
 > x&=c_1e^{r_1t}+c_2e^{r_2t}+c_3e^{r_3t} \\
@@ -220,7 +220,7 @@ $$
 > $$x^{(4)} - xy''' + xy'' -x'=0$$
 > 
 > Guess:  $x=e^{rt}$
-> [[Characteristic equation]]: $r^4 -3r^3 + 3r^2 - r = 0$
+> [[../../Calculus/Characteristic equation]]: $r^4 -3r^3 + 3r^2 - r = 0$
 > 
 > Find the roots. This is a case by case. Comes with experience
 > $$

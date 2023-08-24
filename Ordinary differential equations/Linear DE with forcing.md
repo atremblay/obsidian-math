@@ -45,11 +45,11 @@ Obviously if the input/forcing vector is zero then we have the normal base case 
 ## No initial condition, one single input
 Suppose that the initial condition is zero in $(1)$, then nothing happens forever and ever because things never gets off the ground in the solution $(2)$.
 
-But with a system that has forcing, or input, then the state of the system can change, be it at time zero or at a later time. If I have a [[Mecanical vibration#Higher order DE|mass on a spring]] that is not initially stretched or compressed (no initial condition) and I whack it with a hammer at some other time, then the system will start to move.
+But with a system that has forcing, or input, then the state of the system can change, be it at time zero or at a later time. If I have a [[Problems/Mecanical vibration#Higher order DE|mass on a spring]] that is not initially stretched or compressed (no initial condition) and I whack it with a hammer at some other time, then the system will start to move.
 
-To understand the input dynamics, it's better to look at an input at a specific time. To model this we need the [[Dirac Delta Function]] and set 
+To understand the input dynamics, it's better to look at an input at a specific time. To model this we need the [[../Calculus/Dirac Delta Function]] and set 
 $$\mathbf{u}(\tau) = \delta(t-\tau)$$
-and set $\mathbf{B}$ to some sort of initial conditions that we will call $\mathbf{b}_0$ (basically the same thing as $\mathbf{x}_0$). The [[Dirac Delta Function]] acts as a switch. At that specific point in time, an input is given to the system, very rapidly. 
+and set $\mathbf{B}$ to some sort of initial conditions that we will call $\mathbf{b}_0$ (basically the same thing as $\mathbf{x}_0$). The [[../Calculus/Dirac Delta Function]] acts as a switch. At that specific point in time, an input is given to the system, very rapidly. 
 
 Now, because there is an input to the system at some time $\tau$, $\mathbf{\dot{x}}(t)$ is no longer zero and it follows the dynamics of $\mathbf{Ax}$. In this diagram $x$ is represented as a scalar, but it's a vector.
 

@@ -1,4 +1,4 @@
-[[System of ODE]]
+[[../Ordinary differential equations/System of ODE]]
 $$\mathbf{\dot{x}}(t)=\mathbf{A}\mathbf{x}(t) \implies\mathbf{\dot{x}}(t)=\mathbf{f(x(t))}$$
 
 $\mathbf{x}$ is a vector representing the state of a system 
@@ -28,7 +28,7 @@ $$
 &= (\mathbb{I} + \Delta t\mathbf{A})\mathbf{x_k}
 \end{align}$$
 
-The interesting thing is that $\mathbb{I} + \Delta t\mathbf{A}$ are the first two terms of the [[Matrix exponential|Taylor expansion]]
+The interesting thing is that $\mathbb{I} + \Delta t\mathbf{A}$ are the first two terms of the [[../Linear Algebra/Matrix exponential|Taylor expansion]]
 $\mathbf{x}_{k+1}=e^{\mathbf{A}\Delta t}\mathbf{x}_{k}$
 
 
@@ -80,7 +80,7 @@ $$
 
 
 > [!Example]- Mass on a spring
-> [[Mecanical vibration]]
+> [[../Ordinary differential equations/Problems/Mecanical vibration]]
 > 
 > $$
 > \begin{align}
@@ -90,7 +90,7 @@ $$
 > \end{align}
 > $$
 > 
-> To make a more readable [[Characteristic equation]] we do a change of variable (that seems out of nowhere, but it comes from other people's experience)
+> To make a more readable [[../Calculus/Characteristic equation]] we do a change of variable (that seems out of nowhere, but it comes from other people's experience)
 > 
 > $$\omega_0 = \sqrt \frac k m, \zeta = \frac c {2 \sqrt{km}}$$
 > $$
@@ -109,7 +109,7 @@ $$
 > \end{align}
 > $$
 > 
-> As a [[System of ODE]]
+> As a [[../Ordinary differential equations/System of ODE]]
 > 
 > $$
 > \begin{align}
@@ -189,7 +189,7 @@ $$
 So if $\lvert \beta\rvert > 1$, the system will blow up to infinity and is unstable.
 If $|\beta| < 1$, the system will shrink to zero and is stable.
 
-If $\beta=a+bi$ is complex, then $R = \sqrt {a^2+b^2}$ and using [[Polar coordinate in complexe plane]]
+If $\beta=a+bi$ is complex, then $R = \sqrt {a^2+b^2}$ and using [[../Polar coordinate in complexe plane]]
 $$
 \begin{align}
 \beta &= Re^{i\theta} \\

@@ -6,7 +6,7 @@
 If a body moves in a horizontal direction, as on a table or platform, a frictional force develops, which operates to stop the progress of the motion. This frictional force is due to
 
 1. The [[../../Newtons's Laws/Second Law|Gravitational Force]] of the earth pressing the body to the platform $mg$
-2. The [[../Definitions/Coefficient of Friction|coefficient of friction]] of the surface $\mu$
+2. The [[Coefficient of Friction|coefficient of friction]] of the surface $\mu$
  
 
  From experience we know that it requires a greater force to begin the movement of an object than it does to keep it moving. There are thus two coefficients of friction, one called static friction, which operates at the start of the motion, the other called sliding friction, which operates after the motion has begun.

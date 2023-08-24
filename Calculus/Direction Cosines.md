@@ -47,7 +47,7 @@ $$
 \end{align}
 $$
 
-By the [[Trigonometric identity#Supplementary Angles]] we know that these two values will be $\gamma_1$ and $\gamma_2=\pi - \gamma_1$ 
+By the [[../Trigonometry/Trigonometric identity#Supplementary Angles]] we know that these two values will be $\gamma_1$ and $\gamma_2=\pi - \gamma_1$ 
 
 $$
 \begin{align}

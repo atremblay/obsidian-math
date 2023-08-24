@@ -21,7 +21,7 @@ In other words, set the constants to something, plug it in the DE and if it equa
 
 > $f(x)$ is one solution among many. This is NOT a general solution
 
-Need to be careful with the [[Function#Domain and Range|domain]] on which the function is defined. $xy'=1$ has *no* solution in the interval $-1 < x < 1$. Formally, $y=log|x| + x$.
+Need to be careful with the [[../Ordinary differential equations/Definitions/Function#Domain and Range|domain]] on which the function is defined. $xy'=1$ has *no* solution in the interval $-1 < x < 1$. Formally, $y=log|x| + x$.
 
 $$
 y= 

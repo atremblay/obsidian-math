@@ -3,7 +3,7 @@ aliases:
     - "homogeneous function"
 ---
 
-Let $z=f(t,x(t))$ define $z$ as a function of $x(t)$ and $t$ in a [[region]] $R$. The function $f(t,x(t))$ is said to be **homogeneous of order n** if it can be written as 
+Let $z=f(t,x(t))$ define $z$ as a function of $x(t)$ and $t$ in a [[Region]] $R$. The function $f(t,x(t))$ is said to be **homogeneous of order n** if it can be written as 
 ###### Alternative 1
 
 ^dc5cc9

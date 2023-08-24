@@ -19,12 +19,12 @@ tags: #model
 
 [Paper](https://arxiv.org/pdf/2107.02137)
 
-![[ERNIE 3.0 framework.png]]
+![[../../../Explorance/Research/Images/ERNIE 3.0 framework.png]]
 
  
   
 
-- We propose a unified framework ERNIE 3.0, which combines [[Autoregressive model|auto-regressive]] network and auto-encoding network so that the trained model can handle both natural language understanding and generation tasks through zero-shot learning, few-shot learning or fine-tuning.
+- We propose a unified framework ERNIE 3.0, which combines [[../../../Explorance/Research/Terminology/Autoregressive model|auto-regressive]] network and auto-encoding network so that the trained model can handle both natural language understanding and generation tasks through zero-shot learning, few-shot learning or fine-tuning.
 - We pre-train large scale knowledge enhanced models with 10 billion parameters and evaluate them with a series of experiments on both natural language understanding and natural language generation tasks. Experimental results show that ERNIE 3.0 consistently outperforms the state-of-the art models on 54 benchmarks by a large margin and achieves the first place on the SuperGLUE benchmark.
 
 

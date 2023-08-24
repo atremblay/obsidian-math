@@ -23,11 +23,11 @@ f_2(x_1,x_2,\ldots,x_n) \\
 f_n(x_1,x_2,\ldots,x_n)
 \end{bmatrix}
 $$
-A [[System of ODE]] can still be expressed this way, but since each $\frac{dx_i}{dt}$ is a linear combination of all other states, we write is as $\dot{\mathbf{x}}= \mathbf{A}\mathbf{x}$.
+A [[../System of ODE]] can still be expressed this way, but since each $\frac{dx_i}{dt}$ is a linear combination of all other states, we write is as $\dot{\mathbf{x}}= \mathbf{A}\mathbf{x}$.
 
 Much of the tricks that we know for linear systems, such as [[Linear ODE#Principle of Superposition|superposition]], do not work. But we if zoom in on [[Fixed point|fixed points]], written as $\mathbf{\bar{x}}$, then we can use them. At $\mathbf{\bar{x}}$, the system does not change anymore
 $$\mathbf{\dot{\bar{x}}}=\mathbf{f}(\mathbf{\bar{x}})=\mathbf{0}$$
-To achieve this zoom, we need to do a [[Taylor's theorem#Generalization|Taylor expansion]] around a fixed point $\mathbf{\bar{x}}$ at $\mathbf{x}=\mathbf{\bar{x}} + \mathbf{\Delta x}$. $\mathbf{x}$ is arbitrarily close (by $\mathbf{\Delta x}$) to $\mathbf{\bar{x}}$.
+To achieve this zoom, we need to do a [[../../Calculus/Taylor's theorem#Generalization|Taylor expansion]] around a fixed point $\mathbf{\bar{x}}$ at $\mathbf{x}=\mathbf{\bar{x}} + \mathbf{\Delta x}$. $\mathbf{x}$ is arbitrarily close (by $\mathbf{\Delta x}$) to $\mathbf{\bar{x}}$.
 
 $$
 \begin{align}
@@ -39,11 +39,11 @@ $$
 The rate of change at $\mathbf{x}$ is now approximately a linear ODE in terms of $\mathbf{\Delta x}$. 
 
 > [!todo] Taylor expansion
-> The [[Taylor's theorem|taylor expansion]] does not cover the exact same notation as here. That's because that example only uses one function of x and y, but here we have n such functions. So just expand on that.
+> The [[../../Calculus/Taylor's theorem|taylor expansion]] does not cover the exact same notation as here. That's because that example only uses one function of x and y, but here we have n such functions. So just expand on that.
 
 
 > [!Important]
-> See [[Hartman-Grobman theorem]], not every fixed point can be linearlized.
+> See [[../Hartman-Grobman theorem]], not every fixed point can be linearlized.
 
 
 > [!important]

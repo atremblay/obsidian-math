@@ -32,7 +32,7 @@ Overtime, [[GLUE|GLUE]] got too close to human performance, leaving very little 
 
 The success of these models on GLUE has been driven by ever-increasing model capacity, compute power, and data quantity, as well as innovations in model expressivity (from recurrent to bidirectional recurrent to multi-headed transformer encoders) and degree of contextualization (from learning representation of words in isolation to using unidirectional contexts and ultimately to leveraging bidirectional contexts).
 
-![[GLUE benchmark.png]]
+![[../../../Explorance/Research/Images/GLUE benchmark.png]]
 
 
 #### References

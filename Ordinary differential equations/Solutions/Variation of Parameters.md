@@ -18,15 +18,15 @@ Easier to explain with a second order generic DE
 $$f_2(x)y''+f_1(x)y'+f_0(x)y=Q(x)$$
 
 
-#### Step 1: [[Complementary function]]
-We need to have the [[Complementary function|complementary function]] 
+#### Step 1: [[../Definitions/Complementary function]]
+We need to have the [[../Definitions/Complementary function|complementary function]] 
 of the equation above. If the $f_i(x)$ are not constants then it will often be very difficult to get the $n$ independant solutions.  If they are constants then we know a few ways (e.g. [[Undetermined Coefficient]]). For the rest we will do as if $f_i(x)$ are constants. 
 
 First solve the homogeneous version
 $$a_2y''+a_1y'+a_0y=0$$
 With $a_2\neq 0$
 
-And find the solutions $y_1$ and $y_2$, giving the [[Complementary function|complementary function]]
+And find the solutions $y_1$ and $y_2$, giving the [[../Definitions/Complementary function|complementary function]]
 $$y_h(x)=c_1y_1(x)+c_2y_2(x)$$
 
 #### Step 2: Calculate the derivatives
@@ -70,7 +70,7 @@ u_1'y_1+u_2'y_2&=0 \\
 u_1'y_1'+u_2'y_2'&=\frac{Q(x)}{a_2}
 \end{align}
 $$
-[[Solve equations|Solutions]] are
+[[../../Linear Algebra/Solve equations|Solutions]] are
 $$
 u_1'=\frac{
     \left| {
@@ -105,10 +105,10 @@ u_2'=\frac{
     }
 $$
 
-The denominator in both is the [[Lin. Ind. of Func#Wronskian|Wronskian]].
+The denominator in both is the [[../../Calculus/Lin. Ind. of Func#Wronskian|Wronskian]].
 
 $$u_1(x)=\int u_1'(x)dx, \hspace{2em}u_2(x)=\int u_2'(x)dx$$
-Plug these in the particular solution $y_p$ and finally get the [[general solution]]
+Plug these in the particular solution $y_p$ and finally get the [[../../Calculus/General solution]]
 $$
 \begin{align}
 y&=y_h+y_p \\
@@ -136,7 +136,7 @@ Up to our ability to integrate, this always works if we have $y_1$ and $y_2$.
 > \end{align}
 > $$
 > 
-> [[Characteristic equation]]: $r^2 + 1=0 \rightarrow r = \pm \sqrt{-1} = \pm i$
+> [[../../Calculus/Characteristic equation]]: $r^2 + 1=0 \rightarrow r = \pm \sqrt{-1} = \pm i$
 > 
 > We have a [[Const Coeff Homo DE#Case 3 Complex pair of roots|complex pair of roots]] (with no real part, $\alpha = 0,\beta=1$), so the solution will have the form
 > $$
@@ -223,7 +223,7 @@ Up to our ability to integrate, this always works if we have $y_1$ and $y_2$.
 > 
 > We made the variation of parameters (change the constants in the homogeneous version to functions of x) that our solution would look like 
 > $$y=u_1(x)\cos x + u_2(x)\sin x $$
-> We now have the coefficient $u_1$ and $u_2$, so we have a solution (not a [[general solution]], but **a** solution).
+> We now have the coefficient $u_1$ and $u_2$, so we have a solution (not a [[../../Calculus/General solution]], but **a** solution).
 
 
 > [!Question] 

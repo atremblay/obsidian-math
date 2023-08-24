@@ -5,6 +5,9 @@
 > The path traced by a body which always moves in the direction of a fixed point or of another moving object is called a pursuit curve.
 
 ## Example
+
+^07afa4
+
 #example 
 ### Statement
 
@@ -230,7 +233,7 @@ $$
 x \frac{dy}{dx}=y-k \sqrt{x^{2}+y^{2}} \tag{g}
 $$
 
-This equation is of the [[Definitions/Homogeneous Function|homogeneous type]]. It can therefore be solved by [[Solutions/Variable Substitution in DE|Variable Substitution in DE]]. Note that $x,y\ge 0$ since we are working with positive coordinates.
+This equation is of the [[../../Definitions/Homogeneous Function|homogeneous type]]. It can therefore be solved by [[../../Solutions/Variable Substitution in DE|Variable Substitution in DE]]. Note that $x,y\ge 0$ since we are working with positive coordinates.
 $$
 u=\frac y x, \qquad y^\prime=u^\prime x + u
 $$
@@ -259,7 +262,7 @@ $$
 \end{align}
 $$
 
-Using the [[../Calculus/Integration/Cheatsheet#^9a7c4a|integral]] on (j)
+Using the [[../../../Calculus/Integration/Cheatsheet#^9a7c4a|integral]] on (j)
 $$
 \begin{align}
 -k[\log (x)-\log (a)]&=\left[\log \left(u+\sqrt{1+u^2}\right)-\log\left(0+\sqrt{1+c^2}\right)\right] \tag{k} \\
@@ -279,7 +282,37 @@ $$
 \end{align}
 $$
 
-We have finally
+> [!step]- Alternative step
+> We can use the indefinite integral and the initial condition to find (m) again
+> $$
+> \begin{align}
+> -k \int \frac{1}{x} d x&=\int \frac{1}{\sqrt{1+u^2}} du \\
+> -k \log (x)+C&=\log \left(u+\sqrt{1+u^2}\right) \\
+> C x^{-k}&=u+\sqrt{1+u^2}  \\
+> \left(Cx^{\cdot k}-u\right)^2&=1+u^2 \\
+> y^2-2 Cu x^{-k}+c^2 x^{-2 k}&=1+u^2 \\
+> C^2 x^{2 k}-1=2 C\frac{y}{x} x^{-k}&=2C y x^{-(k+1)} \\
+> \frac{\left(C^2 x^{-2 k}-1\right) x^{k+1}}{2C}&=y \\
+> \end{align}
+> $$
+> 
+> Using the initial condition that at $x=a, y=0$, we can find the value of $C$
+> $$
+> \begin{align}
+> \frac{\left(C^2 a^{-2 k}-1\right) a^{k+1}}{2C}&=0 \\
+> C^2 a^{-2 k+k-1}-a^{k+1}&=0 \\
+> C^2&=\frac{a^{k-1}}{a^{-k+1}}=a^{2k} \\
+> C&= a^k
+> \end{align}
+> $$
+> Plugging back the value of $C$, we end up with (m)
+> $$
+> \begin{aligned}
+> y& =\frac{a}{2}\left[\left(\frac{x}{a}\right)^{1-k}-\left(\frac{x}{a}\right)^{1+k}\right] \\
+> \end{aligned}
+> $$
+
+Replace $k$ with its value set in (f), we have finally
 $$
 y=\frac{a}{2}\left[\left(\frac{x}{a}\right)^{1-(w / v)}-\left(\frac{x}{a}\right)^{1+(w / v)}\right] \tag{n}
 $$
@@ -294,7 +327,7 @@ Equation (n) enables us to obtain interesting conclusions in regard to the path 
 Wind speed $w=$ plane speed $v$. In this case (n) becomes
 
 $$
-y=\frac{a}{2}\left(1-\frac{x^{2}}{a^{2}}\right), \quad x^{2}=-2 a\left(y-\frac{a}{2}\right), \tag{s}
+y=\frac{a}{2}\left(1-\frac{x^{2}}{a^{2}}\right), \quad x^{2}=-2 a\left(y-\frac{a}{2}\right), \tag{o}
 $$
 
 which is the equation of a parabola, Fig. 17.12. Note that the plane will never reach its destination $T$.
@@ -480,6 +513,11 @@ which is the equation of a parabola, Fig. 17.12. Note that the plane will never 
 \end{document} 
 ```
 
+
+##### Case 2. 
+Wind speed $w>$ plane speed $v$. In this case $w / v>1$ so that $1-(w / v)<0$. Hence as $x \rightarrow 0,\left(\frac{x}{a}\right)^{1-(w / v)}\left[=\left(\frac{a}{x}\right)^{(w / v)-1}\right] \rightarrow \infty$. We see from (n), therefore, that as $x \rightarrow 0, y \rightarrow \infty$. Again the plane will never reach $T$. A rough graph of its path is shown in Fig. 17.13 with $w=2 v$. 
+
+
 ```tikz
 \usepackage{pgfplots}
 \usetikzlibrary{calc}
@@ -650,14 +688,8 @@ which is the equation of a parabola, Fig. 17.12. Note that the plane will never 
 ```
 
 
-
-
-##### Case 2. 
-Wind speed $w>$ plane speed $v$. In this case $w / v>1$ so that $1-(w / v)<0$. Hence as $x \rightarrow 0,\left(\frac{x}{a}\right)^{1-(w / v)}\left[=\left(\frac{a}{x}\right)^{(w / v)-1}\right] \rightarrow \infty$. We see from (r), therefore, that as $x \rightarrow 0, y \rightarrow \infty$. Again the plane will never reach $T$. A rough graph of its path is shown in Fig. 17.13 with $w=2 v$. 
-
-
 ##### Case 3
-Wind speed $w<$ plane speed $v$. In this case $w / v<1$, so that $1-(w / v)>0$. We see from (r), therefore that when $x=0$, $y=0$. Hence the plane will reach the town $T$. A rough graph of its path is shown in Fig. 17.14, with $v=2 w$.
+Wind speed $w<$ plane speed $v$. In this case $w / v<1$, so that $1-(w / v)>0$. We see from (n), therefore that when $x=0$, $y=0$. Hence the plane will reach the town $T$. A rough graph of its path is shown in Fig. 17.14, with $v=2 w$.
 
 
 ```tikz
@@ -830,6 +862,7 @@ Wind speed $w<$ plane speed $v$. In this case $w / v<1$, so that $1-(w / v)>0$. 
 ```
 
 
+
 ## Example 
 ### Statement
 Solve the problem of Example 17.1 by using polar coordinates.
@@ -840,9 +873,7 @@ The components of the wind velocity $w$ in the radial and transverse directions 
 $$
 \frac{d r}{d t}=w \sin \theta, \quad r \frac{d \theta}{d t}=w \cos \theta .
 $$
-
-![](https://cdn.mathpix.com/cropped/2023_07_30_ca1c1f7b3544dd2eae87g-186.jpg?height=440&width=787&top_left_y=1088&top_left_x=204)
-
+![[Pasted image 20230822152639.png]]
 Figure 17.21
 
 Hence the effective velocity of the plane in the radial direction, taking into account the wind's speed $w$ and the plane's speed $v$, is
@@ -903,21 +934,94 @@ $$
 
 ### Statement
 
-Solve the problem of Example 17.1 if the wind is blowing with a velocity $w$ in a direction which makes an angle $\alpha$ with the vertical, Fig. 17.31.
+A pilot always keeps the nose of his plane pointed toward a city T due west of his starting point. If his speed is o miles per hour and a wind is blowing with a velocity $w$ in a direction which makes an angle $\alpha$ with the vertical, find the equation of the plane's path. Assume that it starts from a flying field which is at a distance $a$ miles from $T$.
 
-![](https://cdn.mathpix.com/cropped/2023_07_30_ca1c1f7b3544dd2eae87g-187.jpg?height=281&width=457&top_left_y=1349&top_left_x=369)
+See [[#^07afa4|this example]] for a special case of this where $\alpha=0$
 
-Figure 17.31
+```tikz
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\pgfplotsset{compat=1.16,width=20cm,height=10cm}
+
+\begin{document} 
+
+\begin{tikzpicture}
+    \newcommand\A{1200};
+    \newcommand\W{100};
+    \newcommand\V{500};
+    \newcommand\K{\W/\V};
+    \newcommand\X{1000};
+
+    \begin{axis}[
+        axis line style={line width=1.5pt},
+        draw={rgb,255:red,209;green,209;blue,209}, 
+        text={rgb,255:red,209;green,209;blue,209}, 
+        fill={rgb,255:red,209;green,209;blue,209}, 
+        axis lines=middle,
+        samples=200,
+        enlargelimits,
+        ticks=none,
+        declare function={
+            func(\x)=((\A/2)*((\x/\A)^(1-\K) - (\x/\A)^(1+\K)));
+        },
+        
+    ]
+    \pgfmathsetmacro\Y{func(\X)};
+    
+    \node at (0,0) [font=\LARGE, below right] {$T(0,0)$};
+    
+    \addplot[] 
+        coordinates {(\A, 0)} 
+        node [font=\Large, below] {$(a,0)$};
+    
+    \addplot[-stealth, line width=3pt] 
+        coordinates {(0,0) (\X, {func(\X)})}
+        node [above right, font=\LARGE] {Wind direction}
+        node [pos=0.5, above left, font=\Large]{$\mathbf{w}$};
+    \draw[-stealth, line width=3pt]
+        (\X,0) -- (\X, {func(\X)})
+        node [pos=0.5, rotate=90, below, font=\Large] {$w\cos(\alpha)$};
+    \draw[-stealth, line width=3pt]
+        (0,0) -- (\X, 0)
+        node [pos=0.5, below, font=\Large] {$w\sin(\alpha)$};
+        
+    %\draw[->, line width=1.1pt] (rel axis cs:0.9,0.81) -- (rel axis cs:0.9,0.9) 
+    %    node[left,pos=0.5, font=\Large] {$+$};
+    %\draw[->, line width=1.1pt] (rel axis cs:0.91,0.8) -- (rel axis cs:1,0.8) 
+    %    node[below,pos=0.5, font=\Large] {$+$};
+    \coordinate (A) at (axis cs:0,0); 
+    \coordinate (B) at (axis cs:\X,\Y); 
+    \draw[thick] 
+    let 
+        \p1 = ($(B)-(A)$), 
+        \n1 = {atan2(\y1,\x1)},
+    in (A) ++(90:1.5cm) arc[start angle=90, end angle=\n1, radius=1.5cm] 
+        node[midway, above right, font=\Large] {$\alpha$};
+
+    \draw[thick] 
+    let 
+        \p1 = ($(B)-(A)$), 
+        \n1 = {180+atan2(\y1,\x1)},
+    in (B) ++(\n1:1.5cm) arc[start angle=\n1, end angle=270, radius=1.5cm] 
+        node[midway, above right, font=\Large] {$\alpha$};
+    \end{axis} 
+\end{tikzpicture} 
+
+\end{document}
+```
+
 
 ### Solution
 
-We shall give two methods by which this problem may be solved. Method 1. Choose the axes so that the direction of the wind becomes the $y$ axis (Fig. 17.32). The initial conditions at $t=0$, therefore, become
+We shall give two methods by which this problem may be solved. 
+
+#### Method 1
+Choose the axes so that the direction of the wind becomes the $y$ axis (Fig. 17.32). The initial conditions at $t=0$, therefore, become
 
 $$
 x=a \cos \alpha, \quad y=a \sin \alpha .
 $$
-
-![](https://cdn.mathpix.com/cropped/2023_07_30_ca1c1f7b3544dd2eae87g-188.jpg?height=459&width=781&top_left_y=314&top_left_x=209)
+![[Pasted image 20230821142443.png|800]]
 
 Figure 17.32
 
@@ -957,9 +1061,195 @@ $$
 
 We leave it to you as an exercise to draw rough graphs of its path as we did in Comment 17.11. Remember $\tan \alpha, \sec \alpha, \cos \alpha$ and $a$ are constants.
 
-![](https://cdn.mathpix.com/cropped/2023_07_30_ca1c1f7b3544dd2eae87g-189.jpg?height=446&width=849&top_left_y=277&top_left_x=175)
-
+#### Method 2
 Figure 17.33
+
+```tikz
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\pgfplotsset{compat=1.16,width=15cm,height=10cm}
+\begin{document} 
+    \begin{tikzpicture}
+        \newcommand\A{2500};
+        \newcommand\W{100};
+        \newcommand\V{500};
+        \newcommand\K{\W/\V};
+        \newcommand\X{1200};
+        \newcommand\windangle{30};
+        \newcommand\prop{0.6};
+        \pgfmathsetmacro\cprop{1 - \prop}; 
+        \begin{axis}[
+            axis line style={line width=1.5pt},
+            draw={rgb,255:red,209;green,209;blue,209}, 
+            text={rgb,255:red,209;green,209;blue,209}, 
+            fill={rgb,255:red,209;green,209;blue,209}, 
+            axis lines=middle,
+            samples=200,
+            enlargelimits,
+            ticks=none,
+            declare function={
+                func(\x)=((\A/2)*((\x/\A)^(1-\K)- (\x/\A)^(1+\K));
+                derivative(\x)=(
+                    (1/2)*( 
+                        (1-\K)*( 
+                            (\x/\A)^(-\K) 
+                        ) - 
+                        (1+\K)*(
+                            (\x/\A)^(\K)
+                        )
+                    )
+                );
+            }
+        ]
+        \pgfmathparse{\X+0.8};
+        \pgfmathsetmacro\slope{derivative(\X)};
+        \pgfmathsetmacro\Y{func(\X)};
+        \pgfmathsetmacro\angle{atan(\Y/\X)};
+        
+        \pgfmathsetmacro\vstartx{\X};
+        \pgfmathsetmacro\vstarty{\Y};
+        \pgfmathsetmacro\vendx{\X*\prop};
+        \pgfmathsetmacro\vendy{func(\X)*\prop};
+
+        \pgfmathsetmacro\dstartx{\X};
+        \pgfmathsetmacro\dstarty{\Y};
+        \pgfmathsetmacro\dendx{\X*\prop};
+        \pgfmathsetmacro\dendy{\Y-\X*\slope*\cprop};
+
+        \pgfmathsetmacro\wstartx{\X};
+        \pgfmathsetmacro\wstarty{\Y};
+        \pgfmathsetmacro\wyendx{\X};
+        \pgfmathsetmacro\wyendy{\Y + (\dendy - \vendy)};
+        \pgfmathsetmacro\wx{\dendy - \vendy}; 
+        \pgfmathsetmacro\wxendx{\X*(1+\cprop*0.8) };
+        \pgfmathsetmacro\wxendy{\Y};
+        
+        \addplot[
+            ultra thick,
+            domain=\A:\X,
+            draw={rgb,255:red,163;green,190;blue,140},
+        ] {func(x)}
+            node [
+                pos=0, 
+                below, 
+                font=\LARGE,
+            ] {$\left(a, 0\right)$};
+
+        \node at (0,0) [font=\LARGE, below right] {$T(0,0)$};
+        
+        \addplot[] 
+            coordinates {(0,0) (\X, {func(\X)})}
+            node [above left, font=\LARGE] {$P(x,y)$};
+        
+        \addplot[]  
+            coordinates {(\X,0) (\X, {func(\X)})}
+            node [pos=0.4, right, font=\Large] {$y$};
+
+        \addplot[]  
+            coordinates {(0,0) (\X, 0)}
+            node [pos=0.5, below, font=\Large] {$x$};
+
+        % x component of the plane direction
+        \addplot[
+            ->, 
+            -latex, 
+            line width=1.5pt, 
+        ] 
+            coordinates {(\X,{func(\X)*\prop}) (\X*\prop, {func(\X)*\prop})}  
+            node [pos=0.5, below] {$v \cos(\theta)$};
+        % y component of the plane direction
+        \addplot[
+            ->, 
+            -latex, 
+            line width=1.5pt
+        ] 
+            coordinates {(\X,\Y) (\X, {\Y*\prop})}  
+            node [rotate=90, below right] {$v \sin(\theta)$};
+        % plane direction
+        \addplot[
+            ->, 
+            -latex, 
+            line width=1.5pt,
+        ] 
+            coordinates {(\vstartx, \vstarty) (\X*\prop, {func(\X)*\prop})} 
+            node [pos=0.5, font=\Large, above left] {$\mathbf{v}$};
+ 
+            
+        % Direction of the wind
+        \addplot[
+            -, 
+            line width=1pt,
+        ] 
+            coordinates {(\wstartx, \wstarty) (\wyendx, \wyendy)};
+
+        \addplot[
+            ->, 
+            -latex, 
+            line width=1pt,
+        ] 
+            coordinates {(\wxendx, \wxendy) (\wxendx, \wyendy)}
+            node [pos=0.5, font=\large, right] {$\mathbf{w}_y=w\cos(\alpha)$};
+        \addplot[
+            ->, 
+            -latex, 
+            line width=1pt,
+        ] 
+            coordinates {(\X, \Y) (\wxendx, \wxendy)}
+            node [font=\large, below right] {$\mathbf{w}_x=w\sin(\alpha)$};
+            
+        \addplot[
+            ->, 
+            -latex, 
+            line width=1pt,
+        ] 
+            coordinates {(\wstartx, \wstarty) (\wxendx, \wyendy)} 
+            node [pos=0.8, above left, font=\Large] {$\mathbf{w}$}
+            node [above right, font=\Large] {Wind Direction};
+        
+
+        \draw[->, line width=1.1pt] (rel axis cs:0.9,0.41) -- (rel axis cs:0.9,0.5) 
+        node[left,pos=0.5, font=\Large] {$+$};
+        \draw[->, line width=1.1pt] (rel axis cs:0.91,0.4) -- (rel axis cs:1,0.4) 
+        node[below,pos=0.5, font=\Large] {$+$};
+
+        \coordinate (A) at (axis cs:0,0); 
+        \coordinate (B) at (axis cs:\X,\Y); 
+        \draw[thick] 
+        let 
+            \p1 = (B), 
+            \n1 = {atan2(\y1,\x1)},
+    
+        in (A) ++(0:1.5cm) arc[start angle=0, end angle=\n1, radius=1.5cm] 
+            node[midway, right, font=\Large] { \( \theta \) };
+
+        \coordinate (C) at (axis cs:\vendx,\vendy); 
+        \draw[thick] 
+        let 
+            \p1 = (B), 
+            \n1 = {atan2(\y1,\x1)},
+        in (C) ++(0:1cm) arc[start angle=0, end angle=\n1, radius=1cm] 
+            node[midway, right, font=\Large] { \( \theta \) };
+    
+        \coordinate (D) at (axis cs:\X,\Y); 
+        \coordinate (E) at (axis cs:\wxendx,\wyendy); 
+        \draw[thick] 
+        let 
+            \p1 = ($(E)-(D)$), 
+            \n1 = {atan2(\y1,\x1)},
+        in (D) ++(90:1cm) arc[start angle=90, end angle=\n1, radius=1cm] 
+            node[midway, above, font=\Large] {$\alpha$};
+
+        \draw[thick] 
+        let 
+            \p1 = ($(E)-(D)$), 
+            \n1 = {180+atan2(\y1,\x1)},
+        in (E) ++(\n1:1cm) arc[start angle=\n1, end angle=270, radius=1cm] 
+            node[midway, below, font=\Large] {$\alpha$};
+    \end{axis} 
+    \end{tikzpicture} 
+\end{document} 
+```
+
 
 Method 2 (Fig. 17.33). From Fig. 17.33, we see that the resultant of the effective velocities of wind and plane in the $x$ and $y$ directions are respectively
 

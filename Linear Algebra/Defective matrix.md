@@ -14,7 +14,7 @@ aliases:
 > [!Example]
 > > [!Example]- Case 1 - Dimension of nullspace of $(\mathbf{A}-\lambda \mathbf{I})=3$
 > > $$\begin{bmatrix} \lambda & 0 & 0 \\ 0 & \lambda & 0 \\ 0 & 0 & \lambda \end{bmatrix} $$
-> > $rank(\mathbf{A}-\lambda \mathbf{I})=0$. There will be 3 clean eigenvectors. No need for [[generalized eigenvectors]].
+> > $rank(\mathbf{A}-\lambda \mathbf{I})=0$. There will be 3 clean eigenvectors. No need for [[Generalized eigenvectors]].
 > 
 > 
 > > [!Example]- Case 2 - Dimension of nullspace of $(\mathbf{A}-\lambda \mathbf{I})=2$
@@ -24,7 +24,7 @@ aliases:
 > 
 > > [!Example]- Case 3 - Dimension of nullspace of $(\mathbf{A}-\lambda \mathbf{I})=1$
 > > $$\begin{bmatrix} \lambda & 1 & 0 \\ 0 & \lambda & 1 \\ 0 & 0 & \lambda \end{bmatrix} $$
-> > $rank(\mathbf{A}-\lambda \mathbf{I})=2$. There will be 1 clean eigenvector, will need 2 [[generalized eigenvectors]].
+> > $rank(\mathbf{A}-\lambda \mathbf{I})=2$. There will be 1 clean eigenvector, will need 2 [[Generalized eigenvectors]].
 
 
 A defective matrix is a matrix that has less independant eigenvectors than its rank. It fails to provided a basis for $\mathbb{R}^n$ made of eigenvectors. This example is in $\mathbb{R}^3$
@@ -37,7 +37,7 @@ $$
 \end{bmatrix}
 $$
 
-The [[Characteristic equation]] of this matrix is $(3-\lambda)^3$, so just one eigenvalue with multiplicity 3. 
+The [[../Calculus/Characteristic equation]] of this matrix is $(3-\lambda)^3$, so just one eigenvalue with multiplicity 3. 
 $$
 \det\left(\begin{bmatrix}
 6 & -2 & -1 \\

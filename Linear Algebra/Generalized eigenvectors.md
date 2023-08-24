@@ -10,9 +10,9 @@ aliases:
 > or
 > $$(\mathbf{A}-\lambda\mathbf{I})\mathbf{x}_m=\mathbf{x}_{m-1}$$
 
-Given a [[Defective matrix]], we need additional eigenvectors in order to have a complete eigenspace to [[Decoupling a system of ODE|decouple a system of ODE]].
+Given a [[Defective matrix]], we need additional eigenvectors in order to have a complete eigenspace to [[../Ordinary differential equations/Decoupling a system of ODE|decouple a system of ODE]].
 
-The following [[defective matrix]]
+The following [[Defective matrix]]
 $$
 \mathbf{A}=
 \begin{bmatrix}
@@ -154,7 +154,7 @@ $$
 
 > [!todo] 
 > 1. These notes have been scrambled together. This is not organized. Organize it better.
-> 2. Link it to ODE solution [[Decoupling a system of ODE]]
+> 2. Link it to ODE solution [[../Ordinary differential equations/Decoupling a system of ODE]]
 
 $\mathbf{J}$ is the diagonal matrix with eigenvalues with ones on top of it.
 

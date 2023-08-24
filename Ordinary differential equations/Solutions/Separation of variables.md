@@ -7,7 +7,7 @@ tags:
 ---
 
 > [!summary]
-> Separation of variables is one way to solve an [[Ordinary differential equation|ordinary differential equation]].
+> Separation of variables is one way to solve an [[../Definitions/Ordinary differential equation|ordinary differential equation]].
 > 
 > $$
 > \boxed{
@@ -39,7 +39,7 @@ We can then integrate both sides with respect to $t$
 $$
 \int \frac{1}{g(y)} \frac{dy}{dt} dt = \int f(t)dt
 $$
-By using the [[Substitution rule|change of variable]], we can rewrite 
+By using the [[../../Calculus/Integration/Substitution rule|change of variable]], we can rewrite 
 $$
 \int \underbrace{\frac{1}{g(y)} \frac{dy}{dt} dt}_{\textit{Change of variable}} = \int \frac{1}{g(y)} dy = \int f(t)dt
 $$
@@ -63,5 +63,5 @@ We now have an integral with respecto to $y$ and another one with respect to $t$
 > 
 > A constant is just a constant. We have to keep track of it, but we don't need to know it exactly unless we are looking for a specific solution.
 > 
-> So **a** family of solution is $y = Ce^{t}$. Not to be confused with [[General solution|general solution]].
+> So **a** family of solution is $y = Ce^{t}$. Not to be confused with [[../../Calculus/General solution|general solution]].
 > 

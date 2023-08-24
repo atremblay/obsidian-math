@@ -1,4 +1,4 @@
-[[@tenenbaum_ordinary_1985]] p.124
+[[../../Reading notes/@tenenbaum_ordinary_1985]] p.124
 
 ##### Example ^354736
 #example #homogeneous
@@ -14,7 +14,7 @@ To warm up your brain, remember that calculus deals in approximation and when th
 
 $$\Delta x = \frac{3x}{100}\Delta t$$
 Taking the limit $$\lim_{\Delta t \rightarrow 0}\frac{\Delta x}{\Delta t} = \frac{\mathrm{d}x}{\mathrm{d}t} = \frac{-3x}{100}$$
-Using the most common technique [[Separation of variables]]
+Using the most common technique [[../Solutions/Separation of variables]]
 $$x(t) = 300e^{-0.03t}$$
 
 The problem is not yet solved. We want to know **when** the tank will have 200 pounds of salt
@@ -65,7 +65,7 @@ This requires two parts:
 
 The amount of salt coming in is constant over time, simply 2 pounds of salt per gallon. So if 3 gallons are coming in per minutes, $6\Delta t$ pounds are coming in in $\Delta t$ minutes.
 $$\Delta x = \frac{-3x}{100}\Delta t + 6\Delta t$$
-Again using [[Separation of variables]]
+Again using [[../Solutions/Separation of variables]]
 $$\boxed{x(t) = 100e^{-0.03t}+200}$$
 
 > [!Note]-
@@ -85,7 +85,7 @@ $$\boxed{x(t) = 100e^{-0.03t}+200}$$
 > With the initial condition that $x(0) = 300$ we find that $C=100$.
 
 > [!Tip]
-> This is a [[Linear ODE#Nonhomogeneous|nonhomogeneous equation]]
+> This is a [[../Definitions/Linear ODE#Nonhomogeneous|nonhomogeneous equation]]
 > $$\dot{x} = -0.03x + 6$$
 > We have a constant forcing over time of 6. This is a direct application of [[Constant input#Linear DE with forcing]]
 > $$x(t)=x_0e^{kt} + \frac {b} {k} e^{kt} -\frac {b} {k}$$
@@ -120,7 +120,7 @@ Very similar to the [[#^354736|first example]], but the overall quantity in the 
 
 This time, we cannot calculate the concentration per gallon by considering a constant amount of 100 gallons as it lowers over time. Every minute the tank loses 5 gallons and gains 3, so a delta of 2 gallons. Over a period of $t$ that's $2t$ gallons lost. So the amount of salt per gallon at time $t$ is $\frac{x(t)}{100-2t}$
 
-This gives a more interesting problem because it's one of those rare times where we have something on the right of the [[Separation of variables]]
+This gives a more interesting problem because it's one of those rare times where we have something on the right of the [[../Solutions/Separation of variables]]
 $$\Delta x = \frac{-5 x \Delta t}{100-2t} $$
 $$
 \begin{align}
@@ -170,7 +170,7 @@ $$\boxed{x= \frac 3 {1000} \left(100-2t\right)^{\frac 5 2}}$$
 - $3\Delta t$ gallons were ejected from the tank during a period of length $\Delta t$
 - **Approximately** $-\frac {3x(t)}{100}\Delta t$ pounds of salt are ejected during a period of lenght $\Delta t$
 $$\Delta x = -\frac {3x(t)}{100}\Delta t$$
-Taking the limit and using [[Separation of variables|separation of variables]]
+Taking the limit and using [[../Solutions/Separation of variables|separation of variables]]
 $$
 \begin{align}
 \lim_{\Delta t \rightarrow 0} \frac{\Delta x}{\Delta t} = \frac{\mathrm{d}x}{\mathrm{d}t}&=-0.03x(t)\\
@@ -253,7 +253,7 @@ So to answer the question, the salt content at of the brine at the end of 10 min
 > [!Example] Statement
 > A tank initially contains 200 gal of brine whose salt concentration is 3 lb/gal. Brine whose salt concentration is 2 lb/gal flows into the tank at the rate of 4 gal/min. The mixture flows out at the same rate. 
 
-This is a [[Linear ODE#Nonhomogeneous|nonhomogeneous equation]]
+This is a [[../Definitions/Linear ODE#Nonhomogeneous|nonhomogeneous equation]]
 $x(t)$ is still the amount of salt in total.
 $$\dot{x} = -\frac{4}{200}x + 4\cdot2$$
 We have a constant forcing over time of 8. This is a direct application of [[Constant input#Linear DE with forcing]]
@@ -373,7 +373,7 @@ $$
 > [!Example] Statement
 > A tank initially contains 100 gal of brine whose salt concentration is 0.5 lb/gal. Brine whose salt concentration is 2 lb/gal flows into the tank at the rate of 3 gal/min. The mixture flows out at the rate of 2 gal/min. Find the salt content of the brine and its concentration at the end of 30 minutes.
  
-This is similar to a [[#^1b9c9c|previous example]] but trickier because we have a function of $t$ as a coefficient. Will need [[Integrating factor]], first time in this page. 
+This is similar to a [[#^1b9c9c|previous example]] but trickier because we have a function of $t$ as a coefficient. Will need [[../Solutions/Integrating factor]], first time in this page. 
 
 - Liquid at time $t$ is $(100 + t)$ as 3 gallons go in and 2 go out.
 - $x(t)$ is the amount of salt at time $t$
@@ -480,7 +480,7 @@ $$\dot{x}=-0.01x+4$$
 $$x(t)=-400e^{-0.01t}+400$$
 $$x(100)=-400e^{-1}+400\approx 252.85$$
   
-> [!Note]- [[Separation of variables]]
+> [!Note]- [[../Solutions/Separation of variables]]
 > More details. As usual, the constant $C$ absorbs everything.
 > $$
 > \begin{align}
@@ -497,7 +497,7 @@ $$x(100)=-400e^{-1}+400\approx 252.85$$
 > With the initial condition that $x(0) = 0$ we find that $C=-400$.
 
 > [!Note]- [[Constant input#Linear DE with forcing]]
-> This is a [[Linear ODE#Nonhomogeneous|nonhomogeneous equation]]
+> This is a [[../Definitions/Linear ODE#Nonhomogeneous|nonhomogeneous equation]]
 > $$\dot{x} = -0.01x + 4$$
 > We have a constant forcing over time of 4. 
 > $$x(t)=x_0e^{kt} + \frac {b} {k} e^{kt} -\frac {b} {k}$$
@@ -613,7 +613,7 @@ x_A \\ x_B
 \end{bmatrix}
 $$
 
-Since the system is coupled, we need to [[Decoupling a system of ODE|decouple it]]. Eigenvalues of $\mathbf{A}$ are $-\frac{1}{25}$ and 0 and their respective eigenvectors are $\begin{bmatrix}-1&1\end{bmatrix}^T$ and $\begin{bmatrix}1&1\end{bmatrix}^T$
+Since the system is coupled, we need to [[../Decoupling a system of ODE|decouple it]]. Eigenvalues of $\mathbf{A}$ are $-\frac{1}{25}$ and 0 and their respective eigenvectors are $\begin{bmatrix}-1&1\end{bmatrix}^T$ and $\begin{bmatrix}1&1\end{bmatrix}^T$
 
 $$
 \mathbf{D}=\begin{bmatrix}\frac{-1}{25}&0\\0&0\end{bmatrix},\hspace{1em}\mathbf{T}=\begin{bmatrix}-1&1\\1&1\end{bmatrix},\hspace{1em}\mathbf{T}^{-1}=\begin{bmatrix}-\frac{1}{2}&\frac{1}{2} \\ \frac{1}{2}& \frac{1}{2}\end{bmatrix}
@@ -762,7 +762,7 @@ $$
 > Everything, it seems. 
 > - Did not realized this was a system of equations. Both $x_A$ and $x_B$ are functions of time. The state of the system depends on two values, so this requires a system of ODE
 > - Not too sure how to write a matrix exponential in Wolfram Alpha, but it was not giving what I expected. The final result was giving negative time values. Once I checked the matrix exponential part and realized it was wrong, everything clicked. Good old divide and conquer.
-> - My notes on [[Decoupling a system of ODE|decoupling a system of ODE]] was incomplete and I could not easily find what I was looking for. The solution was scattered in other notes. 
+> - My notes on [[../Decoupling a system of ODE|decoupling a system of ODE]] was incomplete and I could not easily find what I was looking for. The solution was scattered in other notes. 
 
 
 > [!Example] (b)
@@ -793,7 +793,7 @@ Limit
 $$
 \lim_{\Delta t \rightarrow 0} \frac{\Delta x}{\Delta t} = \dot{x}=1
 $$
-Using [[Separation of variables|separation of variables]]
+Using [[../Solutions/Separation of variables|separation of variables]]
 $$
 \begin{align}
 \int \frac{dx}{dt}&=\int dt \\
@@ -856,7 +856,7 @@ Limit
 $$
 \lim_{\Delta t \rightarrow 0} \frac{\Delta x}{\Delta t} = \dot{x}=-0.2x+1
 $$
-Using [[Separation of variables|separation of variables]]
+Using [[../Solutions/Separation of variables|separation of variables]]
 $$
 \begin{align}
 \int \frac{dx}{dt}dt&=\int dt \\
@@ -952,7 +952,7 @@ $$
 \lim_{\Delta t \rightarrow 0}\frac{\Delta x}{\Delta t}=\frac{dx}{dt}&=\frac{-Vx}{7200} + 0.0005V=\frac{-Vx+3.6V}{7200}
 \end{align}$$
 
-[[Separation of variables]]
+[[../Solutions/Separation of variables]]
 $$
 \begin{align}
 \frac{7200}V\int \frac 1 {-x+3.6}\frac{dx}{dt}dt&=\int dt \\

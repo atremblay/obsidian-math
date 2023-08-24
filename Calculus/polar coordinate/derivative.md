@@ -51,7 +51,7 @@ Substitute
 $$
 \frac{RQ}{RP}=\frac{\textcolor{orange}{\rho + \Delta\rho} - \textcolor{violet}{\rho \cos \Delta \theta}}{\rho \sin \Delta \theta} = \frac{\rho (1- \cos \Delta \theta) + \Delta\rho }{\rho \sin \Delta \theta}
 $$
-We are close to [[Important limits#^abe062|this]] and [[Important limits#^46d97d|this]] limit, we only need to divide by $\Delta \theta$ in the numerator and denominator
+We are close to [[../Limits/Important limits#^abe062|this]] and [[../Limits/Important limits#^46d97d|this]] limit, we only need to divide by $\Delta \theta$ in the numerator and denominator
 $$
 \begin{align}
 \frac{RQ}{RP} &= \frac{\rho\frac{ (1- \cos \Delta \theta)}{\Delta \theta} + \frac{\Delta\rho}{\Delta \theta} }{\rho\frac{ \sin \Delta \theta}{\Delta \theta}} \\
@@ -75,7 +75,7 @@ $$
 } \\
 \end{align}
 $$
-Everything is ready to check the limit (by using the [[Properties#^55ded8|product rule]] and [[Properties#^208b6f|quotient rule]])
+Everything is ready to check the limit (by using the [[../Limits/Properties#^55ded8|product rule]] and [[../Limits/Properties#^208b6f|quotient rule]])
 
 $$
 \begin{align}
@@ -91,7 +91,7 @@ $$
 }
 \end{align}
 $$
-By some [[Important limits]]
+By some [[../Limits/Important limits]]
 $$
 \begin{align}
 \cot \psi = \lim_{ \Delta \theta \to 0 } \cot \alpha &= \lim_{ \Delta \theta \to 0 } \frac{

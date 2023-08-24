@@ -88,7 +88,7 @@ The Transformer follows this overall architecture using stacked self-attention a
 
 ### 3.1 Encoder and Decoder Stacks
 > [!blank-container|right-small]
-> ![[Figure 1.png|400]]
+> ![[../Research/Images/Attention is all you need/Figure 1.png|400]]
 > 
 > *Figure 1*: The Transformer - model architecture.
 
@@ -98,9 +98,9 @@ The Transformer follows this overall architecture using stacked self-attention a
 
 ### 3.2 Attention
 > [!blank-container|right-small]
-> ![[Figure 2.1.png|350]]
+> ![[../Research/Images/Attention is all you need/Figure 2.1.png|350]]
 > *Figure 2.1*: Scaled Dot-Product Attention. 
-> ![[Figure 2.2.png|350]]
+> ![[../Research/Images/Attention is all you need/Figure 2.2.png|350]]
 > *Figure 2.2*: Multi-Head Attention consists of several attention layers running in parallel.
 
 ^8d337e

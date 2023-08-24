@@ -14,7 +14,7 @@ $x$ = the distance of the body above the earth's surface
 
 
 > [!blank-container|right-medium]
-> ![[Images/earth_gravity.svg|400]]
+> ![[../Images/earth_gravity.svg|400]]
 
 By (1.12), the force of attraction between earth and body is (we assume their masses are concentrated at their respective centers) 
 $$F=-G\frac{Mm}{(R+x)^2} \tag{1.13}$$
@@ -56,13 +56,13 @@ $$x(t)=-\frac{gt^2}{2} + c_1t + c_2 \tag{1.2}$$
 
 
 > [!blank-container|right-small]
-> ![[Images/gravity_ex1.svg|300]]
+> ![[../Images/gravity_ex1.svg|300]]
 
 The force of the air resistance is given as $(m/40)v$. The downward force due to the weight of the mass $m$ is $mg$ pounds. Hence the differential equation of motion (1.16) must be modified to read, with the *positive direction downward* (remember mass X acceleration of a body = the net forces acting upon it),
 $$\cancel{m}\frac{dv}{dt}=g\cancel{m}-\frac{\cancel{m}}{40}v$$
 Note that the force of gravity $gm$ is now positive since it acts in the chosen positive direction. 
 
-> [!solution]- Alternative step - [[Solutions/Separation of variables|Separation of variables]]
+> [!solution]- Alternative step - [[../Solutions/Separation of variables|Separation of variables]]
 > With $g(v) = g - \frac{v}{40}$ and $f(t) = 1$
 > > Do not confuse the $g$s. $g(v)$ is simply to reuse the notation from the Separation of variable page and $g$ is the constant determined above.
 > $$
@@ -88,7 +88,7 @@ Note that the force of gravity $gm$ is now positive since it acts in the chosen 
 > $$
 > Giving $$v(t) = 40g(1 - e^{-\frac{t}{40}})$$
 
-> [!Solution]- Alternative step - [[Solutions/Integrating factor|Integrating factor]]
+> [!Solution]- Alternative step - [[../Solutions/Integrating factor|Integrating factor]]
 > $$v^\prime + \frac{v}{40} = g$$
 > 
 > With $p(t) = \frac{1}{40}$ and $f(t) = g$
@@ -224,7 +224,7 @@ $$
 \end{align}
 $$
 
-> [!solution] Alternative step - [[Solutions/Separation of variables|Separation of variables]]
+> [!solution] Alternative step - [[../Solutions/Separation of variables|Separation of variables]]
 > With $g(v) = g - \frac{v^2}{40}$ and $f(t) = 1$
 > > Do not confuse the $g$s. $g(v)$ is simply to reuse the notation from the Separation of variable page and $g$ is the constant determined above.
 > $$

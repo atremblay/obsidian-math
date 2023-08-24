@@ -2,7 +2,7 @@
 
 $$\lambda = a + bi$$
 $$a = R\cos{\theta}, \hspace{1em}b = R\sin{\theta}$$
-Using [[Euler's formula]]
+Using [[Calculus/Euler's formula]]
 $$
 \begin{align}
 \lambda &= R\cos{\theta} + Ri\sin{\theta} \\

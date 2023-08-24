@@ -5,7 +5,7 @@ $$
 
 At $t=0$ we have an initial position $x(0)=x_0$ and an initial velocity $v(0)=\dot{x}(0) = v_0$   
 
-# Method 1 - [[Const Coeff Homo DE]]
+# Method 1 - [[../Solutions/Const Coeff Homo DE]]
 
 In the constant coefficient homogeneous differential equation 
 $$ax'' + bx' + cx=0$$
@@ -14,12 +14,12 @@ $$ r = \frac{-b \pm \sqrt{b^2-4ac}}{2a} $$
 Here the DE is
 $$ \ddot{x} + kx = 0 $$
 
-With $a=1$, $b=0$ and $c=k$, we have a [[Const Coeff Homo DE#Case 3: Complex pair of roots|complex pair of roots]].
+With $a=1$, $b=0$ and $c=k$, we have a [[../Solutions/Const Coeff Homo DE#Case 3: Complex pair of roots|complex pair of roots]].
 
 $$
 r = \frac{ \pm \sqrt{-4k}}{2} = \pm i\sqrt{k}
 $$
-Real part: $\alpha=0$, imaginary part: $\beta=\sqrt{k}$ . The [[Const Coeff Homo DE#General solution|the two general solutions]] are
+Real part: $\alpha=0$, imaginary part: $\beta=\sqrt{k}$ . The [[../Solutions/Const Coeff Homo DE#General solution|the two general solutions]] are
 
 $$
 x^{(1)}=e^{\alpha t}\cos{\beta t}=e^{0}\cos{t\sqrt{k}} = \cos{\left(t\sqrt{k}\right)}
@@ -28,7 +28,7 @@ and
 $$
 x^{(2)}=e^{\alpha t}\sin{\beta t}=e^{0}\sin{t\sqrt{k}} = \sin{\left(t\sqrt{k}\right)}
 $$
-The solution is  the combination of both by the [[Superposition]] principle
+The solution is  the combination of both by the [[../Superposition]] principle
 
 $$
 x = c_1\cos{\left(t\sqrt{k}\right)}+c_2\sin{\left(t\sqrt{k}\right)}
@@ -59,7 +59,7 @@ $$
 
 # Method 2 - Power Series
 
-Use polynomial expansion like in the [[Taylor's theorem|taylor series]]. 
+Use polynomial expansion like in the [[../../Calculus/Taylor's theorem|taylor series]]. 
 
 $$
 \begin{align}
@@ -155,4 +155,4 @@ $$
 $$
 \dot{\textbf{x}}= A \textbf{x}
 $$
-The eigenvalues of $A$ are the roots of the [[Characteristic equation]].
+The eigenvalues of $A$ are the roots of the [[../../Calculus/Characteristic equation]].

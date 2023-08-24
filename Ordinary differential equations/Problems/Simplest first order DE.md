@@ -3,7 +3,7 @@ $$
 \frac{dx}{dt} = \dot{x} = kx
 $$
 
-Using [[Separation of variables]]
+Using [[../Solutions/Separation of variables]]
 
 $$
 \begin{align}
@@ -15,5 +15,5 @@ $$
 
 A constant is just a constant. We have to keep track of it, but we don't need to know it exactly unless we are looking for a specific solution.
 
-So **a** family of solution is $x = Ce^{kt}$. Not to be confused with [[General solution|general solution]].
+So **a** family of solution is $x = Ce^{kt}$. Not to be confused with [[../../Calculus/General solution|general solution]].
 

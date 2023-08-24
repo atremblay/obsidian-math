@@ -8,7 +8,7 @@
 > \end{align}
 > $$
 > 
-> ![[eigenstability.svg|200]]
+> ![[Images/eigenstability.svg|200]]
 > The eigenvalues are in the matrix $\mathbf{D}$
 > If the eigen value has a negative real part, it acts as a sink (blue part)
 > If the eigen value has a positive real part, it acts as a source (orange part)
@@ -24,9 +24,9 @@
 
 
 
-In a linear ODE there is only one [[Fixed point|fixed point]] and that is the origin (the trivial solution)
+In a linear ODE there is only one [[Definitions/Fixed point|fixed point]] and that is the origin (the trivial solution)
 
-The [[Solving high-order ODE|solution]] to a linear ODE $\dot{\mathbf{x}}=\mathbf{A}\mathbf{x}$ is 
+The [[Solutions/Solving high-order ODE|solution]] to a linear ODE $\dot{\mathbf{x}}=\mathbf{A}\mathbf{x}$ is 
 $$\mathbf{x}(t)=e^{\mathbf{A}t}\mathbf{x}(0)$$
 The eigenvalues of $\mathbf{A}$ will tell us if the system is stable or unstable. [[System of ODE#Decoupling|Decouple]] the system to get a better view of what's happening. 
 $$\mathbf{x}(t)=\mathbf{T}e^{\mathbf{D}t}\mathbf{T}^{-1}\mathbf{x}(0)$$
@@ -42,13 +42,13 @@ where $\mathbf{T}$ are the eigenvectors and $\mathbf{D}$ are the eigenvalues. Ev
 $$e^{\mathbf{D}t}=\begin{bmatrix}e^{2t} & 0 \\ 0 & e^{4t} \end{bmatrix}$$
 As $t\to \infty$, the entries go to $\infty$ as well, so every directions are going to infinity. 
 
-![[source.png|400]]
+![[Images/source.png|400]]
 
 ## Sink
-![[sink.png|400]]
+![[Images/sink.png|400]]
 
 ## Saddle point
-![[saddle.png|400]]
+![[Images/saddle.png|400]]
 
 
 # Neutrally stable
@@ -91,8 +91,8 @@ $$
 \end{align}
 $$
 Let's go over each of these terms where we will see that the imaginary parts disappear. We will use:
-- [[Euler's formula]] $e^{i\theta} = \cos \theta + i \sin \theta$
-- [[Trigonometric identity#Opposite Angles|Opposite Angles]]  $\sin -\theta = -\sin \theta$  and $\cos -\theta = \cos \theta$
+- [[../Calculus/Euler's formula]] $e^{i\theta} = \cos \theta + i \sin \theta$
+- [[../Trigonometry/Trigonometric identity#Opposite Angles|Opposite Angles]]  $\sin -\theta = -\sin \theta$  and $\cos -\theta = \cos \theta$
 
 The building blocks are 
 $$
@@ -148,7 +148,7 @@ $$
 \mathbf{x}(0)
 \end{align}
 $$
-![[neutral_stable.png|400]]
+![[Images/neutral_stable.png|400]]
 
 
 > [!Question]
@@ -212,7 +212,7 @@ $$
 \end{align}
 $$
 The matrix is the same as above, but we multiply by $e^t$, so as time goes by, the whole thing will blow up to infinity, creating a spiral going out.
-![[spiral_out.png|400]]
+![[Images/spiral_out.png|400]]
 
 ### Spiraling in/Spiral sink
 Simply flipping the sign of the diagonal.
@@ -237,7 +237,7 @@ $$
 $$
 Now the exponential decays to zero, so the whole system spirals in.
 
-![[spiral_in.png|400]]
+![[Images/spiral_in.png|400]]
 
 > [!tip]- How to cook-up examples
 > Take a generic matrix and its determinant

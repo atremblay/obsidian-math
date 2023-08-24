@@ -9,7 +9,7 @@ where
 - $C=T_0-T_m$ 
     -  $T_0$ is the initial temperature of the body
 
-Using [[Separation of variables|separation of variables]]
+Using [[../Solutions/Separation of variables|separation of variables]]
 
 $$
 \begin{align}

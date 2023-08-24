@@ -1,5 +1,5 @@
 
-Given a constant coefficients [[Linear ODE#Homogeneous|homogeneous DE]]
+Given a constant coefficients [[../Definitions/Linear ODE#Homogeneous|homogeneous DE]]
 $$a_nx^{(n)}+a_{n-1}x^{(n-1)}+\ldots+a_2\ddot{x}+a_1\dot{x}+a_0x=0$$
 
 Try $x(t)=e^{\lambda t}$ as potential solution, just like when solving [[Const Coeff Homo DE]]. This time it has a higher order 
@@ -15,12 +15,12 @@ x^{(n)}(t)&=\lambda^{n} e^{\lambda t}
 $$
 Plug these derivatives in the initial ODE
 $$e^{\lambda t}\underbrace{\left(a_n\lambda^{n}+a_{n-1}\lambda^{n-1}+\ldots+a_2\lambda^2+a_1\lambda+a_0\right)}_{\text{characteristic equation}}=0$$
-This will be zero only when the quantity in parentheses, the [[Characteristic equation]], is zero. That polynomial has $n$ roots. Some of them might be repeated ([[Const Coeff Homo DE#Case 2: Repeated root|repeated roots]]), some of them might be complex ([[Const Coeff Homo DE#Case 3: Complex pair of roots|complex roots]]). 
+This will be zero only when the quantity in parentheses, the [[../../Calculus/Characteristic equation]], is zero. That polynomial has $n$ roots. Some of them might be repeated ([[Const Coeff Homo DE#Case 2: Repeated root|repeated roots]]), some of them might be complex ([[Const Coeff Homo DE#Case 3: Complex pair of roots|complex roots]]). 
 
 Each one of these roots will be a solution
 $$x_i=e^{\lambda_i t}$$
 
-And by the [[Superposition]] principle, we can linearly combine all of them to have another solution
+And by the [[../Superposition]] principle, we can linearly combine all of them to have another solution
 $$
 \begin{align}
 x&=c_1x_1 + c_2x_2 + \ldots + c_{n-1}x_{n-1}+c_nx_n \\
@@ -102,6 +102,6 @@ c_{n-1} \\
 c_n
 \end{bmatrix}}_{C}
 $$
-then we can solve for $\mathbf{C}=\mathbf{M}^{-1}\mathbf{D}$. All the $\lambda_i$ in $\mathbf{M}$ are known from the roots of the [[Characteristic equation]] as well as the initial conditions $\mathbf{D}$.
+then we can solve for $\mathbf{C}=\mathbf{M}^{-1}\mathbf{D}$. All the $\lambda_i$ in $\mathbf{M}$ are known from the roots of the [[../../Calculus/Characteristic equation]] as well as the initial conditions $\mathbf{D}$.
 
 The matrix $\mathbf{M}$ is called the [Vandermonde](https://en.wikipedia.org/wiki/Vandermonde_matrix)

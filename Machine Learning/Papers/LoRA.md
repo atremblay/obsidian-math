@@ -75,7 +75,7 @@ An important paradigm of natural language processing consists of large-scale pre
 ## 1 Introduction
 
 > [!blank-container|right-small]
-> ![[LoRA.png|300]]
+> ![[../Research/Images/LoRA.png|300]]
 > 
 > *Figure 1*: Our reparametrization. We only train $A$ and $B$.
 
@@ -301,7 +301,7 @@ As a final stress test for LoRA, we scale up to GPT-3 with 175 billion parameter
 
 As shown in Table 4, LoRA matches or exceeds the fine-tuning baseline on all three datasets. Note that not all methods benefit monotonically from having more trainable parameters, as shown in Figure 2. We observe a significant performance drop when we use more than 256 special tokens for prefix-embedding tuning or more than 32 special tokens for prefix-layer tuning. This corroborates similar observations in Li & Liang (2021). While a thorough investigation into this phenomenon is out-of-scope for this work, we suspect that having more special tokens causes the input distribution to shift further away from the pre-training data distribution. Separately, we investigate the performance of different adaptation approaches in the low-data regime in Section F.3.
 
-![[LoRA - Figure 2.png|900]]
+![[../Research/Images/LoRA - Figure 2.png|900]]
 >*Figure 2* GPT-3 175B validation accuracy vs. number of trainable parameters of several adaptation methods on WikiSQL and MNLI-matched. LoRA exhibits better scalability and task performance. See Section F.2 for more details on the plotted data points.
 
 
@@ -433,7 +433,7 @@ where $U_i$ represents the columns of $U_{A_{r=8}}$ corresponding to the top-$i$
 
 $\phi(\cdot)$ has a range of $[0, 1]$, where 1 represents a complete overlap of subspaces and 0 a complete separation. See Figure 3 for how $\phi$ changes as we vary $i$ and $j$. We only look at the 48th layer (out of 96) due to space constraint, but the conclusion holds for other layers as well, as shown in Section H.1.
 
-![[LoRA - Figure 3.png|900]]
+![[../Research/Images/LoRA - Figure 3.png|900]]
 
 >Figure 3: Subspace similarity between column vectors of $A_{r=8}$ and $A_{r=64}$ for both $\Delta W_q$ and $\Delta W_v$. The third and the fourth figures zoom in on the lower-left triangle in the first two figures. The top directions in $r = 8$ are included in $r = 64$, and vice versa.
 
@@ -449,7 +449,7 @@ Since both $A_{r=8}$ and $A_{r=64}$ are learned using the same pre-trained model
 We further investigate the relationship between $\Delta W$and $W$ . In particular, does $\Delta W$ highly correlate
 with $W$ ? (Or mathematically, is $\Delta W$ mostly contained in the top singular directions of $W$?) Also, how "large" is $\Delta W$ comparing to its corresponding directions in $W$ ? This can shed light on the underlying mechanism for adapting pre-trained language models.
 
-![[LoRA - Figure 4.png|900]]
+![[../Research/Images/LoRA - Figure 4.png|900]]
 
 >Figure 4: Left and Middle: Normalized subspace similarity between the column vectors of $A_r=64$ from two random seeds, for both $\Delta W_q$ and $\Delta W_v$ in the 48th layer. Right: the same heat-map between the column vectors of two random Gaussian matrices. See Section H.1 for other layers.
 

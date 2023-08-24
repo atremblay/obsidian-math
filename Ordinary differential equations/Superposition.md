@@ -77,11 +77,11 @@ $$
 
 This shows that $y_{p}=\sum_{i=1}^n c_{i}y_{p_{i}}$ is a solution of  $Q(x) = \sum_{i=1}^n c_{i}Q_i(x)$
 
-Each $y_{p_{i}}$ are all [[Lin. Ind. of Func|linearly independant]]
+Each $y_{p_{i}}$ are all [[../Calculus/Lin. Ind. of Func|linearly independant]]
 
 
 > [!question]-
-> I'm still unclear why they are all linearly independant. Apparently, for the case of constant coefficient (i.e. $f_{i}(x) = \text{constant}$) these are proofs of that [[Const Coeff Homo DE]],  [[Undetermined Coefficient|Undetermined coefficient for non-homogeneous ODE]] and [[Variation of Parameters]]
+> I'm still unclear why they are all linearly independant. Apparently, for the case of constant coefficient (i.e. $f_{i}(x) = \text{constant}$) these are proofs of that [[Solutions/Const Coeff Homo DE]],  [[Solutions/Undetermined Coefficient|Undetermined coefficient for non-homogeneous ODE]] and [[Solutions/Variation of Parameters]]
 
 > [!Example]-
 > If $\textcolor{lime}{y_{p_1}}=1+x$ is a solution to 
@@ -122,7 +122,7 @@ f_n(x)y_c^{(n)} + \ldots +f_1(x)y_c^{(1)} +  f_0(x)y_c =0
 \end{align}
 $$
 
-Notice the subscript $y_c$. $c$ stands for [[Complementary function|complementary]] because this is a solution to the homogeneous version where $Q_{i}(x)=0$ for all $i$ .
+Notice the subscript $y_c$. $c$ stands for [[Definitions/Complementary function|complementary]] because this is a solution to the homogeneous version where $Q_{i}(x)=0$ for all $i$ .
 
 
 ## $c_i=a$
@@ -137,5 +137,5 @@ f_n(x)\left[ay_{p_1}  + ay_{p_2} + \ldots + ay_{p_n} \right]^{(n)} \\ + \ldots \
 \end{align}
 $$
 
-The [[Complementary function|complementary solution]] is now
+The [[Definitions/Complementary function|complementary solution]] is now
 $$y_c=\sum_{j=1}^n y_{p_{j}}$$

@@ -8,7 +8,7 @@
 > - If it's a diagonal matrix, then the system is decoupled. 
 > - If not, then the system is coupled.
 > 
-> The $n$ eigenvalues of $\mathbf{A}$ are the $n$ roots of the [[Characteristic equation]] of $(1)$, meaning $n$ different solutions. 
+> The $n$ eigenvalues of $\mathbf{A}$ are the $n$ roots of the [[../Calculus/Characteristic equation]] of $(1)$, meaning $n$ different solutions. 
 
 
 # Decoupled
@@ -92,12 +92,12 @@ x_{n-1} \\
 x_{n}
 \end{bmatrix}(0) \\
 $$
-With the matrix $\mathbf{A}$ above, we can write this new matrix as a [[Matrix exponential|matrix exponential]] $e^{\mathbf{A}t}$.
+With the matrix $\mathbf{A}$ above, we can write this new matrix as a [[../Linear Algebra/Matrix exponential|matrix exponential]] $e^{\mathbf{A}t}$.
 
 # Coupled
-## [[Linear ODE#Homogeneous|Homogeneous ODE]] as Coupled System
+## [[Definitions/Linear ODE#Homogeneous|Homogeneous ODE]] as Coupled System
 
-Given an $n^{th}$ order constant coefficients [[Linear ODE#Homogeneous|homogeneous DE]] 
+Given an $n^{th}$ order constant coefficients [[Definitions/Linear ODE#Homogeneous|homogeneous DE]] 
 $$a_{n}x^{(n)}+a_{n-1}x^{(n-1)}+a_{n-2}x^{(n-2)}+\ldots+a_2\ddot{x}+a_1\dot{x}+a_0x=0 \hspace{2em}(1)$$
 we can turn it into $n$ **coupled** first order linear ODE. First let's rewrite the ODE
 $$x^{(n)}=-a_{n-1}x^{(n-1)}-a_{n-2}x^{(n-2)}-\ldots-a_2\ddot{x}-a_1\dot{x}-a_0x=-\sum_{i=0}^{n-1}a_{i}x^{(i)}$$
@@ -198,7 +198,7 @@ $$
 $$\boxed{\dot{\mathbf{x}}= \mathbf{A}\mathbf{x}}$$
 We now have $n$ coupled ($\mathbb{R}^{n\times n}\times \mathbb{R}^{n \times 1}$ ) first order linear ODE. First order because we are taking the first derivative of the newly introduced variables $x_i$.  
 
-The eigenvalues of $\mathbf{A}$, **in this specific case where we express an $n^{th}$ order ODE as $n$ first order ODE**, are the roots of the [[Characteristic equation]] of $(1)$.
+The eigenvalues of $\mathbf{A}$, **in this specific case where we express an $n^{th}$ order ODE as $n$ first order ODE**, are the roots of the [[../Calculus/Characteristic equation]] of $(1)$.
 
 Example here 
 https://youtu.be/Vtijyyo5fKI?t=1281
@@ -238,7 +238,7 @@ https://youtu.be/Vtijyyo5fKI?t=1281
 > \end{align}
 > $$
 > 
-> The eigenvalues of the matrix $\mathbf{A}$ are the roots of the of the [[Characteristic equation]] of the ODE
+> The eigenvalues of the matrix $\mathbf{A}$ are the roots of the of the [[../Calculus/Characteristic equation]] of the ODE
 > 
 > $\det(\mathbf{A} - \lambda \mathbf{I}) = 0$
 > $$ 
@@ -254,12 +254,12 @@ https://youtu.be/Vtijyyo5fKI?t=1281
 > &= 0
 > \end{align}
 > $$
-> And the [[Characteristic equation]] is $\lambda^3 + a_2\lambda^2+a_1\lambda + a_0$
+> And the [[../Calculus/Characteristic equation]] is $\lambda^3 + a_2\lambda^2+a_1\lambda + a_0$
 > So the values of $\lambda$ satisfying one satisfies the other.
 > 
 > All those $\lambda$ satisfies the solutions of type $x(t)=e^{\lambda t}$  
 
-## [[Linear ODE#Nonhomogeneous|Nonhomogeneous ODE]] as Coupled system
+## [[Definitions/Linear ODE#Nonhomogeneous|Nonhomogeneous ODE]] as Coupled system
 
 $$x^{(n)}+a_{n-1}x^{(n-1)}+a_{n-2}x^{(n-2)}+\ldots+a_2\ddot{x}+a_1\dot{x}+a_0x=Q(t) \hspace{2em}(2)$$
 

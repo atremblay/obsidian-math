@@ -40,7 +40,7 @@ $y_1$ and $y_2$ are linearly independant on an interval if they are not a scalar
 
 Suppose there are two __linearly independant__ solutions $\textcolor{yellow}{y_1}$ and $\textcolor{cyan}{y_2}$ to 
 $$y''+p(x)y'+q(x)y=0$$
-then the [[general solution]] is 
+then the [[../Calculus/General solution]] is 
 $$y=c_1\textcolor{yellow}{y_1} + c_2\textcolor{cyan}{y_2}$$
 That means that if you find more than 2 solutions then you have some that are linear combinations of 2 linearly independant solutions. There cannot be more than 2 solutions.
 
@@ -66,9 +66,9 @@ $$y(n) + p_{n-1}(x)y^{(n-1)} + \ldots + p_{0}(x)y =0$$
 Then $y=c_1y_1 + \ldots + c_ny_n$ also solves.
 
 
-##### Theorem: [[General Solution]]
+##### Theorem: [[../Calculus/General solution]]
 Suppose $y_1, \ldots, y_n$ solve 
 $$y(n) + p_{n-1}(x)y^{(n-1)} + \ldots + p_{0}(x)y =0$$
-Then $y=c_1y_1 + \ldots + c_ny_n$ is the *[[general solution]]* if and only if the [[Lin. Ind. of Func#Wronskian|Wronskian]] $W(t) \neq 0$ for some $t_0$.
+Then $y=c_1y_1 + \ldots + c_ny_n$ is the *[[../Calculus/General solution]]* if and only if the [[../Calculus/Lin. Ind. of Func#Wronskian|Wronskian]] $W(t) \neq 0$ for some $t_0$.
 
 This tells us that we can stop searching for new solutions once you have found *n* independant ones. Anything else will be a combination of these.

@@ -18,12 +18,12 @@ Language models used are T5:
 - T5-XL: 3B parameters
 
 
-![[Pasted image 20211103084548.png]]
+![[../../../Explorance/Research/Images/Pasted image 20211103084548.png]]
 >  Each heatmap displays the model’s performance (F1/accuracy) given its size in parameters (horizontal axis) and the number of labeled examples available during fine-tuning (vertical axis).
 
 Basic metric to gage what is more relevant, data or parameters. 0 is data, 1 is the model.
 
-![[Pasted image 20211103090609.png|350]]
+![[../../../Explorance/Research/Images/Pasted image 20211103090609.png|350]]
 
 
 This fits the intuition that one can have about data versus model size. This gives more meat to the idea.

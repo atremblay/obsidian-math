@@ -5,7 +5,7 @@ tags:
 ---
 
 > [!summary]
-> Standard form of a [[Ordinary differential equation#Order|first order]] [[Linear ODE|linear ODE]]
+> Standard form of a [[../Definitions/Ordinary differential equation#Order|first order]] [[../Definitions/Linear ODE|linear ODE]]
 > $$
 > x'+p(y)x = f(y)
 > $$

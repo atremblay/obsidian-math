@@ -2,13 +2,13 @@
 > $$\dot{x}=kx+b$$
 > $b$ is a constant input
 
-# Use [[Undetermined Coefficient]]
+# Use [[../Solutions/Undetermined Coefficient]]
 
 ## Homogeneous version
 
 $$\dot{x}=kx$$
 
-Use [[Separation of variables]]
+Use [[../Solutions/Separation of variables]]
 
 $$
 \begin{align}
@@ -19,7 +19,7 @@ $$
 \end{align}
 $$
 > [!note]- Change of variable
-> Bit more details for future reference, when you feel dumb. Use a [[Substitution rule|change of variable]] $u=kx$ and $du=kdx\iff \frac{du}{k}=dx$
+> Bit more details for future reference, when you feel dumb. Use a [[../../Calculus/Integration/Substitution rule|change of variable]] $u=kx$ and $du=kdx\iff \frac{du}{k}=dx$
 >  $$
 >  \begin{align}
 >  \int \frac {1}{kx} dx &= \frac 1 k \int \frac 1 u du \\
@@ -43,7 +43,7 @@ $$
 
 $$\dot{x}=kx+b$$
 
-Use [[Separation of variables]]
+Use [[../Solutions/Separation of variables]]
 
 $$
 \begin{align}
@@ -54,7 +54,7 @@ $$
 \end{align}
 $$
 > [!note]- Change of variable
-> Bit more details for future reference, when you feel dumb. Use a [[Substitution rule|change of variable]] $u=kx+b$ and $du=kdx\iff \frac{du}{k}=dx$
+> Bit more details for future reference, when you feel dumb. Use a [[../../Calculus/Integration/Substitution rule|change of variable]] $u=kx+b$ and $du=kdx\iff \frac{du}{k}=dx$
 >  $$
 >  \begin{align}
 >  \int \frac {1}{kx+b} dx &= \frac 1 k \int \frac 1 u du \\

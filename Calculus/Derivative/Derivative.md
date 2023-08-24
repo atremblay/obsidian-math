@@ -11,4 +11,4 @@ from the middle
 $$\frac {\mathrm{d}f}{\mathrm{d}t} = \lim_{\Delta t \to 0} \frac {f(t+\Delta t) - f(t-\Delta t)}{2\Delta t}$$
 
 > [!blank-container]
-> ![[Images/derivative.svg]]
+> ![[../Images/derivative.svg]]

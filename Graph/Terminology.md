@@ -5,27 +5,27 @@ Highlight from [Introduction to Graph Theory](https://store.doverpublications.co
 # Graph
 A graph is an object consisting of two sets called its *vertex set* and its *edge set*. The vertex set is a finite **nonempty** set. The edge set may be emtpy, but otherwise its elements are **two-element** subsets of the vertex set.
 
-![[graph.svg]]
+![[Images/graph.svg]]
 # Pseudograph
 Loops are not allowed in a graph because that would be an edge `{X,X}` and this is not a proper set; the same element is there twice.
 
 If we allow loops. then we are talking about a *pseudograph*
 
-![[pseudograph.svg]]
+![[Images/pseudograph.svg]]
 
 # Multigraph
 Skeins (repeated edges) are not allowed either because that would mean having the edge `{X,Y}` repeated, but a graph is defined by an **edge set**, cannot have `{{X,Y}, {X,Y}}`.
 
 If we allow skeins, then we are talking about a *multigraph*
 
-![[multigraph.svg]]
+![[Images/multigraph.svg]]
 
 # Hypergraph
 An hypergraph is an object consisting of two sets called its *vertex set* and its *edge set*. The vertex set is a finite **nonempty** set. The edge set may be emtpy, but otherwise its elements are subsets of the vertex set.
 
 The main difference with a standard graph is that the elements of the edge set can have more than one vertice. This is a generalization of an edge called an hyperedge.
 
-![[hypergraph.svg]]
+![[Images/hypergraph.svg]]
 
 # Cyclic graph
 If *v* is an integer greater than or equal to 3, the *cyclic* graph on *v* vertices, denoted $C_v$ , is the graph having vertex set *{1,2,...,v}* and the edge set *{{1,2}, {2,3}, ..., {v-1, v}, {v,1}}*.
@@ -59,7 +59,7 @@ Two graphs are isomorphic if there is a one-to-one correspondance between bertex
 Left grpah is isomorphic to the right graph. Intermediate steps in-between
 
 
-![[isomorphism 1.svg]]
+![[../Machine Learning/isomorphism 1.svg]]
 
 
 1. Flip B and D
@@ -104,7 +104,7 @@ If some new vertices of degree 2 are added to some of the edges of a graph *G*, 
 
 Right image is an expansion of the left. 
 
-![[expansion.svg]]
+![[Images/expansion.svg]]
 
 # Euler walk
 
@@ -120,12 +120,12 @@ An **euler walk** is a walk that uses every edge in the graph exactly once.
 If a connected graph has a closed euler walk, then every vertex is even. Conversly, if a graph is connected and every vectex is even, then it has a closed euler walk.
 
 # Faces
-When a planar graph is actually drawn in a place without edge-crossings, it cuts the plane into regions called *faces* (denoted *f*) of the graph. The exterior [[region]] is counted as a face.
+When a planar graph is actually drawn in a place without edge-crossings, it cuts the plane into regions called *faces* (denoted *f*) of the graph. The exterior [[../Ordinary differential equations/Definitions/Region]] is counted as a face.
 
 # Polygonal graph
 A graph is *polygonal* if it is planar, cnnected and has the property that every edge borders on two different faces. An edge can border on no more than two faces, so what we are excluding are planar connected graphs having one or more edges that border on only one face.
 
-![[polygonal.svg]]
+![[Images/polygonal.svg]]
 
 ##### Eurler's formula
 No matter what graph you draw, provided that it is corrsing-free and in one piece, there is the basic cimplicity of $v + f - e = 2$

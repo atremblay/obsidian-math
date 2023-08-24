@@ -61,7 +61,7 @@ $$
 > ^abe062
 
 
-Using the [[Trigonometric identity#Half Angle|half angle]] identity
+Using the [[../../Trigonometry/Trigonometric identity#Half Angle|half angle]] identity
 
 $$
 \sin \frac x 2 = \sqrt{  \frac{1-\cos x}{2}}

@@ -53,7 +53,7 @@ We can now use the [[Integrating factor|integrating factor]]
 > Plug everything in
 > $u'+10u = 5x$
 > 
-> Then use the [[integrating factor]]
+> Then use the [[Integrating factor]]
 > 
 > $p(y)=10$, $f(y)=5x$
 > $r(y)=e^{\int p(y)dy}=e^{\int 10 dy} = e^{10y}$

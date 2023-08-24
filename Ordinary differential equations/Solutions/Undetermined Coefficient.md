@@ -8,7 +8,7 @@ tags:
 ---
 
 > [!summary]
-> The [[general solution]] of
+> The [[../../Calculus/General solution]] of
 > $$
 > \sum_{i=0}^{n}a_{i}x^{(i)}=Q(t)
 > $$
@@ -22,9 +22,9 @@ tags:
 
 A differential equation that has something other than zero on the right-hand side. For example:
 $$y''-2y'-3y=3e^{2t}$$
-#### [[General solution]]
+#### [[../../Calculus/General solution]]
 
-Particular solution $\textcolor{yellow}{y_p}$ solves non-homogeneous. Because of [[Existence and uniqueness#Theorem Existence Uniqueness|uniqueness]], $\textcolor{yellow}{y_p}$ is the only solution to the non-homogeneous equation. 
+Particular solution $\textcolor{yellow}{y_p}$ solves non-homogeneous. Because of [[../Existence and uniqueness#Theorem Existence Uniqueness|uniqueness]], $\textcolor{yellow}{y_p}$ is the only solution to the non-homogeneous equation. 
 $\textcolor{cyan}{y_h}$ solves the homogeneous version of the same equation $y''-2y'-3y=0$
 
 If we add both solutions together as a new solution, then $\textcolor{cyan}{y_h}+\textcolor{yellow}{y_p}$ solves the non-homogeneous equation.
@@ -51,7 +51,7 @@ $$
 Here is the methodology to use with the same example as above weaved-in
 
 ### Step 1: Solve the homogeneous
-See [[Const Coeff Homo DE|constant coefficient homogeneous differential equation]]. The [[general solution]] the the homogeneous DE is
+See [[Const Coeff Homo DE|constant coefficient homogeneous differential equation]]. The [[../../Calculus/General solution]] the the homogeneous DE is
 $$\textcolor{cyan}{y_h=c_1e^{3t}+c_2e^{-t}}$$
 With the guess $y=e^{rt}$
 
@@ -66,23 +66,23 @@ $$
 \iff&\textcolor{orange}{A}=-1
 \end{align}
 $$
-This is **not** the [[general solution]], but a particular solution.
+This is **not** the [[../../Calculus/General solution]], but a particular solution.
 
-### Step 3: [[General solution]]
-The [[general solution]] is 
+### Step 3: [[../../Calculus/General solution]]
+The [[../../Calculus/General solution]] is 
 $$
 \begin{align}
 y_g&=\textcolor{cyan}{y_h}+\textcolor{yellow}{y_p} \\
 &=\textcolor{cyan}{c_1e^{3t}+c_2e^{-t}} \textcolor{yellow}{-e^{2t}}
 \end{align}$$
-If we had initial condition this is where we would plug them, in the [[general solution]]. Not at any other time before.
+If we had initial condition this is where we would plug them, in the [[../../Calculus/General solution]]. Not at any other time before.
 
 # Heads up
 Cannot be dumb about the guess. This is mostly plug and play, but we still have to think a little bit.
 
 If the non-homogeneous ODE was (right-hand side is different)
 $$y''-2y'-3y=\textcolor{pink}{3e^{-t}}$$
-The homogeneous [[general solution]] would still be $\textcolor{cyan}{y_h=c_1e^{3t}+c_2e^{-t}}$ (because it's still equal to zero). We still get inspiration from the right-hand side for the guess, but it cannot be $y_p=Ae^{\textcolor{orange}{-t}}$  because it's one of the particular solution to the homogeneous equation. It's a simple scalar multiplication away from the second term of $\textcolor{cyan}{y_h}$.
+The homogeneous [[../../Calculus/General solution]] would still be $\textcolor{cyan}{y_h=c_1e^{3t}+c_2e^{-t}}$ (because it's still equal to zero). We still get inspiration from the right-hand side for the guess, but it cannot be $y_p=Ae^{\textcolor{orange}{-t}}$  because it's one of the particular solution to the homogeneous equation. It's a simple scalar multiplication away from the second term of $\textcolor{cyan}{y_h}$.
 
 We then have to use a similar trick as in [[Const Coeff Homo DE#Case 2 Repeated root|repeated roots]]
 $$\textcolor{yellow}{y_p}=A\textcolor{violet}{t}e^{-t}$$
@@ -98,7 +98,7 @@ $$
 \end{align}
 $$
 
-So the [[general solution]] is 
+So the [[../../Calculus/General solution]] is 
 $$
 \begin{align}
 y_g&=y_h+\textcolor{yellow}{y_p}\\
@@ -125,7 +125,7 @@ Has all of the above. So the guess would be
 $$\textcolor{yellow}{y_p=(A+Bt+Ct^2) + D(e^{-t}\cos(4t)) + E(e^{-t}\sin(4t))}$$
 >The polynomial includes all degrees, not just $t^2$.
 
-Homogeneous [[general solution]] stays the same, $\textcolor{cyan}{y_h=c_1e^{3t}+c_2e^{-t}}$. There is no need to multiply anything by $t^s$ because none of the things in $\textcolor{yellow}{y_p}$ is a solution of the homogeneous case.
+Homogeneous [[../../Calculus/General solution]] stays the same, $\textcolor{cyan}{y_h=c_1e^{3t}+c_2e^{-t}}$. There is no need to multiply anything by $t^s$ because none of the things in $\textcolor{yellow}{y_p}$ is a solution of the homogeneous case.
 
 ## Constraints
 $$
@@ -149,7 +149,7 @@ $Q(x)$ contains a term which, ignoring constant coefficients, is $x^k$ times a t
 ### Case 3
 Applicable only if both of the following are fulfilled. 
 
-1. The [[Characteristic equation|characteristic equation]] has an $r$ multiple root
+1. The [[../../Calculus/Characteristic equation|characteristic equation]] has an $r$ multiple root
 2. $Q(x)$ contains a term which, ignoring constant coefficients, is $x^k$ times a term $u(x)$ in $y_p$ where $u(x)$ was obtained from the $r$ multiple root. 
 
 In this case, a particular solution $y_p$ will be a linear combination of $x^{k+r}u(x)$ and **all it's linearly independant derivatives**. If in addition $Q(x)$ contains terms which belong to [[Undetermined Coefficient#Case 1|Case 1]] and [[Undetermined Coefficient#Case 2|Case 2]], then the proper terms called for by theses cases must also be added to $y_p$.

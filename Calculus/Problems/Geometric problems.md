@@ -27,7 +27,7 @@ $$
 \end{align}
 $$
 
-We now have a differential equation, without $a$. We can use [[Separation of variables]] to solve this (as usual the
+We now have a differential equation, without $a$. We can use [[../../Ordinary differential equations/Solutions/Separation of variables]] to solve this (as usual the
 constant $C$ absorbs every other constants)
 
 $$
@@ -112,4 +112,4 @@ $$
     \frac{y'}{y^2}&=\frac{-1}{2A} \\
 \end{align}
 $$
-And proceed with the [[Separation of variables]] like above.
+And proceed with the [[../../Ordinary differential equations/Solutions/Separation of variables]] like above.

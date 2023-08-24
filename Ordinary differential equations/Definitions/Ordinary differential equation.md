@@ -31,7 +31,7 @@ The order of the diffrential equation is the order of the higest derivate involv
 
 Let $y=f(x)$ define $y$ as a function of $x$ on an interval $I: a<x<b$. We say that the function $f(x)$ is an **explicit solution** or simply a **solution** of an ordinary differential equation involving $x$, $f(x)$, and its derivatives, if it satisfies the equation for *every* $x$ in $I$, i.e., if we replace $y$ by $f(x)$, $y'$ by $f'(x)$, ..., $y^{(n)}$ by $f^{(n)}(x)$, the differential equation reduces to a function with only $x$ as the independant variable. In mathematical symbols the definitions says: the function $f(x)$ is a solution of the differential equation
 
-> #TODO Make the link with [[Existence and uniqueness]]
+> #TODO Make the link with [[../Existence and uniqueness]]
 
 $$F(x,y,y\,...,y^{(n)})=0,$$
 if

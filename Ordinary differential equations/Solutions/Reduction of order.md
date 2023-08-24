@@ -84,5 +84,5 @@ y_2&=y_1(x)\int u(x)dx  \\
 \end{align}
 $$
 ###### References
-[[@tenenbaum_ordinary_1985]] p.242
+[[../../Reading notes/@tenenbaum_ordinary_1985]] p.242
 

@@ -3,7 +3,7 @@ aliases:
     - "matrix exponential"
 ---
 
-Let $\mathbf{X}$ be an $n\times n$ real or complex matrix. The exponential of $\mathbf{X}$, denoted by $e^{\mathbf{X}}$ or $\exp(\mathbf{X})$, is the $n \times n$ matrix given by the [[Maclaurin Series#^f3c038|power series]]
+Let $\mathbf{X}$ be an $n\times n$ real or complex matrix. The exponential of $\mathbf{X}$, denoted by $e^{\mathbf{X}}$ or $\exp(\mathbf{X})$, is the $n \times n$ matrix given by the [[../Calculus/Maclaurin Series#^f3c038|power series]]
 
 $$
 e^{\mathbf{X}} = \sum_{k=0}^{\infty} \frac{1}{k!}\mathbf{X}^k=\mathbf{I} + \sum_{k=1}^{\infty} \frac{1}{k!}\mathbf{X}^k
