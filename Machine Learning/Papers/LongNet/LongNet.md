@@ -116,8 +116,6 @@ $$
 
 In the implementation, the dilated attention can be transformed into dense attention between a gathering operation over the input $(Q, K, V)$ and a scattering operation over the output $\widetilde{O}_{i}$, so it can directly reuse any optimization for vanilla attention (e.g., flash attention). Dilated attention can significantly reduce the computation cost by a factor of $\frac{N}{w} r^{2}$ over the vanilla attention.
 
-In practice, the segment size $w$ trades the globality of attention for efficiency, while the dilation with a size $r$ reduces the computation cost by approximating the attention matrix. To capture both long-range and short-range information efficiently, we implement a mixture of dilated attentions with different segment sizes and dilation rates $\left\{r_{i}, w_{i}\right\}^{k}$ :
-
 > [!blank-container]
 > 
 > ![[figure_2.svg]]
@@ -130,7 +128,7 @@ O=\left.\sum_{i=1}^{k} \alpha_{i} O\right|_{r_{i}, w_{i}} \tag{9}\\
 \end{gather}
 $$
 
-where $s_{i}$ denotes the denominator of the attention softmax for $\left.O\right|_{r_{i}, w_{i}}$. Note that the computations for $\left\{\left.O\right|_{r_{i}, w_{i}}\right\}^{k}$ are in parallel because there is no computation dependency among them. Experiments show that dynamic weights calculated by the denominator of the attention softmax are better than learnable fixed weights. For a query attends to keys in different dilated attentions, our method to mix dilated attentions is equivalent to gather keys in different parts and calculate softmax together.
+In practice, the segment size $w$ trades the globality of attention for efficiency, while the dilation with a size $r$ reduces the computation cost by approximating the attention matrix. To capture both long-range and short-range information efficiently, we implement a mixture of dilated attentions with different segment sizes and dilation rates $\left\{r_{i}, w_{i}\right\}^{k}$ : where $s_{i}$ denotes the denominator of the attention softmax for $\left.O\right|_{r_{i}, w_{i}}$. Note that the computations for $\left\{\left.O\right|_{r_{i}, w_{i}}\right\}^{k}$ are in parallel because there is no computation dependency among them. Experiments show that dynamic weights calculated by the denominator of the attention softmax are better than learnable fixed weights. For a query attends to keys in different dilated attentions, our method to mix dilated attentions is equivalent to gather keys in different parts and calculate softmax together.
 
 Intuitively, the local attention should be precisely computed, while the global attention can be approximate. Therefore, we set a larger $w_{i}$ with a bigger $r_{i}$. Moreover, we gradually increase the $w_{i}$ for each attention until it reaches the maximum length $N$ or the number of attention patterns $k$ :
 
@@ -149,7 +147,6 @@ In practice, we set $w$ and $r$ to geometric sequences for an exponential attent
 > 
 > ![[figure_3.svg]]
 > > **Figure 3**: Dilated attention with multiple heads. The attention patterns differ among heads by shifting the position successively.
-
 
 As shown in Figure 3, we differ in the computation among different heads by sparsifying different parts of the query-key-value pairs. Specifically, for the $j$-th head, we have an offset $s_{j}=j \bmod r$ when selecting the $(Q, K, V)$ :
 
@@ -255,7 +252,7 @@ The distributed algorithm described above is orthogonal to other parallelisms, i
 
 ### 3.2 Scaling up to 1B Tokens
 
-We verify the feasibility of scaling to $1 \mathrm{~B}$ tokens with the modern distributed systems. Starting from $8 \mathrm{~K}$, we gradually scale the sequence length until the limit of GPU memory. We reduce the batch size accordingly to keep the number of tokens per batch at 1 billion. Each model of different sequence lengths has up to 3 segment lengths, which are 2,048, the number of tokens per device, and the sequence length. We compute the average speed in the forward propagation for 10 different runs.
+We verify the feasibility of scaling to 1B tokens with the modern distributed systems. Starting from 8K, we gradually scale the sequence length until the limit of GPU memory. We reduce the batch size accordingly to keep the number of tokens per batch at 1 billion. Each model of different sequence lengths has up to 3 segment lengths, which are 2,048, the number of tokens per device, and the sequence length. We compute the average speed in the forward propagation for 10 different runs.
 
 Figure 5 reports the runtime of vanilla attention and our dilated attention. Both of them are implemented with FlashAttention Kernel for saving memory and improving speed. It shows that dilated attention can successfully scale up the sequence length with almost constant latency. By partitioning the sequence dimension, it can leverage the distributed systems to scale the sequence length to 1 billion tokens. In contrast, vanilla attention suffers from the quadratic dependency on the sequence length. Its latency dramatically increases as the length grows. Moreover, there is no distributed algorithm for vanilla attention to break sequence length limitation. This proves the advantage of the linear complexity as well as the distributed algorithm for LONGNET.
 

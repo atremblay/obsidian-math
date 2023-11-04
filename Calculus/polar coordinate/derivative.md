@@ -5,12 +5,13 @@ tags:
     - "polar_coordinate"
 ---
 > [!summary]
+> A geometrical interpretation of a polar coordinate derivative is given in terms of the angle $\textcolor{cyan}{\psi}$ which is between the [[#^d30f18|radius vector]] and the tangent line at point $P$ where the derivative is calculated. 
 > $$
 > \boxed{
 > \cot \psi=\frac{\frac{\mathrm{d} \rho}{\mathrm{d} \theta}}{\rho},\hspace{1em} \tan \psi=\frac{\rho}{\rho^\prime}
 > }
 > $$
-> Where $\psi$ is the angle from the [[#^d30f18|radius vector]] to the tangent line at point $P$ where the derivative is calculated.
+> 
 
 
  Intuitively, as $\Delta \theta \rightarrow 0$

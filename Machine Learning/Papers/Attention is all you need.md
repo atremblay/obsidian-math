@@ -15,6 +15,8 @@ authors:
 status: read
 aliases:
     - "Vaswani et al., 2017"
+    - Transformer
+    - transformer architecture
 published: "2017-12-06"
 url:
     - "[paper](https://arxiv.org/pdf/1706.03762.pdf)"

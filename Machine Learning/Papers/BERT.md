@@ -11,9 +11,8 @@ authors:
     - "Ming-Wei Chang" 
     - Kenton Lee 
     - Kristina Toutanova
-url:
-    - "[paper](https://arxiv.org/pdf/1810.04805)"
-    - "[arxiv](https://arxiv.org/abs/1810.04805)"
+paper: "https://arxiv.org/pdf/1810.04805"
+arxiv: "https://arxiv.org/abs/1810.04805"
 published: "2018-10-11"
 ---
 

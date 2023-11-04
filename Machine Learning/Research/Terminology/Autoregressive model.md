@@ -1,4 +1,7 @@
-The Autoregressive Model, or AR model for short, relies only on past period values to predict current ones. 
+---
+accronym: AR
+definition: The Autoregressive Model relies only on past period values to predict current ones.
+---
 
 For example, RNN trained on predicting the next word by only considering past words.
 
