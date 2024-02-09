@@ -1,11 +1,11 @@
 ---
 cssclasses:
-  - custom-full-width
+  - wide-page
 ---
 
 <div class="container full-width-page">
   <div class="my-math-block">
-    <h5>Reciprocal</h5>
+    <h1>Reciprocal</h1>
     <p class="math display">
         \begin{align}
         \sin \theta &= \frac{1}{\csc \theta} \\
@@ -18,7 +18,7 @@ cssclasses:
     </p>
 </div>
   <div class="my-math-block">
-    <h5>Complementary angles</h5>
+    <h1>Complementary angles</h1>
     <p class="math display">
         \begin{array} 
         \\
@@ -32,7 +32,7 @@ cssclasses:
     </p>
 </div>
     <div class="my-math-block">
-    <h5>Half angle</h5>
+    <h1>Half angle</h1>
     <p class="math display">
 \begin{align}
 \sin\left(\frac{\theta}{2}\right) = \pm \sqrt{\frac{1-\cos\theta}{2}} \\
@@ -41,7 +41,7 @@ cssclasses:
 \end{align}
 </div>
     <div class="my-math-block">
-    <h5>Double angle</h5>
+    <h1>Double angle</h1>
     <p class="math display">
         \begin{align}
         \sin (2\theta) &= 2 \sin\theta\cos\theta \\
@@ -51,7 +51,7 @@ cssclasses:
         \end{align}
 </div>
     <div class="my-math-block">
-    <h5>Opposite angle</h5>
+    <h1>Opposite angle</h1>
     <p class="math display">
         \begin{align}
         \\
@@ -65,7 +65,7 @@ cssclasses:
     </p>
   </div>
     <div class="my-math-block">
-    <h5>Sum/Diff of angles</h5>
+    <h1>Sum/Diff of angles</h1>
     <p class="math display">
         \begin{align}
         \\
@@ -79,7 +79,7 @@ cssclasses:
     </p>
   </div>
     <div class="my-math-block">
-    <h5>Obtuse angles</h5>
+    <h1>Obtuse angles</h1>
     <p class="math display">
         \begin{array} 
         \\
@@ -93,7 +93,7 @@ cssclasses:
     </p>
   </div>
   <div class="my-math-block">
-    <h5>Product</h5>
+    <h1>Product</h1>
     <p class="math display">
         \begin{align}
         \sin \alpha \sin \beta &= \frac{\cos(\alpha - \beta) - \cos(\alpha + \beta)}{2} \\
@@ -104,7 +104,7 @@ cssclasses:
     </p>
   </div>
   <div class="my-math-block">
-    <h5>Derivative</h5>
+    <h1>Derivative</h1>
     <p class="math display">
         \begin{align}
         \frac{d}{d \theta} \sin(\theta) &= \cos\theta \\
@@ -117,7 +117,7 @@ cssclasses:
     </p>
   </div>
   <div class="my-math-block">
-    <h5>Integral</h5>
+    <h1>Integral</h1>
     <p class="math display">
         \begin{align}
         \int \sin(x) dx &= -\cos(x) + C \\
@@ -130,7 +130,7 @@ cssclasses:
     </p>
   </div>
   <div class="my-math-block">
-    <h5>Integral of sum of angles</h5>
+    <h1>Integral of sum of angles</h1>
     <p class="math display">
         \begin{align}
         \int \sin (a+\theta) d \theta&=-\cos (a+\theta) + C \\
@@ -143,7 +143,7 @@ cssclasses:
     </p>
   </div>
   <div class="my-math-block">
-    <h5>Integral of difference of angles</h5>
+    <h1>Integral of difference of angles</h1>
     <p class="math display">
         \begin{align}
         \int \sin (a-\theta) d \theta&=\cos (a-\theta) + C \\
@@ -156,7 +156,7 @@ cssclasses:
     </p>
   </div>
   <div class="my-math-block">
-    <h5>Pythagorean</h5>
+    <h1>Pythagorean</h1>
     <p class="math display">
         \begin{align}
         \sin^2 \theta + \cos^2 \theta &= 1 \\
@@ -166,7 +166,7 @@ cssclasses:
     </p>
   </div>
   <div class="my-math-block">
-    <h5>Unit Circle</h5>
+    <h1>Unit Circle</h1>
     <img src="/Documents/Batvault/unit_circle.png">
   </div>
 </div>

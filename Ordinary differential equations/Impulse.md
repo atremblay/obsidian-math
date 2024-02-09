@@ -4,7 +4,7 @@
 > $$x(t)=\int_{\tau=0}^{\tau=t} f(\tau)e^{\lambda (t-\tau)} d\tau$$
 
 
-To model a very quick impulse to a system we make use of the [[../Calculus/Dirac Delta Function]] and the [[../Calculus/Mean value theorem#Integral| mean value theorem for the integral]]
+To model a very quick impulse to a system we make use of the [[../Calculus/Dirac Delta Function]] and the [[../Calculus/Mean Value Theorem/Mean value theorem#Integral| mean value theorem for the integral]]
 
 $$
 \begin{align}

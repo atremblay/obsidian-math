@@ -1,0 +1,2 @@
+- hostPath Volume is a volume hosted on the local machine.
+- 

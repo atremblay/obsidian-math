@@ -5,23 +5,17 @@
 > The path traced by a body which always moves in the direction of a fixed point or of another moving object is called a pursuit curve.
 > 
 > > [!important]
-> > Look at [[Plane trying to reach its destination#Flip the script]]. Chosing the direction of the movement can set you up for failure. If it becomes very ugly, consider changing something. Reversing the direction or perhaps using another substitution of [[../../Solutions/Variable Substitution in DE|Variable Substitution in DE]]
+> > Look at [[Flying Plane Subjected to Wind/Vertical Wind > Cartesian#Flip the script]]. Chosing the direction of the movement can set you up for failure. If it becomes very ugly, consider changing something. Reversing the direction or perhaps using another substitution of [[../../Solutions/Variable Substitution in DE|Variable Substitution in DE]]
 
 
 ## Examples
-- [[Plane trying to reach its destination]]
+- [[Flying Plane Subjected to Wind/Table of Content|Flying Plane Subjected to Wind]]
 - [[Swimming across a river]]
+- [[Walking on a turntable]]
 
 
 
 
-
-4. An insect steps on the edge of a turntable of radius $a$ that is rotating at a constant angular velocity $\alpha$. It moves straight toward the center of the table at a constant velocity $v_{0}$. Find the equation of its path in polar coordinates, relative to axes fixed in space. (Hint. If $\theta$ is the angle through which the turntable has rotated in time $t$ and $r$ is the distance of the insect from the center at that moment, then $d \theta / d t=\alpha, r(d \theta / d t)=r \alpha$.) Draw a graph of the equation if $a=10 \mathrm{ft}, \alpha=\pi / 4$ radians/sec, $v_{0}=1 \mathrm{ft} / \mathrm{sec}$. How many revolutions will the table have made by the time the insect reaches the center?
-5. Assume in problem 4 that the insect always moves in a direction parallel to the diameter drawn through the point where he steps on the table.
-
-(a) Find the equation of its path relative to axes fixed in space.
-
-(b) What kind of curve is it? Hint. Change the equation to rectangular coordinates if the polar form is unfamiliar to you.
 
 6. A boy stands at A. By means of a string $l$ ft long, he holds a boat, which is in the water at $B$. He starts walking in a direction perpendicular to $A B$, always keeping the string taut. Find the equation of the boat's path. Ignore the height of the boy above the horizontal and assume that the string is always tangent to the path. The resulting curve is known as a tractrix. Hint. The slope of the tractrix is: $\tan \theta=d y / d x$.
 

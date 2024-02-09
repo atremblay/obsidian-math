@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - cornell-left
+  - cornell-border
+---
 
 > [!summary]
 > The concept is to break up a line in smaller and smaller segments and add up their length
@@ -12,7 +17,7 @@ The arc length is the length of a curve between two points. The idea is pretty s
 
 $$S_{n}=\sum_{i=1}^n P_{i-1}P_{i}$$
 
-> [!blank-container|left-large]
+> [!blank-container|left-medium]
 > ![[Images/arc_length.svg]]
 
 The more segments we have, the more accurate the measurement will be. Each segment has a $\Delta x_{i}$ and a $\Delta y_{i}$ that we can use to calculate its length.

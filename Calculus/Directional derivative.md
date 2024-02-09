@@ -1,3 +1,9 @@
+---
+cssclasses:
+  - cornell-border
+  - cornell-right
+  - tufte-sidenotes
+---
 
 > [!summary]
 > $$
@@ -49,7 +55,7 @@ Just like the [[Multivariate chain rule]], we introduce new terms that add up to
 $$
 \frac{f(x,y) - f(x_0,y_0)}{\Delta s} = \frac{\textcolor{orange}{f(x,y) - f(x_0,y)} + \textcolor{cyan}{f(x_0,y) - f(x_0,y_0)}}{\Delta s} \tag{3}
 $$
-By the [[Mean value theorem|mean value theorem]], 
+By the [[Mean Value Theorem/Mean value theorem|mean value theorem]], 
 $$
 \textcolor{orange}{f(x,y) - f(x_0,y)} = f_x(x_1,y)\Delta x, \qquad \textcolor{cyan}{f(x_0,y) - f(x_0,y_0)} = f_y(x_0,y_1)\Delta y
 $$
@@ -69,7 +75,7 @@ $$
 &= f_x(x_1,y)\textcolor{lightgreen}{\cos \alpha} + f_y(x_0,y_1) \textcolor{lightblue}{\cos \beta} \tag{4}
 \end{align}
 $$
-Following on the [[Mean value theorem|mean value theorem]], as $\Delta s \rightarrow 0$, $x_1 \rightarrow x_0$ and $y_1 \rightarrow y_0$ because $x \rightarrow x_0$ and $y \rightarrow y_0$. $x_1$ and $y_1$ are being squeezed in 
+Following on the [[Mean Value Theorem/Mean value theorem|mean value theorem]], as $\Delta s \rightarrow 0$, $x_1 \rightarrow x_0$ and $y_1 \rightarrow y_0$ because $x \rightarrow x_0$ and $y \rightarrow y_0$. $x_1$ and $y_1$ are being squeezed in 
 
 $$
 \begin{align}

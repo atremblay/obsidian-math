@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - cornell-border
+  - cornell-left
+---
 
 > [!Summary]
 > The curl measures the rotation of a vector field $\vec{f}$ by doing a [[../Cross Product|cross product]] between the  [[Gradient Operator|grad operator]] and the vector field $\vec{f}$. It's an operator that takes in a vector and output a vector

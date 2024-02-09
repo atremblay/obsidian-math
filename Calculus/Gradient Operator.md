@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - cornell-right
+  - cornell-border
+---
 
 
 > [!summary]

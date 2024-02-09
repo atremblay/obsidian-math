@@ -1,7 +1,11 @@
 ---
 aliases:
-    - "direction numbers"
-    - "direction cosines"
+  - direction numbers
+  - direction cosines
+cssclasses:
+  - cornell-border
+  - cornell-right
+  - tufte-sidenotes
 ---
 > [!summary]
 > > [!blank-container|right-small]

@@ -1,7 +1,12 @@
+---
+aliases:
+  - multivariate chain rule
+---
 
 > [!Summary]
+> $u=f(x,y,z)$ and $(x,y,z)$ are each functions of $(s,t)$
 > $$
-> \boxed{
+> 
 > \frac{\delta u}{\delta s} =
 > \left[\begin{matrix} 
 > f_x(x, y, z) & f_y(x, y, z) & \cdots & f_z(x, y, z)
@@ -11,8 +16,18 @@
 > \frac{\delta y}{\delta s} \\
 > \cdots \\
 > \frac{\delta z}{\delta s}
+> \end{matrix}\right] , \qquad
+> \frac{\delta u}{\delta t} =
+> \left[\begin{matrix} 
+> f_x(x, y, z) & f_y(x, y, z) & \cdots & f_z(x, y, z)
 > \end{matrix}\right] 
-> }
+> \left[\begin{matrix} 
+> \frac{\delta x}{\delta t} \\ 
+> \frac{\delta y}{\delta t} \\
+> \cdots \\
+> \frac{\delta z}{\delta t}
+> \end{matrix}\right] 
+> 
 > $$
 
 This shows how to extend the concept of [[Derivative/Chain Rule]] to multiple variables.
@@ -51,9 +66,9 @@ $$=\frac{f(x + \Delta x, y + \Delta y) - f(x, y + \Delta y) }{\Delta x}\frac{\De
 
 We have to look at this considering that $\lim\limits_{\Delta s \to 0}$. As $\Delta s \to 0$, so does $\Delta x \to 0$. Same thing for $\Delta y$.
 
-- $\frac{f(x + \Delta x, y + \Delta y) - f(x, y + \Delta y) }{\Delta x}$ is the definition of the partial derivate of $f$ w.r.t. $x$ at the point $(x, y + \Delta y)$
+- $\displaystyle \frac{f(x + \Delta x, y + \Delta y) - f(x, y + \Delta y) }{\Delta x}$ is the definition of the partial derivate of $f$ w.r.t. $x$ at the point $(x, y + \Delta y)$
 
-- $\frac{f(x, y + \Delta y) - f(x,y)}{\Delta y}$ is the definition of the partial derivate of $f$ w.r.t. $y$ at the point $(x, y)$
+- $\displaystyle \frac{f(x, y + \Delta y) - f(x,y)}{\Delta y}$ is the definition of the partial derivate of $f$ w.r.t. $y$ at the point $(x, y)$
 
 $$\frac{\Delta u}{\Delta s}=f_x(x, y + \Delta y)\frac{\Delta x}{\Delta s} + f_y(x, y)\frac{\Delta y}{\Delta s}$$
 
@@ -63,7 +78,7 @@ $$\frac{\delta u}{\delta s}=f_x(x, y)\frac{\delta x}{\delta s} + f_y(x, y)\frac{
 
 ##### Method 2
 
-This uses the [[Mean value theorem|mean value theorem]].
+This uses the [[Mean Value Theorem/Mean value theorem|mean value theorem]].
 
 $$\frac{\Delta u}{\Delta s}=\frac{f(x + \Delta x, y + \Delta y) - f(x, y + \Delta y) }{\Delta s} + \frac{f(x, y + \Delta y) - f(x,y)}{\Delta s}$$
 $$=f_x(x_1, y + \Delta y)\frac{\Delta x}{\Delta s} + f_y(x, y_1)\frac{\Delta y}{\Delta s}$$

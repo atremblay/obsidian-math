@@ -1,12 +1,18 @@
+---
+cssclasses:
+  - cornell-left
+  - cornell-border
+---
 
-> [!summary]
+
+> [!summary] Summary
 > If $\cos\alpha$, $\cos\beta$ and $\cos\gamma$ are the [[Direction Cosines]] of the line $OP$, $\cos\alpha'$, $\cos\beta'$ and $\cos\gamma'$ are the [[Direction Cosines]] of the line $OP'$, then the angle $\theta$ between the two lines has this relationship
 > $$
 > \boxed{\cos \theta = \cos\alpha \cos\alpha' + \cos\beta\cos\beta'+\cos\gamma\cos\gamma'}
 > $$
 
 
-> [!blank-container|right-medium]
+> [!blank|right-medium]
 > ![[Images/angle_between_lines.svg]]
 
 

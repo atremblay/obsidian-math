@@ -1,57 +1,37 @@
 
-## 1. LESSON 34. Plane Motions Giving Rise to Systems of Equations.
+> [!Summary] 
+> > [!blank-container|right-medium]
+> > ![[Images/free_motion_3.svg]]
+> 
+> When an object is in (free) motion and/or subjected to a force, it is often easier to use polar coordinates. In a polar coordinates system, at the point $P(x,y) \equiv P(r, \theta)$, speed in the $r$ and $\theta$ directions are
+> $$v_{r}=\dot{r}, \quad v_{\theta}=r \dot{\theta}$$
+> 
+> And the accelerations are 
+> $$ a_{r}=\ddot{r}-r \dot{\theta}^{2}, \quad a_{\theta}=2 \dot{r} \dot{\theta}+r \ddot{\theta}$$
+> 
+> > [!important]- $v_\theta \perp v_r$
+> > The direction of $v_\theta$ is perpendicular to $v_r$, just like $v_x$ is perpendicular to $v_y$
+> 
 
-In Lesson 16, we discussed the motion of a particle constrained to move along a straight line. In this lesson, we consider the motion of a particle free to move in a plane.
 
-LESSON 34A. Derivation of Velocity and Acceleration Formulas. If a particle is free to move in a plane, then a change in the direction of its velocity will be equally as important as a change in the magnitude of its velocity. As mentioned in Lesson $16 \mathrm{C}$, quantities in which both magnitude and direction play.a role are called vectors.
+In [[Horizontal Motion|horizontal]] and [[Inclined Motion|inclined motion]], the particule was constrained to move along a straight line. Here, we consider the motion of a particle free to move in a plane. A change in the direction of its velocity will be equally as important as a change in the magnitude of its velocity. 
 
-Since Newton's second law of motion is also applicable to particles which move in a plane, we have, by (16.1),
 
-$$
-F=m a=m \frac{d v}{d t}=m \dot{v} .
-$$
 
-Remark. A dot over a variable means its derivative with respect to time; two dots over the variable means its second derivative with respect to time. Hence $\dot{x} \equiv d x / d t, \vec{x} \equiv d^{2} x / d t^{2}, v \equiv d v / d t$, etc.
-
-The mass $m$ is not a vector quantity. We therefore see, by (34.1), that the acceleration of a particle acted on by a force, not only has magnitude $F / m$, but also has the same direction as $F$.
-
-In Fig. 34.11, the vector $F$ represents the magnitude and direction of a force $F$. It is convenient to break up this vector force into two components, one, $F_{x}$, to represent that part of the force which accelerates the particle in the $x$ direction, the other, $F y$, to represent that part of the force which accelerates the particle in the
-
-![](https://cdn.mathpix.com/cropped/2023_10_07_819562498d978d1c8215g-473.jpg?height=264&width=485&top_left_y=1277&top_left_x=642)
-
-Figure 34.11 $y$ direction. If the inclination of the force $F$ is $\theta$, we see from Fig. 34.11, that
-
-$$
-F_{x}=F \cos \theta, \quad F_{y}=F \sin \theta .
-$$
-
-Since $F_{x}=$ mass times $a_{x}$, the acceleration of a particle in the $x$ direction and $F_{y}=$ mass times $a_{y}$, the acceleration of a particle in the $y$ direction, we obtain from (34.12), the system of equations
-
-$$
-\begin{aligned}
-& F \cos \theta=F_{x}=m a_{x}=m \frac{d^{2} x}{d t^{2}}=m \ddot{x}, \\
-& F \sin \theta=F_{y}=m a_{y}=m \frac{d^{2} y}{d t^{2}}=m \ddot{y} .
-\end{aligned}
-$$
 
 > [!blank-container|right-medium]
 > ![[Images/free_motion_1.svg]]
 > > Figure 1
+> 
 
 
-In a similar manner we can break up any vector quantity into its $x$ and $y$ components. In Fig. (34.14) we have shown, for example, the $x$ and $y$ components of a velocity vector $\mathrm{v}$.
+Any vector quantity can be broken down into its $x$ and $y$ components as in Fig. 1. For certain problems, it is often convenient to use polar coordinates instead of rectangular coordinates. The vector quantity is then broken up into two components: one along the radial $r$ direction, the other **in a direction perpendicular to it**. In Fig. 2, we have broken up the vector $v$ into these two components $v_{r}$ and $v_{\theta}$.
 
-
-For certain problems, it is often convenient to use polar coordinates instead of rectangular coordinates. The vector quantity is then broken up into two components: one along the radial $r$ direction, the other in a direction perpendicular to it. In Fig. 34.15, we have broken up the vector $v$ into these two components $v_{r}$ and $v_{\theta}$.
-
-
-Figure 34.15
-
-> [!blank-container|right-medium]
+> [!blank-container|left-medium]
 > ![[Images/free_motion_2.svg]]
 > > Figure 2
 
-Let $(x, y)$ be the coordinates of a point $P$ in a rectangular system and $(r, \theta)$ its coordinates in a polar system, Fig. 34.15. Then we see from the figure, that
+Let $(x, y)$ be the coordinates of a point $P$ in a rectangular system and $(r, \theta)$ its coordinates in a polar system, Fig. 2. Then we see from the figure, that
 
 $$
 x=r \cos \theta, \quad y=r \sin \theta . \tag{a}
@@ -75,73 +55,81 @@ $$
 \end{aligned} \tag{c}
 $$
 
+> [!Important] Parametric functions
+> The coordinates $x$ and $y$ (or $r$ and $\theta$) are functions of time. The position of an object will depend on time. 
+
+
 These formulas, (b) and (c), are valid for every value of $\theta$. Hence they must hold in particular when $\theta=0$. But when $\theta=0, x=r$ and the direction perpendicular to $r$ is the $y$ direction. Hence the components of velocity and acceleration in a radial direction and in a direction perpendicular to it are
 
 $$
-v_{r}=\frac{d x}{d t}, \quad v_{\theta}=\frac{d y}{d t}, \quad a_{r}=\frac{d^{2} x}{d t^{2}}, \quad a_{\theta}=\frac{d^{2} y}{d t^{2}}
+v_{r}=\frac{d x}{d t}, \quad v_{\theta}=\frac{d y}{d t}, \quad a_{r}=\frac{d^{2} x}{d t^{2}}, \quad a_{\theta}=\frac{d^{2} y}{d t^{2}} \tag{d}
 $$
 
-Substituting the first two equations of (34.19) in (34.17), the second two in (34.18), we obtain with $\theta=0$,
+Substituting the first two equations of (d) in (b), the second two in (c), we obtain with $\theta=0$,
 
 $$
-\begin{aligned}
-& v_{r}=\frac{d r}{d t}=\dot{r}, \quad v_{\theta}=r \frac{d \theta}{d t}=r \dot{\theta} . \\
-& a_{r}=\frac{d^{2} r}{d t^{2}}-r\left(\frac{d \theta}{d t}\right)^{2}=\ddot{r}-r \hat{\theta}^{2}, \\
-& a_{\theta}=2 \frac{d r}{d t} \frac{d \theta}{d t}+r \frac{d^{2} \theta}{d t^{2}}=2 \dot{r} \dot{\theta}+r \dot{\theta} .
-\end{aligned}
+\begin{align}
+& v_{r}=\frac{d r}{d t}=\dot{r}, \quad v_{\theta}=r \frac{d \theta}{d t}=r \dot{\theta} . \tag{e}  \\
+& a_{r}=\frac{d^{2} r}{d t^{2}}-r\left(\frac{d \theta}{d t}\right)^{2}=\ddot{r}-r \dot{\theta}^{2}, \\
+& a_{\theta}=2 \frac{d r}{d t} \frac{d \theta}{d t}+r \frac{d^{2} \theta}{d t^{2}}=2 \dot{r} \dot{\theta}+r \ddot{\theta} . \tag{f}
+\end{align}
 $$
 
-Formulas (34.2) and (34.21) give respectively the components of the velocity and acceleration vectors of a particle along the radial axis and in a direction perpendicular to it, at the point $P$ where the curve crosses the $x$ axis. Since the $x$ axis can be chosen in any direction, these equations are valid for every point $P$ of the particle's path.
+Formulas (e) and (f) give respectively the components of the velocity and acceleration vectors of a particle along the radial axis and in a direction perpendicular to it, at the point $P$ where the curve crosses the $x$ axis. Since the $x$ axis can be chosen in any direction, these equations are valid for every point $P$ of the particle's path.
 
-## 2. EXERCISE 34A
+## A more convincing argument. To me. 
 
-1. In Fig. 34.22, we have shown the $x$ and $y$ components of a velocity vector $\mathbf{v}$ as well as its components in a radial direction and in a direction perpendicular to it. With the aid of this diagram, prove (34.2). Hint. 
+This is, to me, a more satisfying demonstration. In Figure 1 we have shown the $x$ and $y$ components of a velocity vector $\mathbf{v}$ as well as its components in a radial direction and in a direction perpendicular to it in Figure 2. Figure 3 shows all of it together.  
 
 
-> [!blank-container|right-large]
+> [!blank-container|center-large]
 > ![[Images/free_motion_3.svg]]
-> > Figure 3
+> > Figure 3: $\mathbf{v}$ broken down into its different components in Cartesian and Polar coordinates. 
 
 
-First show that
+From Figure 3 we see that 
 
 $$
-v_{x}=\frac{d x}{d t}=v \cos \alpha, \quad v_{y}=\frac{d y}{d t}=v \sin \alpha .
+v_{x}=\textcolor{orange}{\frac{d x}{d t}=v \cos \alpha}, \quad v_{y}=\textcolor{teal}{\frac{d y}{d t}=v \sin \alpha} \tag{g} .
 $$
 
-Then show that
+Then, for $v_r$ and $v_\theta$
 
-(b)
+$$
+\begin{align}
+v_{r} & =v \cos (\alpha-\theta)=\textcolor{orange}{v \cos \alpha} \cos \theta+\textcolor{teal}{v \sin \alpha} \sin \theta, \tag{h} \\
+& =\frac{d x}{d t} \cos \theta+\frac{d y}{d t} \sin \theta \tag{i}\\
+\end{align}
+$$
+Where in (h) we replace by (g). In (i), replace $\displaystyle \frac{d x}{d t}$ and $\displaystyle \frac{dy}{d t}$ by the derivative found in (b)
 
 $$
 \begin{aligned}
-v_{r} & =v \cos (\alpha-\theta)=v \cos \alpha \cos \theta+v \sin \alpha \sin \theta, \\
-& =\frac{d x}{d t} \cos \theta+\frac{d y}{d t} \sin \theta \\
-&= \left(\cos \theta \frac{d r}{d t}-r \sin \theta \frac{d \theta}{d t}\right)\cos\theta + \left(\sin \theta \frac{d r}{d t}+r \cos \theta \frac{d \theta}{d t}\right) \sin \theta \\
+v_r&= \left(\cos \theta \frac{d r}{d t}-r \sin \theta \frac{d \theta}{d t}\right)\cos\theta + \left(\sin \theta \frac{d r}{d t}+r \cos \theta \frac{d \theta}{d t}\right) \sin \theta \\
 &= \cos^2 \theta \frac{d r}{d t}\cancel{-r \sin \theta \cos\theta\frac{d \theta}{d t}} + \sin^2 \theta \frac{d r}{d t}+\cancel{r \sin\theta \cos \theta \frac{d \theta}{d t}} \\
 &= (\cos^2 \theta + \sin^2\theta) \frac{d r}{d t} \\
 &= \frac{dr}{dt}
 \end{aligned}
 $$
 
-In (b), replace $d x / d t$ and $d y / d t$ by their values as given in (34.17).
-
-Similarly, show that
-
-(c)
-
+Similarly, for the accelerations in the $r$ and $\theta$ directions 
 $$
-\begin{aligned}
-v_{\theta} & =v \sin (\alpha-\theta) =v \sin \alpha \cos \theta-v \cos \alpha \sin \theta \\
-& =\frac{d y}{d t} \cos \theta-\frac{d x}{d t} \sin \theta \\
-& =\left(\sin \theta \frac{d r}{d t}+r \cos \theta \frac{d \theta}{d t}\right) \cos \theta-\left(\cos \theta \frac{d r}{d t}-r \sin \theta \frac{d \theta}{d t}\right) \sin \theta \\
+\begin{align}
+v_{\theta} & =v \sin (\alpha-\theta) =\textcolor{teal}{v \sin \alpha} \cos \theta-\textcolor{orange}{v \cos \alpha} \sin \theta \tag{j}\\
+& =\frac{d y}{d t} \cos \theta-\frac{d x}{d t} \sin \theta \tag{k} \\
+\end{align}
+$$
+
+In (j), replace by (g) and in (k) replace by (b)
+$$
+\begin{align}
+v_\theta & =\left(\sin \theta \frac{d r}{d t}+r \cos \theta \frac{d \theta}{d t}\right) \cos \theta-\left(\cos \theta \frac{d r}{d t}-r \sin \theta \frac{d \theta}{d t}\right) \sin \theta \\
 & =\cancel{\sin \theta \cos\theta \frac{d r}{d t}}+r \cos^2 \theta \frac{d \theta}{d t} \cancel{-\sin\theta \cos \theta \frac{d r}{d t}}+r \sin^2 \theta \frac{d \theta}{d t} \\
 & =r \frac{d\theta}{dt}\left( \cos^2 \theta  + \sin^2 \theta \right) \\
 & =r \frac{d\theta}{dt} \\
-\end{aligned}
+\end{align}
 $$
 
-In (c), replace $d y / d t$ and $d x / d t$ by their values as given in (34.17).
 
 ![](https://cdn.mathpix.com/cropped/2023_10_07_819562498d978d1c8215g-476.jpg?height=459&width=918&top_left_y=1206&top_left_x=133)
 

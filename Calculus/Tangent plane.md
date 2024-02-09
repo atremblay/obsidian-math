@@ -1,3 +1,7 @@
+---
+aliases:
+  - tangent plane
+---
 
 
 > [!summary]
@@ -45,7 +49,7 @@ $$
 Filling in the partial derivatives
 
 $$
--\frac{\partial z}{\partial {x_0}} (x-x_0) - \frac{\partial z}{\partial {y_0}} B C (y-y_0) + (z-z_0) = 0
+-\frac{\partial z}{\partial {x_0}} (x-x_0) - \frac{\partial z}{\partial {y_0}} (y-y_0) + (z-z_0) = 0
 $$
 
 The [[Direction Cosines|direction numbers]] of the normal to this plane are

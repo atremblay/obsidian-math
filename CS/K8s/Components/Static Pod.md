@@ -1,0 +1,2 @@
+- managed directly by the kublet daemon
+- without control plane

@@ -1,3 +1,8 @@
+---
+cssclasses:
+  - cornell-border
+  - cornell-left
+---
 > [!Summary]
 > Given a function $f(t)$, the fundamental definition of a derivative is given by
 > $$\frac {\mathrm{d}f}{\mathrm{d}t} = \lim_{\Delta t \to 0} \frac {f(t+\Delta t) - f(t)}{\Delta t}$$

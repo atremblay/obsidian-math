@@ -1,6 +1,9 @@
 ---
 aliases:
-    - "chain rule"
+  - chain rule
+cssclasses:
+  - cornell-left
+  - cornell-border
 ---
 > [!summary]
 > $$
